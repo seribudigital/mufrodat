@@ -3,21 +3,22 @@ import type { QuizQuestion } from '../types';
 
 interface QuizProps {
   question: QuizQuestion;
+  timeLimit: number;
   onAnswer: (isCorrect: boolean, isTimeUp?: boolean) => void;
 }
 
-const Quiz: React.FC<QuizProps> = ({ question, onAnswer }) => {
+const Quiz: React.FC<QuizProps> = ({ question, timeLimit, onAnswer }) => {
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [animationKey, setAnimationKey] = useState(0); 
-  const [timeLeft, setTimeLeft] = useState(5);
+  const [timeLeft, setTimeLeft] = useState(timeLimit);
 
   useEffect(() => {
     setSelectedIdx(null);
     setIsTransitioning(false);
-    setTimeLeft(5);
+    setTimeLeft(timeLimit);
     setAnimationKey(prev => prev + 1); 
-  }, [question]);
+  }, [question, timeLimit]);
 
   useEffect(() => {
     if (isTransitioning) return;
@@ -99,7 +100,7 @@ const Quiz: React.FC<QuizProps> = ({ question, onAnswer }) => {
           boxShadow: 'var(--shadow-sm)',
           transition: 'background 0.3s ease'
         }}>
-          00:0{timeLeft}
+          00:{timeLeft.toString().padStart(2, '0')}
         </div>
       </div>
 

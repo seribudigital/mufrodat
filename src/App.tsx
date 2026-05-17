@@ -38,8 +38,14 @@ function App() {
     setView('loading');
     setCurrentLevel(level);
     const data = await loadLevelDataset(currentJilid, level);
-    // Generate questions and slice to a maximum of 50 per session
-    const q = generateQuestions(data).slice(0, 50);
+    
+    let questionLimit = 20;
+    if (level === 2) questionLimit = 25;
+    else if (level === 3) questionLimit = 40;
+    else if (level >= 4) questionLimit = 50;
+
+    // Generate questions and slice to the specific level limit
+    const q = generateQuestions(data).slice(0, questionLimit);
     setQuestions(q);
     setCurrentIdx(0);
     setStreak(0);
@@ -200,6 +206,11 @@ function App() {
 
   const currentQ = questions[currentIdx];
 
+  let timeLimit = 10;
+  if (currentLevel === 2) timeLimit = 8;
+  else if (currentLevel === 3) timeLimit = 7;
+  else if (currentLevel >= 4) timeLimit = 5;
+
   return (
     <div className="fade-in" style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
       <ProgressBar current={currentIdx} total={questions.length} />
@@ -235,7 +246,7 @@ function App() {
         Progress: {currentIdx + 1} / {questions.length}
       </div>
 
-      <Quiz question={currentQ} onAnswer={handleAnswer} />
+      <Quiz question={currentQ} timeLimit={timeLimit} onAnswer={handleAnswer} />
     </div>
   );
 }
