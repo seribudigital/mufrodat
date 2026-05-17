@@ -2,14 +2,17 @@ import React, { useEffect, useState } from 'react';
 import type { HistoryEntry } from '../types';
 
 interface HistoryViewerProps {
+  currentJilid: number;
   onBack: () => void;
 }
 
-const HistoryViewer: React.FC<HistoryViewerProps> = ({ onBack }) => {
+const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentJilid, onBack }) => {
   const [history, setHistory] = useState<HistoryEntry[]>([]);
 
+  const historyKey = `mufrodat_history_jilid${currentJilid}`;
+
   useEffect(() => {
-    const raw = localStorage.getItem('mufrodat_history');
+    const raw = localStorage.getItem(historyKey);
     if (raw) {
       try {
         const parsed: HistoryEntry[] = JSON.parse(raw);
@@ -18,11 +21,11 @@ const HistoryViewer: React.FC<HistoryViewerProps> = ({ onBack }) => {
         console.error("Error parsing history:", e);
       }
     }
-  }, []);
+  }, [historyKey]);
 
   const handleClear = () => {
-    if (window.confirm('Yakin ingin menghapus semua riwayat tes?')) {
-      localStorage.removeItem('mufrodat_history');
+    if (window.confirm(`Yakin ingin menghapus semua riwayat tes untuk Jilid ${currentJilid}?`)) {
+      localStorage.removeItem(historyKey);
       setHistory([]);
     }
   };
@@ -42,7 +45,7 @@ const HistoryViewer: React.FC<HistoryViewerProps> = ({ onBack }) => {
         >
           ← Kembali
         </button>
-        <h2 style={{ fontSize: '1.25rem', color: 'var(--primary-color)', margin: 0 }}>Riwayat Belajar</h2>
+        <h2 style={{ fontSize: '1.25rem', color: 'var(--primary-color)', margin: 0 }}>Riwayat Jilid {currentJilid}</h2>
         <div style={{ width: '70px' }}></div>
       </div>
 

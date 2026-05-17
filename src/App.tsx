@@ -9,6 +9,7 @@ import type { QuizQuestion, HistoryEntry, UserIdentity } from './types';
 
 function App() {
   const [currentLevel, setCurrentLevel] = useState<number>(1);
+  const [currentJilid, setCurrentJilid] = useState<number>(1);
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   
@@ -36,7 +37,7 @@ function App() {
   const handleSelectLevel = async (level: number) => {
     setView('loading');
     setCurrentLevel(level);
-    const data = await loadLevelDataset(level);
+    const data = await loadLevelDataset(currentJilid, level);
     // Generate questions and slice to a maximum of 50 per session
     const q = generateQuestions(data).slice(0, 50);
     setQuestions(q);
@@ -75,12 +76,14 @@ function App() {
       const entry: HistoryEntry = {
         id: Date.now().toString(),
         date: new Date().toISOString(),
+        jilid: currentJilid,
         level: currentLevel,
         score: finalScore,
         correct: newScoreObj.correct,
         wrong: newScoreObj.wrong + newScoreObj.timesUp,
       };
-      const raw = localStorage.getItem('mufrodat_history');
+      const historyKey = `mufrodat_history_jilid${currentJilid}`;
+      const raw = localStorage.getItem(historyKey);
       let history: HistoryEntry[] = [];
       if (raw) {
         try {
@@ -88,7 +91,7 @@ function App() {
         } catch (e) {}
       }
       history.push(entry);
-      localStorage.setItem('mufrodat_history', JSON.stringify(history));
+      localStorage.setItem(historyKey, JSON.stringify(history));
 
       setView('summary');
     }
@@ -103,7 +106,7 @@ function App() {
   }
 
   if (view === 'history') {
-    return <HistoryViewer onBack={() => setView('selector')} />;
+    return <HistoryViewer currentJilid={currentJilid} onBack={() => setView('selector')} />;
   }
 
   if (view === 'selector') {
@@ -113,6 +116,8 @@ function App() {
         onViewHistory={() => setView('history')} 
         userName={identity?.name}
         onChangeProfile={() => setView('welcome')}
+        currentJilid={currentJilid}
+        setCurrentJilid={setCurrentJilid}
       />
     );
   }

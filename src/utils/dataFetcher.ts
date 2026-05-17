@@ -1,9 +1,9 @@
 import type { MufrodatItem, QuizQuestion } from '../types';
 
 // Dynamically import all part JSON files from the assets folder.
-const modules = import.meta.glob<{ default: MufrodatItem[] }>('../assets/part*.json');
+const modules = import.meta.glob<{ default: MufrodatItem[] }>('../assets/data/jilid*/*.json');
 
-export const loadLevelDataset = async (level: number): Promise<MufrodatItem[]> => {
+export const loadLevelDataset = async (jilid: number, level: number): Promise<MufrodatItem[]> => {
   let allData: MufrodatItem[] = [];
   
   const levelMap: Record<number, string[]> = {
@@ -16,8 +16,9 @@ export const loadLevelDataset = async (level: number): Promise<MufrodatItem[]> =
   const allowedParts = levelMap[level] || levelMap[4];
 
   for (const path in modules) {
+    const isTargetJilid = path.includes(`/jilid${jilid}/`);
     const fileName = path.split('/').pop() || '';
-    if (allowedParts.includes(fileName)) {
+    if (isTargetJilid && allowedParts.includes(fileName)) {
       const mod = await modules[path]();
       allData = allData.concat(mod.default);
     }

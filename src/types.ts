@@ -15,6 +15,7 @@ export interface QuizQuestion {
 export interface HistoryEntry {
   id: string;
   date: string; // ISO string
+  jilid?: number;
   level: number;
   score: number;
   correct: number;
