@@ -112,7 +112,7 @@ function App() {
   }
 
   if (view === 'history') {
-    return <HistoryViewer currentJilid={currentJilid} onBack={() => setView('selector')} />;
+    return <HistoryViewer currentJilid={currentJilid} identity={identity} onBack={() => setView('selector')} />;
   }
 
   if (view === 'selector') {

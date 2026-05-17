@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import type { HistoryEntry } from '../types';
+import type { HistoryEntry, UserIdentity } from '../types';
 
 interface HistoryViewerProps {
   currentJilid: number;
+  identity?: UserIdentity | null;
   onBack: () => void;
 }
 
-const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentJilid, onBack }) => {
+const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentJilid, identity, onBack }) => {
   const [history, setHistory] = useState<HistoryEntry[]>([]);
 
   const historyKey = `mufrodat_history_jilid${currentJilid}`;
@@ -50,6 +51,25 @@ const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentJilid, onBack }) =
           <img src="/logo.png" alt="Logo Mufrodat" style={{ width: '35px', height: '35px', objectFit: 'contain' }} />
         </div>
       </div>
+
+      {identity && (
+        <div style={{
+          textAlign: 'center',
+          marginBottom: '2rem',
+          padding: '1.25rem',
+          background: 'var(--bg-color)',
+          borderRadius: '12px',
+          border: '1px solid var(--border-color)',
+          boxShadow: 'var(--shadow-sm)'
+        }}>
+          <h3 style={{ margin: '0 0 0.5rem 0', color: 'var(--primary-color)', fontSize: '1.2rem' }}>
+            👤 {identity.name} - Kelas {identity.studentClass}
+          </h3>
+          <p style={{ margin: 0, color: 'var(--text-muted)', fontSize: '0.95rem', fontStyle: 'italic', fontWeight: 500 }}>
+            "Barangsiapa yang bersungguh-sungguh, maka ia akan berhasil. Teruslah berlatih!"
+          </p>
+        </div>
+      )}
 
       {history.length === 0 ? (
         <div style={{ textAlign: 'center', color: 'var(--text-muted)', marginTop: '3rem' }}>
