@@ -46,7 +46,9 @@ const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentJilid, onBack }) =
           ← Kembali
         </button>
         <h2 style={{ fontSize: '1.25rem', color: 'var(--primary-color)', margin: 0 }}>Riwayat Jilid {currentJilid}</h2>
-        <div style={{ width: '70px' }}></div>
+        <div style={{ width: '70px', display: 'flex', justifyContent: 'flex-end' }}>
+          <img src="/logo.png" alt="Logo Mufrodat" style={{ width: '35px', height: '35px', objectFit: 'contain' }} />
+        </div>
       </div>
 
       {history.length === 0 ? (

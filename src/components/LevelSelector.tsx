@@ -60,6 +60,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({ onSelect, onViewHistory, 
             </div>
           </div>
         )}
+        <img src="/logo.png" alt="Logo Mufrodat" style={{ width: '80px', height: '80px', marginBottom: '0.5rem', objectFit: 'contain' }} />
         <h1 style={{ fontSize: '3rem', marginBottom: '0.5rem', color: 'var(--primary-color)', letterSpacing: '-0.02em' }}>Mufrodat</h1>
         <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '1rem' }}>Pilih Level Pembelajaran</p>
 
