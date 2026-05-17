@@ -208,7 +208,7 @@ function App() {
 
   let timeLimit = 10;
   if (currentLevel === 2) timeLimit = 8;
-  else if (currentLevel === 3) timeLimit = 7;
+  else if (currentLevel === 3) timeLimit = 6;
   else if (currentLevel >= 4) timeLimit = 5;
 
   return (
