@@ -9,7 +9,7 @@ interface MateriViewerProps {
 
 const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level }) => {
   return (
-    <div className="fade-in" style={{
+    <div className="fade-in islamic-bg" style={{
       display: 'flex',
       flexDirection: 'column',
       gap: '1.5rem',
