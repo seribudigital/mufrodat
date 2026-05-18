@@ -128,28 +128,28 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({ onSelect, onViewHistory, 
       </div>
 
       <div className="card" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.75rem', padding: '1.25rem' }}>
-        <button className="btn" style={{ justifyContent: 'center', padding: '1rem' }} onClick={() => onSelect(1)}>
+        <button className="btn card-with-ornament" style={{ justifyContent: 'center', padding: '1rem' }} onClick={() => onSelect(1)}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem', width: '100%' }}>
             <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>Level 1</span>
             <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Kosakata 1 - 110 (Part 1-2)</span>
           </div>
         </button>
         
-        <button className="btn" style={{ justifyContent: 'center', padding: '1rem' }} onClick={() => onSelect(2)}>
+        <button className="btn card-with-ornament" style={{ justifyContent: 'center', padding: '1rem' }} onClick={() => onSelect(2)}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem', width: '100%' }}>
             <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>Level 2</span>
             <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Kosakata 1 - 219 (Part 1-4)</span>
           </div>
         </button>
         
-        <button className="btn" style={{ justifyContent: 'center', padding: '1rem' }} onClick={() => onSelect(3)}>
+        <button className="btn card-with-ornament" style={{ justifyContent: 'center', padding: '1rem' }} onClick={() => onSelect(3)}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem', width: '100%' }}>
             <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>Level 3</span>
             <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Kosakata 1 - 327 (Part 1-6)</span>
           </div>
         </button>
         
-        <button className="btn" style={{ justifyContent: 'center', padding: '1rem', borderColor: 'var(--primary-light)', background: 'linear-gradient(to bottom right, #ffffff, var(--primary-light))' }} onClick={() => onSelect(4)}>
+        <button className="btn card-with-ornament" style={{ justifyContent: 'center', padding: '1rem', borderColor: 'var(--primary-light)', background: 'linear-gradient(to bottom right, #ffffff, var(--primary-light))' }} onClick={() => onSelect(4)}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem', width: '100%' }}>
             <span style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--primary-hover)' }}>Level 4 (Final)</span>
             <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Kosakata 1 - 467 (Semua)</span>

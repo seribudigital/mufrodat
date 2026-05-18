@@ -52,6 +52,8 @@ const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentJilid, identity, o
         </div>
       </div>
 
+      <div className="islamic-divider"><div className="islamic-divider-icon"></div></div>
+
       {identity && (
         <div style={{
           textAlign: 'center',

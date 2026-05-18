@@ -18,7 +18,7 @@ const Welcome: React.FC<WelcomeProps> = ({ onStart }) => {
   };
 
   return (
-    <div className="fade-in" style={{
+    <div className="fade-in islamic-bg" style={{
       display: 'flex',
       flexDirection: 'column',
       flex: 1,

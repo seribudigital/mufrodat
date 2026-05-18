@@ -48,6 +48,9 @@ const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level }) =
         <p style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>Daftar {dataset.length} kosakata</p>
       </div>
 
+      <div className="islamic-divider"><div className="islamic-divider-icon"></div></div>
+
+
       <div className="card" style={{ padding: '0', overflow: 'hidden' }}>
         <div style={{ 
           maxHeight: '60vh', 

@@ -194,3 +194,69 @@ body {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Islamic Aesthetic Utilities */
+.islamic-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%232563eb' fill-opacity='0.03'%3E%3Cpath d='M40 0L46 16L64 16L52 26L56 42L40 32L24 42L28 26L16 16L34 16Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.islamic-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+  opacity: 0.6;
+}
+
+.islamic-divider::before,
+.islamic-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.islamic-divider::before {
+  margin-right: 15px;
+}
+
+.islamic-divider::after {
+  margin-left: 15px;
+}
+
+.islamic-divider-icon {
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5Z'/%3E%3C/svg%3E") no-repeat center / contain;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5Z'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.card-with-ornament {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-with-ornament::before,
+.card-with-ornament::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  opacity: 0.05;
+  pointer-events: none;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M0 0h40v40C17.9 40 0 22.1 0 0z'/%3E%3C/svg%3E") no-repeat center / contain;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M0 0h40v40C17.9 40 0 22.1 0 0z'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.card-with-ornament::before {
+  top: 0;
+  left: 0;
+}
+
+.card-with-ornament::after {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}

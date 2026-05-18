@@ -9,7 +9,7 @@ interface PhaseSelectorProps {
 
 const PhaseSelector: React.FC<PhaseSelectorProps> = ({ level, onSelect, onBack }) => {
   return (
-    <div className="fade-in" style={{
+    <div className="fade-in islamic-bg" style={{
       display: 'flex',
       flexDirection: 'column',
       gap: '2.5rem',
