@@ -1,15 +1,20 @@
 import { useState } from 'react';
 import LevelSelector from './components/LevelSelector';
+import PhaseSelector from './components/PhaseSelector';
+import MateriViewer from './components/MateriViewer';
 import Quiz from './components/Quiz';
 import ProgressBar from './components/ProgressBar';
 import HistoryViewer from './components/HistoryViewer';
 import Welcome from './components/Welcome';
 import { loadLevelDataset, generateQuestions } from './utils/dataFetcher';
-import type { QuizQuestion, HistoryEntry, UserIdentity } from './types';
+import type { QuizQuestion, HistoryEntry, UserIdentity, PhaseType, MufrodatItem } from './types';
 
 function App() {
   const [currentLevel, setCurrentLevel] = useState<number>(1);
   const [currentJilid, setCurrentJilid] = useState<number>(1);
+  const [currentPhase, setCurrentPhase] = useState<PhaseType>(null);
+  
+  const [rawDataset, setRawDataset] = useState<MufrodatItem[]>([]);
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   
@@ -23,7 +28,7 @@ function App() {
     return saved ? JSON.parse(saved) : null;
   });
 
-  const [view, setView] = useState<'welcome' | 'selector' | 'loading' | 'quiz' | 'summary' | 'history'>(
+  const [view, setView] = useState<'welcome' | 'selector' | 'phaseSelector' | 'materi' | 'loading' | 'quiz' | 'summary' | 'history'>(
     identity ? 'selector' : 'welcome'
   );
 
@@ -34,18 +39,32 @@ function App() {
     setView('selector');
   };
 
-  const handleSelectLevel = async (level: number) => {
-    setView('loading');
+  const handleSelectLevel = (level: number) => {
     setCurrentLevel(level);
-    const data = await loadLevelDataset(currentJilid, level);
+    setView('phaseSelector');
+  };
+
+  const handleSelectPhase = async (phase: PhaseType) => {
+    setCurrentPhase(phase);
+    setView('loading');
+    
+    const data = await loadLevelDataset(currentJilid, currentLevel);
+    setRawDataset(data);
+    
+    if (phase === 'materi') {
+      setView('materi');
+      return;
+    }
     
     let questionLimit = 20;
-    if (level === 2) questionLimit = 25;
-    else if (level === 3) questionLimit = 40;
-    else if (level >= 4) questionLimit = 50;
+    if (currentLevel === 2) questionLimit = 25;
+    else if (currentLevel === 3) questionLimit = 40;
+    else if (currentLevel >= 4) questionLimit = 50;
+
+    const optionsCount = phase === 'latihan' ? 2 : 4;
 
     // Generate questions and slice to the specific level limit
-    const q = generateQuestions(data).slice(0, questionLimit);
+    const q = generateQuestions(data, optionsCount).slice(0, questionLimit);
     setQuestions(q);
     setCurrentIdx(0);
     setStreak(0);
@@ -79,32 +98,35 @@ function App() {
       setCurrentIdx(i => i + 1);
     } else {
       const finalScore = Math.round((newScoreObj.correct / questions.length) * 100);
-      const entry: HistoryEntry = {
-        id: Date.now().toString(),
-        date: new Date().toISOString(),
-        jilid: currentJilid,
-        level: currentLevel,
-        score: finalScore,
-        correct: newScoreObj.correct,
-        wrong: newScoreObj.wrong + newScoreObj.timesUp,
-      };
-      const historyKey = `mufrodat_history_jilid${currentJilid}`;
-      const raw = localStorage.getItem(historyKey);
-      let history: HistoryEntry[] = [];
-      if (raw) {
-        try {
-          history = JSON.parse(raw);
-        } catch (e) {}
+      
+      if (currentPhase === 'ujian') {
+        const entry: HistoryEntry = {
+          id: Date.now().toString(),
+          date: new Date().toISOString(),
+          jilid: currentJilid,
+          level: currentLevel,
+          score: finalScore,
+          correct: newScoreObj.correct,
+          wrong: newScoreObj.wrong + newScoreObj.timesUp,
+        };
+        const historyKey = `mufrodat_history_jilid${currentJilid}`;
+        const raw = localStorage.getItem(historyKey);
+        let history: HistoryEntry[] = [];
+        if (raw) {
+          try {
+            history = JSON.parse(raw);
+          } catch (e) {}
+        }
+        history.push(entry);
+        localStorage.setItem(historyKey, JSON.stringify(history));
       }
-      history.push(entry);
-      localStorage.setItem(historyKey, JSON.stringify(history));
 
       setView('summary');
     }
   };
 
   if (view === 'loading') {
-    return <div className="fade-in" style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>Memuat kosakata...</div>;
+    return <div className="fade-in" style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>Memuat...</div>;
   }
 
   if (view === 'welcome') {
@@ -124,6 +146,26 @@ function App() {
         onChangeProfile={() => setView('welcome')}
         currentJilid={currentJilid}
         setCurrentJilid={setCurrentJilid}
+      />
+    );
+  }
+
+  if (view === 'phaseSelector') {
+    return (
+      <PhaseSelector 
+        level={currentLevel} 
+        onSelect={handleSelectPhase} 
+        onBack={() => setView('selector')} 
+      />
+    );
+  }
+
+  if (view === 'materi') {
+    return (
+      <MateriViewer 
+        dataset={rawDataset} 
+        level={currentLevel}
+        onBack={() => setView('phaseSelector')} 
       />
     );
   }
@@ -189,16 +231,24 @@ function App() {
           </div>
         </div>
         
+        {currentPhase === 'latihan' && (
+          <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: '-0.5rem' }}>
+            Sesi Latihan tidak disimpan ke Riwayat.
+          </div>
+        )}
+        
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', width: '100%', marginTop: '1rem' }}>
-          <button className="btn" onClick={() => handleSelectLevel(currentLevel)} style={{ background: 'var(--primary-color)', color: '#fff', borderColor: 'var(--primary-color)', justifyContent: 'center' }}>
-            Ulangi Sesi (Level {currentLevel})
+          <button className="btn" onClick={() => handleSelectPhase(currentPhase)} style={{ background: 'var(--primary-color)', color: '#fff', borderColor: 'var(--primary-color)', justifyContent: 'center' }}>
+            Ulangi Sesi
           </button>
-          <button className="btn" onClick={() => setView('selector')} style={{ justifyContent: 'center' }}>
-            Kembali ke Menu
+          <button className="btn" onClick={() => setView('phaseSelector')} style={{ justifyContent: 'center' }}>
+            Kembali ke Fase
           </button>
-          <button className="btn" onClick={() => setView('history')} style={{ background: 'none', borderColor: 'transparent', color: 'var(--text-muted)', justifyContent: 'center' }}>
-            Lihat Riwayat Belajar
-          </button>
+          {currentPhase === 'ujian' && (
+            <button className="btn" onClick={() => setView('history')} style={{ background: 'none', borderColor: 'transparent', color: 'var(--text-muted)', justifyContent: 'center' }}>
+              Lihat Riwayat Belajar
+            </button>
+          )}
         </div>
       </div>
     );
@@ -208,7 +258,7 @@ function App() {
 
   let timeLimit = 10;
   if (currentLevel === 2) timeLimit = 8;
-  else if (currentLevel === 3) timeLimit = 6;
+  else if (currentLevel === 3) timeLimit = 7;
   else if (currentLevel >= 4) timeLimit = 5;
 
   return (
@@ -223,7 +273,7 @@ function App() {
         marginBottom: '1rem',
       }}>
         <button 
-          onClick={() => setView('selector')}
+          onClick={() => setView('phaseSelector')}
           style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.25rem' }}
         >
           ← Kembali
@@ -246,7 +296,7 @@ function App() {
         Progress: {currentIdx + 1} / {questions.length}
       </div>
 
-      <Quiz question={currentQ} timeLimit={timeLimit} onAnswer={handleAnswer} />
+      <Quiz question={currentQ} timeLimit={timeLimit} phase={currentPhase} onAnswer={handleAnswer} />
     </div>
   );
 }

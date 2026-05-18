@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import type { QuizQuestion } from '../types';
+import type { QuizQuestion, PhaseType } from '../types';
 
 interface QuizProps {
   question: QuizQuestion;
   timeLimit: number;
+  phase?: PhaseType;
   onAnswer: (isCorrect: boolean, isTimeUp?: boolean) => void;
 }
 
-const Quiz: React.FC<QuizProps> = ({ question, timeLimit, onAnswer }) => {
+const Quiz: React.FC<QuizProps> = ({ question, timeLimit, phase, onAnswer }) => {
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [animationKey, setAnimationKey] = useState(0); 
@@ -30,10 +31,13 @@ const Quiz: React.FC<QuizProps> = ({ question, timeLimit, onAnswer }) => {
           setIsTransitioning(true);
           // Visual feedback for time's up
           document.body.classList.add('bg-flash-wrong');
+          
+          const delay = phase === 'latihan' ? 1000 : 400;
+          
           setTimeout(() => {
             document.body.classList.remove('bg-flash-wrong');
             onAnswer(false, true); // Auto-fail
-          }, 400);
+          }, delay);
           return 0;
         }
         return prev - 1;
@@ -41,7 +45,7 @@ const Quiz: React.FC<QuizProps> = ({ question, timeLimit, onAnswer }) => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [question, isTransitioning, onAnswer]);
+  }, [question, isTransitioning, onAnswer, phase]);
 
   const handleSelect = (idx: number) => {
     if (isTransitioning) return;
@@ -57,10 +61,12 @@ const Quiz: React.FC<QuizProps> = ({ question, timeLimit, onAnswer }) => {
       document.body.classList.add('bg-flash-wrong');
     }
     
+    const delay = (!isCorrect && phase === 'latihan') ? 1000 : 350;
+    
     setTimeout(() => {
       document.body.classList.remove('bg-flash-correct', 'bg-flash-wrong');
       onAnswer(isCorrect, false);
-    }, 350);
+    }, delay);
   };
 
   useEffect(() => {

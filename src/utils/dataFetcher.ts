@@ -38,7 +38,7 @@ const shuffleArray = <T>(array: T[]): T[] => {
 };
 
 // Generate options for a given dataset, selecting 3 distractors
-export const generateQuestions = (dataset: MufrodatItem[]): QuizQuestion[] => {
+export const generateQuestions = (dataset: MufrodatItem[], optionsCount: number = 4): QuizQuestion[] => {
   // Shuffle the list to randomize question order (crucial for Level 4)
   const randomizedDataset = shuffleArray(dataset);
 
@@ -49,7 +49,7 @@ export const generateQuestions = (dataset: MufrodatItem[]): QuizQuestion[] => {
     );
 
     // If not enough distractors in the same category, use random distractors from the whole dataset
-    if (distractorsPool.length < 3) {
+    if (distractorsPool.length < optionsCount - 1) {
       const extraPool = dataset.filter(d => d.indonesia !== item.indonesia);
       distractorsPool = [...distractorsPool, ...extraPool];
     }
@@ -58,7 +58,7 @@ export const generateQuestions = (dataset: MufrodatItem[]): QuizQuestion[] => {
     distractorsPool = distractorsPool.filter((v, i, a) => a.findIndex(t => t.indonesia === v.indonesia) === i);
 
     distractorsPool = shuffleArray(distractorsPool);
-    const selectedDistractors = distractorsPool.slice(0, 3).map(d => d.indonesia);
+    const selectedDistractors = distractorsPool.slice(0, optionsCount - 1).map(d => d.indonesia);
 
     const options = shuffleArray([item.indonesia, ...selectedDistractors]);
 

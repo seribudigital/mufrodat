@@ -9,8 +9,10 @@ export interface MufrodatItem {
 
 export interface QuizQuestion {
   item: MufrodatItem;
-  options: string[]; // 4 options in Indonesian
+  options: string[]; // 2 or 4 options in Indonesian
 }
+
+export type PhaseType = 'materi' | 'latihan' | 'ujian' | null;
 
 export interface HistoryEntry {
   id: string;
