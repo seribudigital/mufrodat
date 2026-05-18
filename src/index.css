@@ -37,6 +37,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/mufrodat.svg');
+  background-size: 150px;
+  background-repeat: repeat;
+  opacity: 0.05;
+  z-index: -1;
+  pointer-events: none;
+}
+
 #root {
   flex: 1;
   display: flex;
@@ -196,9 +211,7 @@ body {
 }
 
 /* Islamic Aesthetic Utilities */
-.islamic-bg {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%232563eb' stroke-width='1.5' fill='none' opacity='0.05'%3E%3Cpath d='M40 10 L52 28 L70 40 L52 52 L40 70 L28 52 L10 40 L28 28 Z' /%3E%3Crect x='30' y='30' width='20' height='20' transform='rotate(45 40 40)' /%3E%3Crect x='30' y='30' width='20' height='20' /%3E%3Ccircle cx='40' cy='40' r='4' /%3E%3C/g%3E%3C/svg%3E");
-}
+
 
 .islamic-divider {
   display: flex;
