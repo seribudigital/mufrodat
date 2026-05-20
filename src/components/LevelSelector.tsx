@@ -132,8 +132,8 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({ onSelect, onViewHistory, 
           currentJilid === 2 ? [
             { level: 1, title: 'Level 1', description: 'Kosakata 1 - 301 (Part 1-2)', isAvailable: true },
             { level: 2, title: 'Level 2', description: 'Kosakata 302 - 592 (Part 3-4)', isAvailable: true },
-            { level: 3, title: 'Level 3', description: 'Kosakata 593 - 866 (Part 5-6)', isAvailable: true },
-            { level: 4, title: 'Level 4 (Final)', description: 'Belum Tersedia (Part 7-8)', isAvailable: false, isFinal: true },
+            { level: 3, title: 'Level 3', description: 'Kosakata 593 - 898 (Part 5-6)', isAvailable: true },
+            { level: 4, title: 'Level 4 (Final)', description: 'Kosakata 899 - 1208 (Part 7-8)', isAvailable: true, isFinal: true },
           ] : [
             { level: 1, title: 'Level 1', description: 'Kosakata 1 - 110 (Part 1-2)', isAvailable: true },
             { level: 2, title: 'Level 2', description: 'Kosakata 1 - 219 (Part 1-4)', isAvailable: true },
