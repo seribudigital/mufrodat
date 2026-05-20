@@ -67,7 +67,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({ onSelect, onViewHistory, 
         {/* Jilid Selector */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
           {[1, 2, 3, 4].map(jilid => {
-            const isAvailable = jilid === 1;
+            const isAvailable = jilid === 1 || jilid === 2;
             const isActive = currentJilid === jilid;
             
             return (
@@ -128,33 +128,54 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({ onSelect, onViewHistory, 
       </div>
 
       <div className="card" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.75rem', padding: '1.25rem' }}>
-        <button className="btn card-with-ornament" style={{ justifyContent: 'center', padding: '1rem' }} onClick={() => onSelect(1)}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem', width: '100%' }}>
-            <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>Level 1</span>
-            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Kosakata 1 - 110 (Part 1-2)</span>
-          </div>
-        </button>
-        
-        <button className="btn card-with-ornament" style={{ justifyContent: 'center', padding: '1rem' }} onClick={() => onSelect(2)}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem', width: '100%' }}>
-            <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>Level 2</span>
-            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Kosakata 1 - 219 (Part 1-4)</span>
-          </div>
-        </button>
-        
-        <button className="btn card-with-ornament" style={{ justifyContent: 'center', padding: '1rem' }} onClick={() => onSelect(3)}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem', width: '100%' }}>
-            <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>Level 3</span>
-            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Kosakata 1 - 327 (Part 1-6)</span>
-          </div>
-        </button>
-        
-        <button className="btn card-with-ornament" style={{ justifyContent: 'center', padding: '1rem', borderColor: 'var(--primary-light)', background: 'linear-gradient(to bottom right, #ffffff, var(--primary-light))' }} onClick={() => onSelect(4)}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem', width: '100%' }}>
-            <span style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--primary-hover)' }}>Level 4 (Final)</span>
-            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Kosakata 1 - 467 (Semua)</span>
-          </div>
-        </button>
+        {(
+          currentJilid === 2 ? [
+            { level: 1, title: 'Level 1', description: 'Kosakata 1 - 244 (Part 1-2)', isAvailable: true },
+            { level: 2, title: 'Level 2', description: 'Kosakata 1 - 535 (Part 1-4)', isAvailable: true },
+            { level: 3, title: 'Level 3', description: 'Kosakata 1 - 809 (Part 1-6)', isAvailable: true },
+            { level: 4, title: 'Level 4 (Final)', description: 'Belum Tersedia (Part 7-8)', isAvailable: false, isFinal: true },
+          ] : [
+            { level: 1, title: 'Level 1', description: 'Kosakata 1 - 110 (Part 1-2)', isAvailable: true },
+            { level: 2, title: 'Level 2', description: 'Kosakata 1 - 219 (Part 1-4)', isAvailable: true },
+            { level: 3, title: 'Level 3', description: 'Kosakata 1 - 327 (Part 1-6)', isAvailable: true },
+            { level: 4, title: 'Level 4 (Final)', description: 'Kosakata 1 - 467 (Semua)', isAvailable: true, isFinal: true },
+          ]
+        ).map((lvl) => {
+          const isLvlAvailable = lvl.isAvailable;
+          const isFinal = lvl.isFinal;
+          
+          return (
+            <button 
+              key={lvl.level}
+              className="btn card-with-ornament" 
+              disabled={!isLvlAvailable}
+              style={{ 
+                justifyContent: 'center', 
+                padding: '1rem',
+                opacity: isLvlAvailable ? 1 : 0.65,
+                cursor: isLvlAvailable ? 'pointer' : 'not-allowed',
+                ...(isFinal && isLvlAvailable ? {
+                  borderColor: 'var(--primary-light)', 
+                  background: 'linear-gradient(to bottom right, #ffffff, var(--primary-light))'
+                } : {})
+              }} 
+              onClick={() => isLvlAvailable && onSelect(lvl.level)}
+            >
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem', width: '100%' }}>
+                <span style={{ 
+                  fontSize: '1.2rem', 
+                  fontWeight: isFinal && isLvlAvailable ? 700 : 600,
+                  color: isFinal && isLvlAvailable ? 'var(--primary-hover)' : 'inherit'
+                }}>
+                  {lvl.title}
+                </span>
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+                  {lvl.description}
+                </span>
+              </div>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

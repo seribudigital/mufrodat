@@ -31,7 +31,7 @@ const Welcome: React.FC<WelcomeProps> = ({ onStart }) => {
     }}>
       <div className="card" style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
         <div style={{ textAlign: 'center' }}>
-          <img src="/logo.png" alt="Logo Mufrodat" fetchpriority="high" style={{ width: '80px', height: '80px', marginBottom: '1rem', objectFit: 'contain' }} />
+          <img src="/logo.png" alt="Logo Mufrodat" fetchPriority="high" style={{ width: '80px', height: '80px', marginBottom: '1rem', objectFit: 'contain' }} />
           <h1 style={{ color: 'var(--primary-color)', marginBottom: '1rem', fontSize: '2rem' }}>Mufrodat Durusul Lughoh</h1>
           <p style={{ color: 'var(--text-muted)', lineHeight: '1.6' }}>
             Aplikasi Mufrodat Durusul Lughoh dirancang untuk membantu Anda menguasai kosakata bahasa Arab dengan cepat melalui sistem kuis akumulatif dan tantangan waktu.
