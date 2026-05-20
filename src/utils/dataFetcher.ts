@@ -6,13 +6,21 @@ const modules = import.meta.glob<{ default: MufrodatItem[] }>('../assets/data/ji
 export const loadLevelDataset = async (jilid: number, level: number): Promise<MufrodatItem[]> => {
   let allData: MufrodatItem[] = [];
   
-  const levelMap: Record<number, string[]> = {
+  const levelMapJilid1: Record<number, string[]> = {
     1: ['part1.json', 'part2.json'],
     2: ['part1.json', 'part2.json', 'part3.json', 'part4.json'],
     3: ['part1.json', 'part2.json', 'part3.json', 'part4.json', 'part5.json', 'part6.json'],
     4: ['part1.json', 'part2.json', 'part3.json', 'part4.json', 'part5.json', 'part6.json', 'part7.json', 'part8.json'],
   };
 
+  const levelMapJilid2: Record<number, string[]> = {
+    1: ['part1.json', 'part2.json'],
+    2: ['part3.json', 'part4.json'],
+    3: ['part5.json', 'part6.json'],
+    4: ['part7.json', 'part8.json'],
+  };
+
+  const levelMap = jilid === 2 ? levelMapJilid2 : levelMapJilid1;
   const allowedParts = levelMap[level] || levelMap[4];
 
   for (const path in modules) {

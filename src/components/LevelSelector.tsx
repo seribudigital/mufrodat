@@ -130,9 +130,9 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({ onSelect, onViewHistory, 
       <div className="card" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.75rem', padding: '1.25rem' }}>
         {(
           currentJilid === 2 ? [
-            { level: 1, title: 'Level 1', description: 'Kosakata 1 - 244 (Part 1-2)', isAvailable: true },
-            { level: 2, title: 'Level 2', description: 'Kosakata 1 - 535 (Part 1-4)', isAvailable: true },
-            { level: 3, title: 'Level 3', description: 'Kosakata 1 - 809 (Part 1-6)', isAvailable: true },
+            { level: 1, title: 'Level 1', description: 'Kosakata 1 - 301 (Part 1-2)', isAvailable: true },
+            { level: 2, title: 'Level 2', description: 'Kosakata 302 - 592 (Part 3-4)', isAvailable: true },
+            { level: 3, title: 'Level 3', description: 'Kosakata 593 - 866 (Part 5-6)', isAvailable: true },
             { level: 4, title: 'Level 4 (Final)', description: 'Belum Tersedia (Part 7-8)', isAvailable: false, isFinal: true },
           ] : [
             { level: 1, title: 'Level 1', description: 'Kosakata 1 - 110 (Part 1-2)', isAvailable: true },
