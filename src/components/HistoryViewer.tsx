@@ -11,6 +11,7 @@ const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentJilid, identity, o
   const [history, setHistory] = useState<HistoryEntry[]>([]);
 
   const historyKey = `mufrodat_history_jilid${currentJilid}`;
+  const jilidLabel = currentJilid === 3 ? "Aby Jilid 1" : `Jilid ${currentJilid}`;
 
   useEffect(() => {
     const raw = localStorage.getItem(historyKey);
@@ -25,7 +26,7 @@ const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentJilid, identity, o
   }, [historyKey]);
 
   const handleClear = () => {
-    if (window.confirm(`Yakin ingin menghapus semua riwayat tes untuk Jilid ${currentJilid}?`)) {
+    if (window.confirm(`Yakin ingin menghapus semua riwayat tes untuk ${jilidLabel}?`)) {
       localStorage.removeItem(historyKey);
       setHistory([]);
     }
@@ -46,7 +47,7 @@ const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentJilid, identity, o
         >
           ← Kembali
         </button>
-        <h2 style={{ fontSize: '1.25rem', color: 'var(--primary-color)', margin: 0 }}>Riwayat Jilid {currentJilid}</h2>
+        <h2 style={{ fontSize: '1.25rem', color: 'var(--primary-color)', margin: 0 }}>Riwayat {jilidLabel}</h2>
         <div style={{ width: '70px', display: 'flex', justifyContent: 'flex-end' }}>
           <img src="/logo.png" alt="Logo Mufrodat" style={{ width: '35px', height: '35px', objectFit: 'contain' }} />
         </div>

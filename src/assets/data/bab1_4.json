@@ -1,0 +1,767 @@
+[
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "dua",
+        "arab": "إِثْنَانِ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "nama",
+        "arab": "اِسْمٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "segala puji bagi Allah",
+        "arab": "اَلْحَمْدُ لِلَّهِ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "semoga keselamatan atas kalian",
+        "arab": "السَّلَامُ عَلَيْكُمْ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "saudara (lk)",
+        "arab": "أَخٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "empat",
+        "arab": "أَرْبَعَةٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "saya",
+        "arab": "أَنَا"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "selamat datang",
+        "arab": "أَهْلاً وسَهْلاً"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "di mana",
+        "arab": "أَيْنَ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "saudara (pr)",
+        "arab": "أُخْتٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "kamu (lk)",
+        "arab": "أَنْتَ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "kamu (pr)",
+        "arab": "أَنْتِ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "Pakistan",
+        "arab": "بَاكِسْتَان"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "warga negara Pakistan",
+        "arab": "بَاكِسْتَانِيٌّ / بَاكِسْتَانِيَّة"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "baik-baik",
+        "arab": "بِخَيْرٍ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "Turki",
+        "arab": "تُرْكِيَا"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "warga negara Turki",
+        "arab": "تُرْكِيٌّ / تُرْكِيَّة"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "tiga",
+        "arab": "ثَلاَثَةٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "kewarganegaraan",
+        "arab": "جِنْسِيَّةٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "lima",
+        "arab": "خَمْسَةٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "Suriah",
+        "arab": "سُوْرِيَا"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "warga negara Suriah",
+        "arab": "سُوْرِيٌّ / سُوْرِيَّةٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "teman (lk)",
+        "arab": "صَدِيْقٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "teman (pr)",
+        "arab": "صَدِيْقَةٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "dokter",
+        "arab": "طَبِيْبٌ / طَبِيْبَةٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "siswa",
+        "arab": "طَالِبٌ (ج) طُلَّابٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "bagaimana keadaanmu?",
+        "arab": "كَيْفَ حَالُك؟"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "guru",
+        "arab": "مُدَرِّسٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "Mesir",
+        "arab": "مِصْر"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "warga negara Mesir",
+        "arab": "مِصْرِيٌّ / مِصْريّة"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "dari",
+        "arab": "مِنْ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "apa?",
+        "arab": "مَا؟"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "selamat tinggal",
+        "arab": "مَعَ السَّلَامَة"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "insinyur",
+        "arab": "مُهَنْدِسٌ / مُهَنْدِسَةٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "ya",
+        "arab": "نَعَمْ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "ini (lk)",
+        "arab": "هَذَا"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "apakah",
+        "arab": "هَلْ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "ini (pr)",
+        "arab": "هَذِهِ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "dia (lk) satu",
+        "arab": "هُوَ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "satu",
+        "arab": "وَاحِدٌ"
+    },
+    {
+        "jilid_bab": "1-1",
+        "indonesia": "dan semoga keselamatan atas kalian",
+        "arab": "وَعَلَيْكُمْ السَّلَام"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "anak (lk)",
+        "arab": "اِبْنٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "anak (pr)",
+        "arab": "اِبْنَةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "al qur'an",
+        "arab": "اَلْقُرْآن"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "ayah",
+        "arab": "أَبٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "ibu",
+        "arab": "أُمٌّ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "ke",
+        "arab": "إِلَى"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "keluarga",
+        "arab": "أُسْرَةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "adzan subuh",
+        "arab": "أَذَانُ الْفَجْرِ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "berwudhu",
+        "arab": "تَوَضَّأَ - يَتَوَضَّأُ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "sembilan",
+        "arab": "تِسْعَةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "delapan",
+        "arab": "ثَماَنِيَةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "kakek",
+        "arab": "جَدٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "nenek",
+        "arab": "جَدَّةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "kamar mandi",
+        "arab": "حَمَّامٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "utusan",
+        "arab": "رَسُوْلٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "tujuh",
+        "arab": "سَبْعَةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "enam",
+        "arab": "سِتَّةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "pohon",
+        "arab": "شَجَرَةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "gambar",
+        "arab": "صُوْرَةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "shalat (kk)",
+        "arab": "صَلَّى - يُصَلِّي"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "sepuluh",
+        "arab": "عَشَرَةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "paman",
+        "arab": "عَمٌّ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "bibi",
+        "arab": "عَمَّةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "kamar",
+        "arab": "غُرْفَةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "di dalam",
+        "arab": "فِي"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "membaca",
+        "arab": "قَرَأَ - يَقْرَأُ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "masjid",
+        "arab": "مَسْجِدٌ (ج) مَسَاجِدُ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "siapa?",
+        "arab": "مَن؟"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "guru (pr)",
+        "arab": "مُعَلِّمَةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "mantel",
+        "arab": "مِعْطَفٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "atas kehendak Allah",
+        "arab": "مَا شَاءَ الله"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "tempat shalat",
+        "arab": "مُصَلَّى"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "kacamata",
+        "arab": "نَظِّارَةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "ayah",
+        "arab": "وَالِدٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "ibu",
+        "arab": "وَالِدَةٌ"
+    },
+    {
+        "jilid_bab": "1-2",
+        "indonesia": "anak-anak",
+        "arab": "وَ لَدٌ (ج) أَوْلاَدٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "perabot rumah tangga",
+        "arab": "أَثَاثٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "hari senin",
+        "arab": "الاِثْنَيْنِ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "hari minggu",
+        "arab": "الأَحَدُ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "hari rabu",
+        "arab": "الأَرْبِعَاء"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "hari selasa",
+        "arab": "الثُّلَاثَاء"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "hari juma'at",
+        "arab": "الجُمُعَة"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "kelima",
+        "arab": "الخَامِسُ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "hari kamis",
+        "arab": "الخَمِيْس"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "ingin",
+        "arab": "أَرَادَ - يُرِيْدُ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "sofa",
+        "arab": "أَرِيْكَةٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "ada yang bisa dibantu",
+        "arab": "أَيَّ خِدْمَة؟"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "sebagian",
+        "arab": "بَعْضٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "rumah",
+        "arab": "بَيْتٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "silahkan masuk",
+        "arab": "تَفَضَّل اُدْخُلْ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "lemari es",
+        "arab": "ثَلَّاجَةٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "cantik",
+        "arab": "جَمِيْلَةٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "komplek perguruan tinggi",
+        "arab": "حَيُّ الْجَامِعَة"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "komplek bandara",
+        "arab": "حَيُّ Mَطَارِ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "lima",
+        "arab": "خَمْسَةٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "lantai; tingkat",
+        "arab": "دَوْرٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "nomor",
+        "arab": "رَقْمٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "permadani",
+        "arab": "سَجَّادَة"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "pemanas",
+        "arab": "سَخَّان"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "tinggal (kk)",
+        "arab": "سَكَنَ - يَسْكُن"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "gorden",
+        "arab": "سِتارَةٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "flat/apartemen",
+        "arab": "شَقَّةٌ (ج) شُقَقٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "ruang-ruang",
+        "arab": "غُرْفَةٌ (ج) غُرَفٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "ruang duduk (tamu)",
+        "arab": "غُرْفَةُ الجُلُوس"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "ruang tidur",
+        "arab": "غُرْفَةُ النَّوْم"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "kompor",
+        "arab": "فُرْنٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "berapa",
+        "arab": "كَم؟"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "untuk",
+        "arab": "لِ..."
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "tidak",
+        "arab": "لا"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "saya memiliki",
+        "arab": "لَدَيَّ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "kami memiliki",
+        "arab": "لَدَيْna"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "dapur",
+        "arab": "مَطْبَخٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "menyaksikan",
+        "arab": "مُشَاهَدَةٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "cermin",
+        "arab": "مِرْآةٌ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "mohon; permisi; tolong",
+        "arab": "مِنْ فَضْلِكَ"
+    },
+    {
+        "jilid_bab": "1-3",
+        "indonesia": "apa?",
+        "arab": "ماذا؟"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "bangun (tidur)",
+        "arab": "اِسْتَيْقَظَ - يَسْتَيْقِظُ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "fajar; subuh",
+        "arab": "اَلْفَجْرُ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "atau",
+        "arab": "أَوْ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "pertama (lk)",
+        "arab": "أَوَّلٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "juga",
+        "arab": "أَيْضًا"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "setelah; sesudah",
+        "arab": "بَعْدَ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "televisi",
+        "arab": "تِلْفَازٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "ketiga (lk)",
+        "arab": "ثَالِثٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "kedua (lk)",
+        "arab": "ثَانِي"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "bus",
+        "arab": "حَافِلَةٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "pergi; berangkat",
+        "arab": "ذَهَبَ - يَذْهَبُ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "keempat (lk)",
+        "arab": "رَابِعٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "ketujuh (lk)",
+        "arab": "سَابِعٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "jam; pukul",
+        "arab": "سَاعَةٌ (وَقْت)"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "mobil",
+        "arab": "سَيَّارَة"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "menyaksikan",
+        "arab": "شَاهَدَ - يُشَاهِدُ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "koran; surat kabar",
+        "arab": "صَحِيْفَةٌ (ج) صُحُفٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "pagi",
+        "arab": "صَبَاحٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "shalat",
+        "arab": "صَلَاةٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "nampan",
+        "arab": "طَبَقٌ (ج) أَطْبَاقٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "ketika",
+        "arab": "عِنْدَ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "mencuci",
+        "arab": "غَسَلَ - يَغْسِلُ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "melakukan",
+        "arab": "فعَل - يفعَل"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "besar",
+        "arab": "كَبِيرٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "buku",
+        "arab": "كِتَابٌ (ج) كُتُبٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "menyapu",
+        "arab": "كنَس - يكنُس"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "meyeterika",
+        "arab": "كوى - يكوِي"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "pakaian",
+        "arab": "مَلْبَسٌ (ج) مَلَابِسٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "pagi-pagi benar",
+        "arab": "مُبَكِّرا"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "terlambat",
+        "arab": "مُتَأَخِّرا"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "kapan?",
+        "arab": "مَتَى؟"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "sekolah",
+        "arab": "مَدْرَسَةٌ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "masjid",
+        "arab": "مَسْجِدٌ (ج) مَسَاجِدُ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "tidur",
+        "arab": "نام - يََنَامُ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "hari libur",
+        "arab": "يَوْمُ اْلعُطْلَةِ"
+    },
+    {
+        "jilid_bab": "1-4",
+        "indonesia": "hari kerja",
+        "arab": "يَوْمُ اْلعَمَلِ"
+    }
+]

@@ -1,0 +1,622 @@
+{
+    "Bab 1": [
+        {
+            "bahasa_indonesia": "dua",
+            "bahasa_arab": "إِثْنَانِ"
+        },
+        {
+            "bahasa_indonesia": "nama",
+            "bahasa_arab": "اِسْمٌ"
+        },
+        {
+            "bahasa_indonesia": "segala puji bagi Allah",
+            "bahasa_arab": "اَلْحَمْدُ لِلَّهِ"
+        },
+        {
+            "bahasa_indonesia": "semoga keselamatan atas kalian",
+            "bahasa_arab": "السَّلَامُ عَلَيْكُمْ"
+        },
+        {
+            "bahasa_indonesia": "saudara (lk)",
+            "bahasa_arab": "أَخٌ"
+        },
+        {
+            "bahasa_indonesia": "empat",
+            "bahasa_arab": "أَرْبَعَةٌ"
+        },
+        {
+            "bahasa_indonesia": "saya",
+            "bahasa_arab": "أَنَا"
+        },
+        {
+            "bahasa_indonesia": "selamat datang",
+            "bahasa_arab": "أَهْلاً وسَهْلاً"
+        },
+        {
+            "bahasa_indonesia": "di mana",
+            "bahasa_arab": "أَيْنَ"
+        },
+        {
+            "bahasa_indonesia": "saudara (pr)",
+            "bahasa_arab": "أُخْتٌ"
+        },
+        {
+            "bahasa_indonesia": "kamu (lk)",
+            "bahasa_arab": "أَنْتَ"
+        },
+        {
+            "bahasa_indonesia": "kamu (pr)",
+            "bahasa_arab": "أَنْتِ"
+        },
+        {
+            "bahasa_indonesia": "Pakistan",
+            "bahasa_arab": "بَاكِسْتَان"
+        },
+        {
+            "bahasa_indonesia": "warga negara Pakistan",
+            "bahasa_arab": "بَاكِسْتَانِيٌّ / بَاكِسْتَانِيَّة"
+        },
+        {
+            "bahasa_indonesia": "baik-baik",
+            "bahasa_arab": "بِخَيْرٍ"
+        },
+        {
+            "bahasa_indonesia": "Turki",
+            "bahasa_arab": "تُرْكِيَا"
+        },
+        {
+            "bahasa_indonesia": "warga negara Turki",
+            "bahasa_arab": "تُرْكِيٌّ / تُرْكِيَّة"
+        },
+        {
+            "bahasa_indonesia": "tiga",
+            "bahasa_arab": "ثَلاَثَةٌ"
+        },
+        {
+            "bahasa_indonesia": "kewarganegaraan",
+            "bahasa_arab": "جِنْسِيَّةٌ"
+        },
+        {
+            "bahasa_indonesia": "lima",
+            "bahasa_arab": "خَمْسَةٌ"
+        },
+        {
+            "bahasa_indonesia": "Suriah",
+            "bahasa_arab": "سُوْرِيَا"
+        },
+        {
+            "bahasa_indonesia": "warga negara Suriah",
+            "bahasa_arab": "سُوْرِيٌّ / سُوْرِيَّةٌ"
+        },
+        {
+            "bahasa_indonesia": "teman (lk)",
+            "bahasa_arab": "صَدِيْقٌ"
+        },
+        {
+            "bahasa_indonesia": "teman (pr)",
+            "bahasa_arab": "صَدِيْقَةٌ"
+        },
+        {
+            "bahasa_indonesia": "dokter",
+            "bahasa_arab": "طَبِيْبٌ / طَبِيْبَةٌ"
+        },
+        {
+            "bahasa_indonesia": "siswa",
+            "bahasa_arab": "طَالِبٌ (ج) طُلَّابٌ"
+        },
+        {
+            "bahasa_indonesia": "bagaimana keadaanmu?",
+            "bahasa_arab": "كَيْفَ حَالُك؟"
+        },
+        {
+            "bahasa_indonesia": "guru",
+            "bahasa_arab": "مُدَرِّسٌ"
+        },
+        {
+            "bahasa_indonesia": "Mesir",
+            "bahasa_arab": "مِصْر"
+        },
+        {
+            "bahasa_indonesia": "warga negara Mesir",
+            "bahasa_arab": "مِصْرِيٌّ / مِصْريّة"
+        },
+        {
+            "bahasa_indonesia": "dari",
+            "bahasa_arab": "مِنْ"
+        },
+        {
+            "bahasa_indonesia": "apa?",
+            "bahasa_arab": "مَا؟"
+        },
+        {
+            "bahasa_indonesia": "selamat tinggal",
+            "bahasa_arab": "مَعَ السَّلَامَة"
+        },
+        {
+            "bahasa_indonesia": "insinyur",
+            "bahasa_arab": "مُهَنْدِسٌ / مُهَنْدِسَةٌ"
+        },
+        {
+            "bahasa_indonesia": "ya",
+            "bahasa_arab": "نَعَمْ"
+        },
+        {
+            "bahasa_indonesia": "ini (lk)",
+            "bahasa_arab": "هَذَا"
+        },
+        {
+            "bahasa_indonesia": "apakah",
+            "bahasa_arab": "هَلْ"
+        },
+        {
+            "bahasa_indonesia": "ini (pr)",
+            "bahasa_arab": "هَذِهِ"
+        },
+        {
+            "bahasa_indonesia": "dia (lk) satu",
+            "bahasa_arab": "هُوَ"
+        },
+        {
+            "bahasa_indonesia": "satu",
+            "bahasa_arab": "وَاحِدٌ"
+        },
+        {
+            "bahasa_indonesia": "dan semoga keselamatan atas kalian",
+            "bahasa_arab": "وَعَلَيْكُمْ السَّلَام"
+        }
+    ],
+    "Bab 2": [
+        {
+            "bahasa_indonesia": "anak (lk)",
+            "bahasa_arab": "اِبْنٌ"
+        },
+        {
+            "bahasa_indonesia": "anak (pr)",
+            "bahasa_arab": "اِبْنَةٌ"
+        },
+        {
+            "bahasa_indonesia": "al qur'an",
+            "bahasa_arab": "اَلْقُرْآن"
+        },
+        {
+            "bahasa_indonesia": "ayah",
+            "bahasa_arab": "أَبٌ"
+        },
+        {
+            "bahasa_indonesia": "ibu",
+            "bahasa_arab": "أُمٌّ"
+        },
+        {
+            "bahasa_indonesia": "ke",
+            "bahasa_arab": "إِلَى"
+        },
+        {
+            "bahasa_indonesia": "keluarga",
+            "bahasa_arab": "أُسْرَةٌ"
+        },
+        {
+            "bahasa_indonesia": "adzan subuh",
+            "bahasa_arab": "أَذَانُ الْفَجْرِ"
+        },
+        {
+            "bahasa_indonesia": "berwudhu",
+            "bahasa_arab": "تَوَضَّأَ - يَتَوَضَّأُ"
+        },
+        {
+            "bahasa_indonesia": "sembilan",
+            "bahasa_arab": "تِسْعَةٌ"
+        },
+        {
+            "bahasa_indonesia": "delapan",
+            "bahasa_arab": "ثَماَنِيَةٌ"
+        },
+        {
+            "bahasa_indonesia": "kakek",
+            "bahasa_arab": "جَدٌّ"
+        },
+        {
+            "bahasa_indonesia": "nenek",
+            "bahasa_arab": "جَدَّةٌ"
+        },
+        {
+            "bahasa_indonesia": "kamar mandi",
+            "bahasa_arab": "حَمَّامٌ"
+        },
+        {
+            "bahasa_indonesia": "utusan",
+            "bahasa_arab": "رَسُوْلٌ"
+        },
+        {
+            "bahasa_indonesia": "tujuh",
+            "bahasa_arab": "سَبْعَةٌ"
+        },
+        {
+            "bahasa_indonesia": "enam",
+            "bahasa_arab": "سِتَّةٌ"
+        },
+        {
+            "bahasa_indonesia": "pohon",
+            "bahasa_arab": "شَجَرَةٌ"
+        },
+        {
+            "bahasa_indonesia": "gambar",
+            "bahasa_arab": "صُوْرَةٌ"
+        },
+        {
+            "bahasa_indonesia": "shalat (kk)",
+            "bahasa_arab": "صَلَّى - يُصَلِّي"
+        },
+        {
+            "bahasa_indonesia": "sepuluh",
+            "bahasa_arab": "عَشَرَةٌ"
+        },
+        {
+            "bahasa_indonesia": "paman",
+            "bahasa_arab": "عَمٌّ"
+        },
+        {
+            "bahasa_indonesia": "bibi",
+            "bahasa_arab": "عَمَّةٌ"
+        },
+        {
+            "bahasa_indonesia": "kamar",
+            "bahasa_arab": "غُرْفَةٌ"
+        },
+        {
+            "bahasa_indonesia": "di dalam",
+            "bahasa_arab": "فِي"
+        },
+        {
+            "bahasa_indonesia": "membaca",
+            "bahasa_arab": "قَرَأَ - يَقْرَأُ"
+        },
+        {
+            "bahasa_indonesia": "masjid",
+            "bahasa_arab": "مَسْجِدٌ (ج) مَسَاجِدُ"
+        },
+        {
+            "bahasa_indonesia": "siapa?",
+            "bahasa_arab": "مَن؟"
+        },
+        {
+            "bahasa_indonesia": "guru (pr)",
+            "bahasa_arab": "مُعَلِّمَةٌ"
+        },
+        {
+            "bahasa_indonesia": "mantel",
+            "bahasa_arab": "مِعْطَفٌ"
+        },
+        {
+            "bahasa_indonesia": "atas kehendak Allah",
+            "bahasa_arab": "مَا شَاءَ الله"
+        },
+        {
+            "bahasa_indonesia": "tempat shalat",
+            "bahasa_arab": "مُصَلَّى"
+        },
+        {
+            "bahasa_indonesia": "kacamata",
+            "bahasa_arab": "نَظِّارَةٌ"
+        },
+        {
+            "bahasa_indonesia": "ayah",
+            "bahasa_arab": "وَالِدٌ"
+        },
+        {
+            "bahasa_indonesia": "ibu",
+            "bahasa_arab": "وَالِدَةٌ"
+        },
+        {
+            "bahasa_indonesia": "anak-anak",
+            "bahasa_arab": "وَلَدٌ (ج) أَوْلاَدٌ"
+        }
+    ],
+    "Bab 3": [
+        {
+            "bahasa_indonesia": "perabot rumah tangga",
+            "bahasa_arab": "أَثَاثٌ"
+        },
+        {
+            "bahasa_indonesia": "hari senin",
+            "bahasa_arab": "الاِثْنَيْنِ"
+        },
+        {
+            "bahasa_indonesia": "hari minggu",
+            "bahasa_arab": "الأَحَدُ"
+        },
+        {
+            "bahasa_indonesia": "hari rabu",
+            "bahasa_arab": "الأَرْبِعَاء"
+        },
+        {
+            "bahasa_indonesia": "hari selasa",
+            "bahasa_arab": "الثُّلَاثَاء"
+        },
+        {
+            "bahasa_indonesia": "hari juma'at",
+            "bahasa_arab": "الجُمُعَة"
+        },
+        {
+            "bahasa_indonesia": "kelima",
+            "bahasa_arab": "الخَامِسُ"
+        },
+        {
+            "bahasa_indonesia": "hari kamis",
+            "bahasa_arab": "الخَمِيْس"
+        },
+        {
+            "bahasa_indonesia": "ingin",
+            "bahasa_arab": "أَرَادَ - يُرِيْدُ"
+        },
+        {
+            "bahasa_indonesia": "sofa",
+            "bahasa_arab": "أَرِيْكَةٌ"
+        },
+        {
+            "bahasa_indonesia": "ada yang bisa dibantu",
+            "bahasa_arab": "أَيَّ خِدْمَة؟"
+        },
+        {
+            "bahasa_indonesia": "sebagian",
+            "bahasa_arab": "بَعْضٌ"
+        },
+        {
+            "bahasa_indonesia": "rumah",
+            "bahasa_arab": "بَيْتٌ"
+        },
+        {
+            "bahasa_indonesia": "silahkan masuk",
+            "bahasa_arab": "تَفَضَّل اُدْخُلْ"
+        },
+        {
+            "bahasa_indonesia": "lemari es",
+            "bahasa_arab": "ثَلَّاجَةٌ"
+        },
+        {
+            "bahasa_indonesia": "cantik",
+            "bahasa_arab": "جَمِيْلَةٌ"
+        },
+        {
+            "bahasa_indonesia": "komplek perguruan tinggi",
+            "bahasa_arab": "حَيُّ الْجَامِعَة"
+        },
+        {
+            "bahasa_indonesia": "komplek bandara",
+            "bahasa_arab": "حَيُّ المَطَارِ"
+        },
+        {
+            "bahasa_indonesia": "lima",
+            "bahasa_arab": "خَمْسَةٌ"
+        },
+        {
+            "bahasa_indonesia": "lantai; tingkat",
+            "bahasa_arab": "دَوْرٌ"
+        },
+        {
+            "bahasa_indonesia": "nomor",
+            "bahasa_arab": "رَقْمٌ"
+        },
+        {
+            "bahasa_indonesia": "permadani",
+            "bahasa_arab": "سَجَّادَة"
+        },
+        {
+            "bahasa_indonesia": "pemanas",
+            "bahasa_arab": "سَخَّان"
+        },
+        {
+            "bahasa_indonesia": "tinggal (kk)",
+            "bahasa_arab": "سَكَنَ - يَسْكُن"
+        },
+        {
+            "bahasa_indonesia": "gorden",
+            "bahasa_arab": "سِتارَةٌ"
+        },
+        {
+            "bahasa_indonesia": "flat/apartemen",
+            "bahasa_arab": "شَقَّةٌ (ج) شُقَقٌ"
+        },
+        {
+            "bahasa_indonesia": "ruang-ruang",
+            "bahasa_arab": "غُرْفَةٌ (ج) غُرَفٌ"
+        },
+        {
+            "bahasa_indonesia": "ruang duduk (tamu)",
+            "bahasa_arab": "غُرْفَةُ الجُلُوس"
+        },
+        {
+            "bahasa_indonesia": "ruang tidur",
+            "bahasa_arab": "غُرْفَةُ النَّوْم"
+        },
+        {
+            "bahasa_indonesia": "kompor",
+            "bahasa_arab": "فُرْنٌ"
+        },
+        {
+            "bahasa_indonesia": "berapa",
+            "bahasa_arab": "كَم؟"
+        },
+        {
+            "bahasa_indonesia": "untuk",
+            "bahasa_arab": "لِ..."
+        },
+        {
+            "bahasa_indonesia": "tidak",
+            "bahasa_arab": "لا"
+        },
+        {
+            "bahasa_indonesia": "saya memiliki",
+            "bahasa_arab": "لَدَيَّ"
+        },
+        {
+            "bahasa_indonesia": "kami memiliki",
+            "bahasa_arab": "لَدَيْنا"
+        },
+        {
+            "bahasa_indonesia": "dapur",
+            "bahasa_arab": "مَطْبَخٌ"
+        },
+        {
+            "bahasa_indonesia": "menyaksikan",
+            "bahasa_arab": "مُشَاهَدَةٌ"
+        },
+        {
+            "bahasa_indonesia": "cermin",
+            "bahasa_arab": "مِرْآةٌ"
+        },
+        {
+            "bahasa_indonesia": "mohon; permisi; tolong",
+            "bahasa_arab": "مِنْ فَضْلِكَ"
+        },
+        {
+            "bahasa_indonesia": "apa?",
+            "bahasa_arab": "ماذا؟"
+        }
+    ],
+    "Bab 4": [
+        {
+            "bahasa_indonesia": "bangun (tidur)",
+            "bahasa_arab": "اِسْتَيْقَظَ - يَسْتَيْقِظُ"
+        },
+        {
+            "bahasa_indonesia": "fajar; subuh",
+            "bahasa_arab": "اَلْفَجْرُ"
+        },
+        {
+            "bahasa_indonesia": "atau",
+            "bahasa_arab": "أَوْ"
+        },
+        {
+            "bahasa_indonesia": "pertama (lk)",
+            "bahasa_arab": "أَوَّلٌ"
+        },
+        {
+            "bahasa_indonesia": "juga",
+            "bahasa_arab": "أَيْضًا"
+        },
+        {
+            "bahasa_indonesia": "setelah; sesudah",
+            "bahasa_arab": "بَعْدَ"
+        },
+        {
+            "bahasa_indonesia": "televisi",
+            "bahasa_arab": "تِلْفَازٌ"
+        },
+        {
+            "bahasa_indonesia": "ketiga (lk)",
+            "bahasa_arab": "ثَالِثٌ"
+        },
+        {
+            "bahasa_indonesia": "kedua (lk)",
+            "bahasa_arab": "ثَانِي"
+        },
+        {
+            "bahasa_indonesia": "bus",
+            "bahasa_arab": "حَافِلَةٌ"
+        },
+        {
+            "bahasa_indonesia": "pergi; berangkat",
+            "bahasa_arab": "ذَهَبَ - يَذْهَبُ"
+        },
+        {
+            "bahasa_indonesia": "keempat (lk)",
+            "bahasa_arab": "رَابِعٌ"
+        },
+        {
+            "bahasa_indonesia": "ketujuh (lk)",
+            "bahasa_arab": "سَابِعٌ"
+        },
+        {
+            "bahasa_indonesia": "jam; pukul",
+            "bahasa_arab": "سَاعَةٌ (وَقْت)"
+        },
+        {
+            "bahasa_indonesia": "mobil",
+            "bahasa_arab": "سَيَّارَة"
+        },
+        {
+            "bahasa_indonesia": "menyaksikan",
+            "bahasa_arab": "شَاهَدَ - يُشَاهِدُ"
+        },
+        {
+            "bahasa_indonesia": "koran; surat kabar",
+            "bahasa_arab": "صَحِيْفَةٌ (ج) صُحُفٌ"
+        },
+        {
+            "bahasa_indonesia": "pagi",
+            "bahasa_arab": "صَبَاحٌ"
+        },
+        {
+            "bahasa_indonesia": "shalat",
+            "bahasa_arab": "صَلَاةٌ"
+        },
+        {
+            "bahasa_indonesia": "nampan",
+            "bahasa_arab": "طَبَقٌ (ج) أَطْبَاقٌ"
+        },
+        {
+            "bahasa_indonesia": "ketika",
+            "bahasa_arab": "عِنْدَ"
+        },
+        {
+            "bahasa_indonesia": "mencuci",
+            "bahasa_arab": "غَسَلَ - يَغْسِلُ"
+        },
+        {
+            "bahasa_indonesia": "melakukan",
+            "bahasa_arab": "فعَل - يفعَل"
+        },
+        {
+            "bahasa_indonesia": "besar",
+            "bahasa_arab": "كَبِيرٌ"
+        },
+        {
+            "bahasa_indonesia": "buku",
+            "bahasa_arab": "كِتَابٌ (ج) كُتُبٌ"
+        },
+        {
+            "bahasa_indonesia": "menyapu",
+            "bahasa_arab": "كنَس - يكنُس"
+        },
+        {
+            "bahasa_indonesia": "meyeterika",
+            "bahasa_arab": "كوى - يكوِي"
+        },
+        {
+            "bahasa_indonesia": "pakaian",
+            "bahasa_arab": "مَلْبَسٌ (ج) مَلَابِسٌ"
+        },
+        {
+            "bahasa_indonesia": "pagi-pagi benar",
+            "bahasa_arab": "مُبَكِّرا"
+        },
+        {
+            "bahasa_indonesia": "terlambat",
+            "bahasa_arab": "مُتَأَخِّرا"
+        },
+        {
+            "bahasa_indonesia": "kapan?",
+            "bahasa_arab": "مَتَى؟"
+        },
+        {
+            "bahasa_indonesia": "sekolah",
+            "bahasa_arab": "مَدْرَسَةٌ"
+        },
+        {
+            "bahasa_indonesia": "masjid",
+            "bahasa_arab": "مَسْجِدٌ (ج) مَسَاجِدُ"
+        },
+        {
+            "bahasa_indonesia": "tidur",
+            "bahasa_arab": "نام - يََنَامُ"
+        },
+        {
+            "bahasa_indonesia": "hari libur",
+            "bahasa_arab": "يَوْمُ اْلعُطْلَةِ"
+        },
+        {
+            "bahasa_indonesia": "hari kerja",
+            "bahasa_arab": "يَوْمُ اْلعَمَلِ"
+        }
+    ]
+}

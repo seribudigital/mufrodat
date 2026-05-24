@@ -1,0 +1,594 @@
+{
+    "Bab 5": [
+        {
+            "bahasa_indonesia": "yang pertama (pr)",
+            "bahasa_arab": "أُوْلىَ"
+        },
+        {
+            "bahasa_indonesia": "nasi",
+            "bahasa_arab": "أَرُزٌّ"
+        },
+        {
+            "bahasa_indonesia": "makan (kk)",
+            "bahasa_arab": "أَكَلَ - يَأْكُلُ"
+        },
+        {
+            "bahasa_indonesia": "suami",
+            "bahasa_arab": "الزوج"
+        },
+        {
+            "bahasa_indonesia": "istri",
+            "bahasa_arab": "الزوجة"
+        },
+        {
+            "bahasa_indonesia": "pramugari",
+            "bahasa_arab": "المضيفة"
+        },
+        {
+            "bahasa_indonesia": "musafir",
+            "bahasa_arab": "المسافرة"
+        },
+        {
+            "bahasa_indonesia": "kurma",
+            "bahasa_arab": "تمر"
+        },
+        {
+            "bahasa_indonesia": "ketiga (pr)",
+            "bahasa_arab": "ثالثة"
+        },
+        {
+            "bahasa_indonesia": "kedua (pr)",
+            "bahasa_arab": "ثانية"
+        },
+        {
+            "bahasa_indonesia": "sangat",
+            "bahasa_arab": "جدا"
+        },
+        {
+            "bahasa_indonesia": "lapar",
+            "bahasa_arab": "جوعان"
+        },
+        {
+            "bahasa_indonesia": "susu",
+            "bahasa_arab": "حليب"
+        },
+        {
+            "bahasa_indonesia": "roti",
+            "bahasa_arab": "خُبز"
+        },
+        {
+            "bahasa_indonesia": "kelima (pr)",
+            "bahasa_arab": "خامسة"
+        },
+        {
+            "bahasa_indonesia": "ayam",
+            "bahasa_arab": "دجاج"
+        },
+        {
+            "bahasa_indonesia": "keempat (pr)",
+            "bahasa_arab": "رابعة"
+        },
+        {
+            "bahasa_indonesia": "enam puluh",
+            "bahasa_arab": "ستون"
+        },
+        {
+            "bahasa_indonesia": "lalapan; salad",
+            "bahasa_arab": "سلطة"
+        },
+        {
+            "bahasa_indonesia": "ikan",
+            "bahasa_arab": "سمك"
+        },
+        {
+            "bahasa_indonesia": "gemuk",
+            "bahasa_arab": "سمين"
+        },
+        {
+            "bahasa_indonesia": "teh",
+            "bahasa_arab": "شايّ"
+        },
+        {
+            "bahasa_indonesia": "minum",
+            "bahasa_arab": "شراب - يشرب"
+        },
+        {
+            "bahasa_indonesia": "minuman",
+            "bahasa_arab": "شراب"
+        },
+        {
+            "bahasa_indonesia": "terima kasih",
+            "bahasa_arab": "شكرا"
+        },
+        {
+            "bahasa_indonesia": "tamu",
+            "bahasa_arab": "ضَيْفٌ (ج) ضُيُوْفٌ"
+        },
+        {
+            "bahasa_indonesia": "makanan",
+            "bahasa_arab": "طعام"
+        },
+        {
+            "bahasa_indonesia": "meminta; memohon",
+            "bahasa_arab": "طلب - يطلُب"
+        },
+        {
+            "bahasa_indonesia": "makan malam",
+            "bahasa_arab": "عَشاء"
+        },
+        {
+            "bahasa_indonesia": "anggur",
+            "bahasa_arab": "عِنب"
+        },
+        {
+            "bahasa_indonesia": "terima kasih kembali",
+            "bahasa_arab": "عفوا"
+        },
+        {
+            "bahasa_indonesia": "di atas",
+            "bahasa_arab": "على"
+        },
+        {
+            "bahasa_indonesia": "makan siang",
+            "bahasa_arab": "غداء"
+        },
+        {
+            "bahasa_indonesia": "buah",
+            "bahasa_arab": "فَاكِهَةٌ (ج) فَوَاكِهُ"
+        },
+        {
+            "bahasa_indonesia": "sarapan",
+            "bahasa_arab": "فَطور"
+        },
+        {
+            "bahasa_indonesia": "lebih menyukai",
+            "bahasa_arab": "فضّل - يُفضِّل"
+        },
+        {
+            "bahasa_indonesia": "sedikit",
+            "bahasa_arab": "قليل"
+        },
+        {
+            "bahasa_indonesia": "kopi",
+            "bahasa_arab": "قهوة"
+        },
+        {
+            "bahasa_indonesia": "banyak",
+            "bahasa_arab": "كثير"
+        },
+        {
+            "bahasa_indonesia": "kilo",
+            "bahasa_arab": "كيل"
+        },
+        {
+            "bahasa_indonesia": "daging",
+            "bahasa_arab": "لَحْمُ (ج) لُحُوْمٌ"
+        },
+        {
+            "bahasa_indonesia": "jangan",
+            "bahasa_arab": "لا (الناهية)"
+        },
+        {
+            "bahasa_indonesia": "mengapa?",
+            "bahasa_arab": "لماذا؟"
+        },
+        {
+            "bahasa_indonesia": "air",
+            "bahasa_arab": "ماء"
+        },
+        {
+            "bahasa_indonesia": "meja makan",
+            "bahasa_arab": "مائدة"
+        },
+        {
+            "bahasa_indonesia": "seratus",
+            "bahasa_arab": "مئة"
+        },
+        {
+            "bahasa_indonesia": "kurus",
+            "bahasa_arab": "نحيف"
+        },
+        {
+            "bahasa_indonesia": "porsi",
+            "bahasa_arab": "وَجْبَةٌ (ج) وَجَبَاتٌ"
+        },
+        {
+            "bahasa_indonesia": "satu (pr)",
+            "bahasa_arab": "واحدة"
+        }
+    ],
+    "Bab 6": [
+        {
+            "bahasa_indonesia": "bisa; mampu",
+            "bahasa_arab": "اِستطاع - يَستَطِيع"
+        },
+        {
+            "bahasa_indonesia": "menunggu",
+            "bahasa_arab": "اِنتَظَر - يَنتَظر"
+        },
+        {
+            "bahasa_indonesia": "malam",
+            "bahasa_arab": "اللّيل"
+        },
+        {
+            "bahasa_indonesia": "kota madinah",
+            "bahasa_arab": "المدينة"
+        },
+        {
+            "bahasa_indonesia": "masjidil haram",
+            "bahasa_arab": "المسجد الحرام"
+        },
+        {
+            "bahasa_indonesia": "masjid nabawi",
+            "bahasa_arab": "المسجد النّبويّ"
+        },
+        {
+            "bahasa_indonesia": "jam weker",
+            "bahasa_arab": "المنبِّه"
+        },
+        {
+            "bahasa_indonesia": "jika Allah menghendaki",
+            "bahasa_arab": "إن شاء الله"
+        },
+        {
+            "bahasa_indonesia": "maaf; sayang sekali",
+            "bahasa_arab": "آسِف"
+        },
+        {
+            "bahasa_indonesia": "di sampingmu",
+            "bahasa_arab": "بجانبك"
+        },
+        {
+            "bahasa_indonesia": "jauh",
+            "bahasa_arab": "بعيدٌ"
+        },
+        {
+            "bahasa_indonesia": "kesembilan (lk)",
+            "bahasa_arab": "تاسع"
+        },
+        {
+            "bahasa_indonesia": "kedelapan (lk)",
+            "bahasa_arab": "ثامن"
+        },
+        {
+            "bahasa_indonesia": "semoga Allah membalasmu dengan kebaikan (yang lebih baik)",
+            "bahasa_arab": "جزاك الله خيرا"
+        },
+        {
+            "bahasa_indonesia": "pergi",
+            "bahasa_arab": "ذاهبٌ"
+        },
+        {
+            "bahasa_indonesia": "ketujuh (lk)",
+            "bahasa_arab": "سابع"
+        },
+        {
+            "bahasa_indonesia": "keenam (lk)",
+            "bahasa_arab": "سادس"
+        },
+        {
+            "bahasa_indonesia": "mendengar",
+            "bahasa_arab": "سمِع - يسمَع"
+        },
+        {
+            "bahasa_indonesia": "benar",
+            "bahasa_arab": "صحيح"
+        },
+        {
+            "bahasa_indonesia": "shalat (kb)",
+            "bahasa_arab": "صلاة (ج) صلوات"
+        },
+        {
+            "bahasa_indonesia": "dzuhur",
+            "bahasa_arab": "ظهرا"
+        },
+        {
+            "bahasa_indonesia": "isya'",
+            "bahasa_arab": "عِشاء"
+        },
+        {
+            "bahasa_indonesia": "kesepuluh (lk)",
+            "bahasa_arab": "عاشر"
+        },
+        {
+            "bahasa_indonesia": "ashar",
+            "bahasa_arab": "عصر"
+        },
+        {
+            "bahasa_indonesia": "bekerja",
+            "bahasa_arab": "عمِل - يعمَل"
+        },
+        {
+            "bahasa_indonesia": "ide yang bagus",
+            "bahasa_arab": "فكرة طيّبة"
+        },
+        {
+            "bahasa_indonesia": "dekat",
+            "bahasa_arab": "قريب"
+        },
+        {
+            "bahasa_indonesia": "malas",
+            "bahasa_arab": "كسلان"
+        },
+        {
+            "bahasa_indonesia": "orang sakit",
+            "bahasa_arab": "مَرِيْضٌ (ج) مَرْضى"
+        },
+        {
+            "bahasa_indonesia": "orang yang bepergian",
+            "bahasa_arab": "مسافر"
+        },
+        {
+            "bahasa_indonesia": "bersama dengan",
+            "bahasa_arab": "مع"
+        },
+        {
+            "bahasa_indonesia": "maghrib",
+            "bahasa_arab": "مغرب"
+        },
+        {
+            "bahasa_indonesia": "kota makkah",
+            "bahasa_arab": "مكّة"
+        },
+        {
+            "bahasa_indonesia": "meletakkan",
+            "bahasa_arab": "وَضَعَ - يَضَعُ"
+        }
+    ],
+    "Bab 7": [
+        {
+            "bahasa_indonesia": "ujian",
+            "bahasa_arab": "اِختبارٌ"
+        },
+        {
+            "bahasa_indonesia": "istirahat",
+            "bahasa_arab": "اِستراحة"
+        },
+        {
+            "bahasa_indonesia": "selesai",
+            "bahasa_arab": "اِنتهى - يَنْتَهِى"
+        },
+        {
+            "bahasa_indonesia": "sekarang",
+            "bahasa_arab": "الآنَ"
+        },
+        {
+            "bahasa_indonesia": "bahasa arab",
+            "bahasa_arab": "اللغة العربيّة"
+        },
+        {
+            "bahasa_indonesia": "minggu",
+            "bahasa_arab": "أُسْبُوْعٌ (ج) أسَابِيْعُ"
+        },
+        {
+            "bahasa_indonesia": "mulai",
+            "bahasa_arab": "بدأ - يبدأ"
+        },
+        {
+            "bahasa_indonesia": "kesembilan (pr)",
+            "bahasa_arab": "تاسعة"
+        },
+        {
+            "bahasa_indonesia": "kedelapan (pr)",
+            "bahasa_arab": "ثامنة"
+        },
+        {
+            "bahasa_indonesia": "kebudayaan islam",
+            "bahasa_arab": "ثقافة إسلاميّة"
+        },
+        {
+            "bahasa_indonesia": "universitas",
+            "bahasa_arab": "جامعة"
+        },
+        {
+            "bahasa_indonesia": "jadwal pelajaran",
+            "bahasa_arab": "جدول دراسي"
+        },
+        {
+            "bahasa_indonesia": "jam pelajaran",
+            "bahasa_arab": "حَصَّةٌ (ج) حَصَصٌ"
+        },
+        {
+            "bahasa_indonesia": "komputer",
+            "bahasa_arab": "حاسوب"
+        },
+        {
+            "bahasa_indonesia": "belajar",
+            "bahasa_arab": "درس - يدْرس"
+        },
+        {
+            "bahasa_indonesia": "studi; kajian",
+            "bahasa_arab": "دراسة"
+        },
+        {
+            "bahasa_indonesia": "bulan ramadhan",
+            "bahasa_arab": "رمضان"
+        },
+        {
+            "bahasa_indonesia": "matematika",
+            "bahasa_arab": "رياضيّات"
+        },
+        {
+            "bahasa_indonesia": "keenam (pr)",
+            "bahasa_arab": "سادسة"
+        },
+        {
+            "bahasa_indonesia": "bulan",
+            "bahasa_arab": "شَهْرٌ (ج) أَشْهُرٌ"
+        },
+        {
+            "bahasa_indonesia": "bulan sya'ban",
+            "bahasa_arab": "شعبان"
+        },
+        {
+            "bahasa_indonesia": "kelas",
+            "bahasa_arab": "صفّ"
+        },
+        {
+            "bahasa_indonesia": "panjang; lama",
+            "bahasa_arab": "طويل"
+        },
+        {
+            "bahasa_indonesia": "kesepuluh",
+            "bahasa_arab": "عاشرة"
+        },
+        {
+            "bahasa_indonesia": "tahun ajaran",
+            "bahasa_arab": "عام دراسي"
+        },
+        {
+            "bahasa_indonesia": "sains",
+            "bahasa_arab": "علوم"
+        },
+        {
+            "bahasa_indonesia": "menjadi",
+            "bahasa_arab": "كان - يكوْن"
+        },
+        {
+            "bahasa_indonesia": "menulis",
+            "bahasa_arab": "كتَب - يكتُب"
+        },
+        {
+            "bahasa_indonesia": "fakultas",
+            "bahasa_arab": "كليّةٌ"
+        },
+        {
+            "bahasa_indonesia": "fakultas pendidikan",
+            "bahasa_arab": "كليّة التّربية"
+        },
+        {
+            "bahasa_indonesia": "fakultas kedokteran",
+            "bahasa_arab": "كليّة الطبّ"
+        },
+        {
+            "bahasa_indonesia": "papan pengumuman",
+            "bahasa_arab": "لوحة"
+        },
+        {
+            "bahasa_indonesia": "mata pelajaran",
+            "bahasa_arab": "مَوَادٌّ دِرَاسِيَّةٌ"
+        },
+        {
+            "bahasa_indonesia": "laboratorium",
+            "bahasa_arab": "مُختَبَر"
+        },
+        {
+            "bahasa_indonesia": "perpustakaan",
+            "bahasa_arab": "مكتبَةٌ"
+        },
+        {
+            "bahasa_indonesia": "melihat",
+            "bahasa_arab": "نَظَر - يَنْظُرُ"
+        },
+        {
+            "bahasa_indonesia": "waktu",
+            "bahasa_arab": "وقتٌ (ج) أَوْقَاتٌ"
+        },
+        {
+            "bahasa_indonesia": "hari",
+            "bahasa_arab": "يَوْمٌ (ج) أيَّامٌ"
+        },
+        {
+            "bahasa_indonesia": "hari masuk sekolah",
+            "bahasa_arab": "يوم دراسيّ"
+        }
+    ],
+    "Bab 8": [
+        {
+            "bahasa_indonesia": "mencintai",
+            "bahasa_arab": "أَحَبَّ - يُحِبُّ"
+        },
+        {
+            "bahasa_indonesia": "pendidikan",
+            "bahasa_arab": "تربية"
+        },
+        {
+            "bahasa_indonesia": "keperawatan",
+            "bahasa_arab": "تمريض"
+        },
+        {
+            "bahasa_indonesia": "keduabelas",
+            "bahasa_arab": "ثانية عشرة"
+        },
+        {
+            "bahasa_indonesia": "kesebelas",
+            "bahasa_arab": "حادية عشرة"
+        },
+        {
+            "bahasa_indonesia": "mengajar",
+            "bahasa_arab": "درَّس - يُدَرَّس"
+        },
+        {
+            "bahasa_indonesia": "jam (kb)",
+            "bahasa_arab": "سَاعَةٌ"
+        },
+        {
+            "bahasa_indonesia": "perusahaan",
+            "bahasa_arab": "شركة"
+        },
+        {
+            "bahasa_indonesia": "farmasi",
+            "bahasa_arab": "صيدَلَة"
+        },
+        {
+            "bahasa_indonesia": "apoteker",
+            "bahasa_arab": "صيدليٌّ"
+        },
+        {
+            "bahasa_indonesia": "anak; bayi",
+            "bahasa_arab": "طِفْلٌ (ج) أَطْفَالٌ"
+        },
+        {
+            "bahasa_indonesia": "kedokteran",
+            "bahasa_arab": "طبّ"
+        },
+        {
+            "bahasa_indonesia": "penerbangan",
+            "bahasa_arab": "طيَرَان"
+        },
+        {
+            "bahasa_indonesia": "fakultas keperawatan",
+            "bahasa_arab": "كليّة التمريض"
+        },
+        {
+            "bahasa_indonesia": "fakultas farmasi",
+            "bahasa_arab": "كليّة الصيدلة"
+        },
+        {
+            "bahasa_indonesia": "fakultas penerbangan",
+            "bahasa_arab": "كليّة الطيران"
+        },
+        {
+            "bahasa_indonesia": "fakultas teknik",
+            "bahasa_arab": "كليّة الهندسة"
+        },
+        {
+            "bahasa_indonesia": "perawat",
+            "bahasa_arab": "مُمَرِّضٌ"
+        },
+        {
+            "bahasa_indonesia": "profesi",
+            "bahasa_arab": "مِهْنَةٌ (ج) مِهَنٌ"
+        },
+        {
+            "bahasa_indonesia": "tahap; tingkat",
+            "bahasa_arab": "مرحلة"
+        },
+        {
+            "bahasa_indonesia": "tingkat dasar",
+            "bahasa_arab": "مرحلة اِبتدائيّة"
+        },
+        {
+            "bahasa_indonesia": "tingkat menengah",
+            "bahasa_arab": "مرحلة متوسّطة"
+        },
+        {
+            "bahasa_indonesia": "rumah sakit",
+            "bahasa_arab": "مستشفى"
+        },
+        {
+            "bahasa_indonesia": "teknik, ilmu teknik",
+            "bahasa_arab": "هندسة"
+        }
+    ]
+}

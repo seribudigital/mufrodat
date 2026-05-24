@@ -1,7 +1,7 @@
 import type { MufrodatItem, QuizQuestion } from '../types';
 
 // Dynamically import all part JSON files from the assets folder.
-const modules = import.meta.glob<{ default: MufrodatItem[] }>('../assets/data/jilid*/*.json');
+const modules = import.meta.glob<{ default: any }>('../assets/data/jilid*/*.json');
 
 export const loadLevelDataset = async (jilid: number, level: number): Promise<MufrodatItem[]> => {
   let allData: MufrodatItem[] = [];
@@ -20,7 +20,20 @@ export const loadLevelDataset = async (jilid: number, level: number): Promise<Mu
     4: ['part7.json', 'part8.json'],
   };
 
-  const levelMap = jilid === 2 ? levelMapJilid2 : levelMapJilid1;
+  const levelMapJilid3: Record<number, string[]> = {
+    1: ['aby_jilid_1_bab_1_4.json'],
+    2: ['aby_jilid_1_bab_5_8.json'],
+    3: ['aby_jilid_1_bab_9_12.json'],
+    4: ['aby_jilid_1_bab_13_16.json'],
+  };
+
+  let levelMap = levelMapJilid1;
+  if (jilid === 2) {
+    levelMap = levelMapJilid2;
+  } else if (jilid === 3) {
+    levelMap = levelMapJilid3;
+  }
+
   const allowedParts = levelMap[level] || levelMap[4];
 
   for (const path in modules) {
@@ -28,7 +41,26 @@ export const loadLevelDataset = async (jilid: number, level: number): Promise<Mu
     const fileName = path.split('/').pop() || '';
     if (isTargetJilid && allowedParts.includes(fileName)) {
       const mod = await modules[path]();
-      allData = allData.concat(mod.default);
+      if (jilid === 3) {
+        const rawData = mod.default as Record<string, Array<{ bahasa_indonesia: string; bahasa_arab: string }>>;
+        let counter = allData.length + 1;
+        for (const babName in rawData) {
+          const babNumber = parseInt(babName.replace(/\D/g, '')) || 1;
+          const items = rawData[babName];
+          for (const item of items) {
+            allData.push({
+              no: counter++,
+              arab: item.bahasa_arab,
+              indonesia: item.bahasa_indonesia,
+              dars: babNumber,
+              kategori_1: babName,
+              kategori_2: 'mufrad',
+            });
+          }
+        }
+      } else {
+        allData = allData.concat(mod.default);
+      }
     }
   }
   

@@ -67,8 +67,9 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({ onSelect, onViewHistory, 
         {/* Jilid Selector */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
           {[1, 2, 3, 4].map(jilid => {
-            const isAvailable = jilid === 1 || jilid === 2;
+            const isAvailable = jilid === 1 || jilid === 2 || jilid === 3;
             const isActive = currentJilid === jilid;
+            const label = jilid === 3 ? "Aby Jilid 1" : `Jilid ${jilid}`;
             
             return (
               <button
@@ -89,7 +90,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({ onSelect, onViewHistory, 
                   fontSize: '0.85rem'
                 }}
               >
-                Jilid {jilid}
+                {label}
                 {!isAvailable && (
                   <span style={{
                     position: 'absolute',
@@ -134,6 +135,11 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({ onSelect, onViewHistory, 
             { level: 2, title: 'Level 2', description: 'Kosakata 302 - 592 (Part 3-4)', isAvailable: true },
             { level: 3, title: 'Level 3', description: 'Kosakata 593 - 898 (Part 5-6)', isAvailable: true },
             { level: 4, title: 'Level 4 (Final)', description: 'Kosakata 899 - 1208 (Part 7-8)', isAvailable: true, isFinal: true },
+          ] : currentJilid === 3 ? [
+            { level: 1, title: 'Level 1', description: 'Kosakata Bab 1 - 4 (203 kata)', isAvailable: true },
+            { level: 2, title: 'Level 2', description: 'Kosakata Bab 5 - 8 (98 kata)', isAvailable: true },
+            { level: 3, title: 'Level 3', description: 'Kosakata Bab 9 - 12 (94 kata)', isAvailable: true },
+            { level: 4, title: 'Level 4 (Final)', description: 'Kosakata Bab 13 - 16 (104 kata)', isAvailable: true, isFinal: true },
           ] : [
             { level: 1, title: 'Level 1', description: 'Kosakata 1 - 110 (Part 1-2)', isAvailable: true },
             { level: 2, title: 'Level 2', description: 'Kosakata 1 - 219 (Part 1-4)', isAvailable: true },
