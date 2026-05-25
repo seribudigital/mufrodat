@@ -8,6 +8,28 @@ interface MateriViewerProps {
 }
 
 const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level }) => {
+  interface UnitGroup {
+    unitName: string;
+    description: string;
+    items: MufrodatItem[];
+  }
+
+  const hasUnits = dataset.length > 0 && !!dataset[0].unit;
+  
+  const unitGroups: UnitGroup[] = [];
+  if (hasUnits) {
+    dataset.forEach(item => {
+      const uName = item.unit || 'Lainnya';
+      const uDesc = item.unitDescription || '';
+      let group = unitGroups.find(g => g.unitName === uName);
+      if (!group) {
+        group = { unitName: uName, description: uDesc, items: [] };
+        unitGroups.push(group);
+      }
+      group.items.push(item);
+    });
+  }
+
   return (
     <div className="fade-in islamic-bg" style={{
       display: 'flex',
@@ -50,35 +72,93 @@ const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level }) =
 
       <div className="islamic-divider"><div className="islamic-divider-icon"></div></div>
 
-
-      <div className="card" style={{ padding: '0', overflow: 'hidden' }}>
-        <div style={{ 
-          maxHeight: '60vh', 
-          overflowY: 'auto',
-          padding: '0.5rem'
-        }}>
-          {dataset.map((item, index) => (
-            <div 
-              key={index} 
-              style={{ 
-                display: 'flex', 
-                justifyContent: 'space-between', 
+      {hasUnits ? (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          {unitGroups.map((group, groupIdx) => (
+            <div key={groupIdx} className="card" style={{ padding: '1.5rem' }}>
+              <h3 style={{ 
+                color: 'var(--primary-color)', 
+                fontSize: '1.3rem', 
+                marginBottom: '0.5rem', 
+                fontWeight: 700,
+                display: 'flex',
                 alignItems: 'center',
-                padding: '1rem',
-                borderBottom: index < dataset.length - 1 ? '1px solid var(--border-color)' : 'none',
-                background: index % 2 === 0 ? 'var(--bg-color)' : 'transparent'
-              }}
-            >
-              <div style={{ flex: 1, paddingRight: '1rem', fontSize: '1.1rem', fontWeight: 500 }}>
-                {item.indonesia}
-              </div>
-              <div className="arab-text" style={{ flex: 1, textAlign: 'right', fontSize: '1.5rem', minWidth: '150px' }}>
-                {item.arab}
+                gap: '0.5rem'
+              }}>
+                📖 {group.unitName}
+              </h3>
+              
+              {group.description && (
+                <div style={{
+                  padding: '0.75rem 1rem',
+                  background: 'var(--primary-light)',
+                  borderLeft: '4px solid var(--primary-color)',
+                  borderRadius: '8px',
+                  fontSize: '0.9rem',
+                  color: 'var(--text-color)',
+                  marginBottom: '1.25rem',
+                  lineHeight: '1.5',
+                  textAlign: 'left'
+                }}>
+                  {group.description}
+                </div>
+              )}
+              
+              <div style={{ border: '1px solid var(--border-color)', borderRadius: '12px', overflow: 'hidden' }}>
+                {group.items.map((item, index) => (
+                  <div 
+                    key={index} 
+                    style={{ 
+                      display: 'flex', 
+                      justifyContent: 'space-between', 
+                      alignItems: 'center',
+                      padding: '0.85rem 1rem',
+                      borderBottom: index < group.items.length - 1 ? '1px solid var(--border-color)' : 'none',
+                      background: index % 2 === 0 ? 'var(--bg-color)' : 'transparent'
+                    }}
+                  >
+                    <div style={{ flex: 1, paddingRight: '1rem', fontSize: '1.05rem', fontWeight: 500, textAlign: 'left' }}>
+                      {item.indonesia}
+                    </div>
+                    <div className="arab-text" style={{ flex: 1, textAlign: 'right', fontSize: '1.4rem', minWidth: '150px' }}>
+                      {item.arab}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
         </div>
-      </div>
+      ) : (
+        <div className="card" style={{ padding: '0', overflow: 'hidden' }}>
+          <div style={{ 
+            maxHeight: '60vh', 
+            overflowY: 'auto',
+            padding: '0.5rem'
+          }}>
+            {dataset.map((item, index) => (
+              <div 
+                key={index} 
+                style={{ 
+                  display: 'flex', 
+                  justifyContent: 'space-between', 
+                  alignItems: 'center',
+                  padding: '1rem',
+                  borderBottom: index < dataset.length - 1 ? '1px solid var(--border-color)' : 'none',
+                  background: index % 2 === 0 ? 'var(--bg-color)' : 'transparent'
+                }}
+              >
+                <div style={{ flex: 1, paddingRight: '1rem', fontSize: '1.1rem', fontWeight: 500, textAlign: 'left' }}>
+                  {item.indonesia}
+                </div>
+                <div className="arab-text" style={{ flex: 1, textAlign: 'right', fontSize: '1.5rem', minWidth: '150px' }}>
+                  {item.arab}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

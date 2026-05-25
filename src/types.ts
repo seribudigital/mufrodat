@@ -5,6 +5,8 @@ export interface MufrodatItem {
   dars: number;
   kategori_1: string;
   kategori_2: string;
+  unit?: string;
+  unitDescription?: string;
 }
 
 export interface QuizQuestion {

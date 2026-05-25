@@ -1,0 +1,1029 @@
+{
+    "metadata": {
+        "title": "Ringkasan Data Kosakata",
+        "unit_1": "Unit 1 (Kesehatan & Medis): 70 kosakata (termasuk fi'il madhi/mudhari', jamak taksir seperti أدوية, أطباء, أمراض, dll.)",
+        "unit_2": "Unit 2 (Rekreasi & Waktu Luang): 59 kosakata (termasuk kata hobi, peralatan kemah, dll.)",
+        "unit_3": "Unit 3 (Kehidupan Berkeluarga & Sosial): 68 kosakata (termasuk hubungan keluarga, kata sifat feminin, pernikahan/perceraian, dll.)",
+        "unit_4": "Unit 4 (Kehidupan di Kota & Desa / Lalu Lintas): 56 kosakata (termasuk penunjuk arah, fasilitas umum jamak seperti مساجد, مدارس, مصانع, dll.)"
+    },
+    "unit_1": [
+        {
+            "arabic": "اتَّبَعَ / يَتَّبِعُ",
+            "indonesian": "mengikuti"
+        },
+        {
+            "arabic": "أَحْسَنَ / يُحْسِنُ",
+            "indonesian": "berbuat baik / memperbagus"
+        },
+        {
+            "arabic": "اِخْتَلَفَ / يَخْتَلِفُ",
+            "indonesian": "berbeda"
+        },
+        {
+            "arabic": "أَخَذَ / يَأْخُذُ",
+            "indonesian": "mengambil"
+        },
+        {
+            "arabic": "أَدْوِيَة",
+            "indonesian": "obat-obatan (jamak)"
+        },
+        {
+            "arabic": "أَسْمَر",
+            "indonesian": "sawo matang / cokelat"
+        },
+        {
+            "arabic": "اِشْتَكَى / يَشْتَكِي",
+            "indonesian": "mengeluh / mengadu"
+        },
+        {
+            "arabic": "أَشْيَاء",
+            "indonesian": "sesuatu / benda-benda (jamak)"
+        },
+        {
+            "arabic": "أصْبَحَ / يُصْبِحُ",
+            "indonesian": "menjadi"
+        },
+        {
+            "arabic": "أَطِبَّاء",
+            "indonesian": "dokter-dokter (jamak)"
+        },
+        {
+            "arabic": "اِعْتَقَدَ / يَعْتَقِدُ",
+            "indonesian": "meyakini / mempercayai"
+        },
+        {
+            "arabic": "اَلْأَمْ",
+            "indonesian": "ibu"
+        },
+        {
+            "arabic": "أَمْر",
+            "indonesian": "perkara / urusan"
+        },
+        {
+            "arabic": "أَمْرَاض",
+            "indonesian": "penyakit-penyakit (jamak)"
+        },
+        {
+            "arabic": "بَطْن",
+            "indonesian": "perut"
+        },
+        {
+            "arabic": "بَيْع",
+            "indonesian": "penjualan / perdagangan"
+        },
+        {
+            "arabic": "تَشَابُه / يَتَشَابَهُ",
+            "indonesian": "menyerupai / mirip"
+        },
+        {
+            "arabic": "تَقَدَّمَ / يَتَقَدَّمُ",
+            "indonesian": "maju / berkembang"
+        },
+        {
+            "arabic": "حَالَة",
+            "indonesian": "keadaan / kondisi"
+        },
+        {
+            "arabic": "حَاوَلَ / يُحَاوِلُ",
+            "indonesian": "mencoba / berusaha"
+        },
+        {
+            "arabic": "حَدَثَ / يَحْدُثُ",
+            "indonesian": "terjadi"
+        },
+        {
+            "arabic": "حَذِرَ / يَحْذَرُ",
+            "indonesian": "berhati-hati / waspada"
+        },
+        {
+            "arabic": "حِمْيَة",
+            "indonesian": "diet / pantangan makanan"
+        },
+        {
+            "arabic": "حَظِيرَة",
+            "indonesian": "kandang / pagar"
+        },
+        {
+            "arabic": "دَائِمًا",
+            "indonesian": "selalu"
+        },
+        {
+            "arabic": "دَسِم",
+            "indonesian": "berlemak"
+        },
+        {
+            "arabic": "دَعَا / يَدْعُو",
+            "indonesian": "berdoa / mengundang / mengajak"
+        },
+        {
+            "arabic": "دُكْتُور",
+            "indonesian": "dokter / doktor"
+        },
+        {
+            "arabic": "اَلَّذِي",
+            "indonesian": "yang (kata penghubung)"
+        },
+        {
+            "arabic": "رَأَى / يَرَى",
+            "indonesian": "melihat"
+        },
+        {
+            "arabic": "رِجَال",
+            "indonesian": "laki-laki / pria (jamak)"
+        },
+        {
+            "arabic": "رَغْمَ",
+            "indonesian": "meskipun / walaupun"
+        },
+        {
+            "arabic": "زَادَ / يَزِيدُ",
+            "indonesian": "bertambah / menambah"
+        },
+        {
+            "arabic": "زَوَاج",
+            "indonesian": "pernikahan"
+        },
+        {
+            "arabic": "سَقَى / يَسْقِي",
+            "indonesian": "menyiram / memberi minum"
+        },
+        {
+            "arabic": "شَحْم",
+            "indonesian": "lemak / gajih"
+        },
+        {
+            "arabic": "صَحَابِيّ",
+            "indonesian": "sahabat (Nabi)"
+        },
+        {
+            "arabic": "ظِلّ",
+            "indonesian": "bayangan / naungan"
+        },
+        {
+            "arabic": "ظَلَّ / يَظَلُّ",
+            "indonesian": "tetap / terus-menerus"
+        },
+        {
+            "arabic": "ظَهَرَ / يَظْهَرُ",
+            "indonesian": "tampak / muncul"
+        },
+        {
+            "arabic": "عَادِيّ",
+            "indonesian": "biasa / normal"
+        },
+        {
+            "arabic": "عَالَجَ / يُعَالِجُ",
+            "indonesian": "mengobati / merawat"
+        },
+        {
+            "arabic": "عَرَفَ / يَعْرِفُ",
+            "indonesian": "mengetahui / mengenal"
+        },
+        {
+            "arabic": "عَصِير",
+            "indonesian": "jus"
+        },
+        {
+            "arabic": "عَلَامَة",
+            "indonesian": "tanda / gejala"
+        },
+        {
+            "arabic": "فَكَّرَ / يُفَكِّرُ",
+            "indonesian": "berpikir"
+        },
+        {
+            "arabic": "فَوَاكِه",
+            "indonesian": "buah-buahan (jamak)"
+        },
+        {
+            "arabic": "قَبِيحَة",
+            "indonesian": "buruk / jelek (feminin)"
+        },
+        {
+            "arabic": "فِضَّة",
+            "indonesian": "perak"
+        },
+        {
+            "arabic": "كَامِل",
+            "indonesian": "sempurna / lengkap"
+        },
+        {
+            "arabic": "كَذٰلِكَ",
+            "indonesian": "demikian juga / begitu juga"
+        },
+        {
+            "arabic": "كَفَى / يَكْفِي",
+            "indonesian": "cukup / mencukupi"
+        },
+        {
+            "arabic": "كُلّ",
+            "indonesian": "setiap / seluruh"
+        },
+        {
+            "arabic": "كَيْل (كِيلُو)",
+            "indonesian": "kilogram / takaran"
+        },
+        {
+            "arabic": "لَا بُدَّ",
+            "indonesian": "harus / tidak boleh tidak"
+        },
+        {
+            "arabic": "لٰكِنْ",
+            "indonesian": "tetapi / namun"
+        },
+        {
+            "arabic": "مَارَسَ / يُمَارِسُ",
+            "indonesian": "mempraktikkan / melatih"
+        },
+        {
+            "arabic": "مَاضٍ",
+            "indonesian": "lampau / masa lalu"
+        },
+        {
+            "arabic": "مِثْل",
+            "indonesian": "seperti / misal"
+        },
+        {
+            "arabic": "مَحَلَّات",
+            "indonesian": "toko-toko (jamak)"
+        },
+        {
+            "arabic": "اَلْمَرْأَة",
+            "indonesian": "wanita / perempuan"
+        },
+        {
+            "arabic": "مَشْغُول",
+            "indonesian": "sibuk"
+        },
+        {
+            "arabic": "اَلنَّاس",
+            "indonesian": "manusia / orang-orang"
+        },
+        {
+            "arabic": "نَجَحَ / يَنْجَحُ",
+            "indonesian": "berhasil / lulus"
+        },
+        {
+            "arabic": "سَنَوَات",
+            "indonesian": "tahun-tahun (jamak)"
+        },
+        {
+            "arabic": "نَقَصَ / يَنْقُصُ",
+            "indonesian": "berkurang / mengurangi"
+        },
+        {
+            "arabic": "هَدِيَّة",
+            "indonesian": "hadiah / kado"
+        },
+        {
+            "arabic": "وَجَبَ / يَجِبُ",
+            "indonesian": "wajib / harus"
+        },
+        {
+            "arabic": "وَجَدَ / يَجِدُ",
+            "indonesian": "menemukan / mendapati"
+        },
+        {
+            "arabic": "وَحْدَهُ",
+            "indonesian": "sendirian / hanya dia sendiri"
+        }
+    ],
+    "unit_2": [
+        {
+            "arabic": "أَبْوَاب",
+            "indonesian": "pintu-pintu (jamak)"
+        },
+        {
+            "arabic": "اِحْتَاجَ / يَحْتَاجُ",
+            "indonesian": "membutuhkan"
+        },
+        {
+            "arabic": "أَدَوَات",
+            "indonesian": "peralatan / instrumen (jamak)"
+        },
+        {
+            "arabic": "إِذَا",
+            "indonesian": "jika / apabila"
+        },
+        {
+            "arabic": "آرَاء",
+            "indonesian": "pendapat-pendapat (jamak)"
+        },
+        {
+            "arabic": "أُسْلُوب",
+            "indonesian": "metode / gaya / corak"
+        },
+        {
+            "arabic": "اِصْطَادَ / يَصْطَادُ",
+            "indonesian": "berburu / memancing"
+        },
+        {
+            "arabic": "أَعَدَّ / يُعِدُّ - إِعْدَاد",
+            "indonesian": "menyiapkan - penyiapan"
+        },
+        {
+            "arabic": "أَعْمَى / (عَمْيَاء)",
+            "indonesian": "buta"
+        },
+        {
+            "arabic": "آفَاق / عَمِيق",
+            "indonesian": "cakrawala / mendalam"
+        },
+        {
+            "arabic": "أَلْعَاب",
+            "indonesian": "permainan / olahraga (jamak)"
+        },
+        {
+            "arabic": "إِنْسَان",
+            "indonesian": "manusia"
+        },
+        {
+            "arabic": "أَنْشِطَة",
+            "indonesian": "aktivitas-aktivitas (jamak)"
+        },
+        {
+            "arabic": "أَوَان",
+            "indonesian": "waktu / saat"
+        },
+        {
+            "arabic": "بَرَامِج",
+            "indonesian": "program-program (jamak)"
+        },
+        {
+            "arabic": "بُيُوت",
+            "indonesian": "rumah-rumah (jamak)"
+        },
+        {
+            "arabic": "تَرْوِيح",
+            "indonesian": "rekreasi / hiburan"
+        },
+        {
+            "arabic": "تَصْوِير",
+            "indonesian": "fotografi / penggambaran"
+        },
+        {
+            "arabic": "حَدِيقَة",
+            "indonesian": "taman / kebun"
+        },
+        {
+            "arabic": "حَمَلَ / يَحْمِلُ",
+            "indonesian": "membawa / memikul"
+        },
+        {
+            "arabic": "حَيَاة",
+            "indonesian": "kehidupan"
+        },
+        {
+            "arabic": "حَيْثُ",
+            "indonesian": "di mana / karena / sekiranya"
+        },
+        {
+            "arabic": "خِيَام",
+            "indonesian": "tenda-tenda (jamak)"
+        },
+        {
+            "arabic": "رَأْي",
+            "indonesian": "pendapat"
+        },
+        {
+            "arabic": "روَّحَ / يُرَوِّحُ",
+            "indonesian": "menghibur / menyegarkan diri"
+        },
+        {
+            "arabic": "سَبَحَ / يَسْبَحُ",
+            "indonesian": "berenang"
+        },
+        {
+            "arabic": "شِعْر",
+            "indonesian": "puisi / syair"
+        },
+        {
+            "arabic": "صَحْرَاء",
+            "indonesian": "gurun / padang pasir"
+        },
+        {
+            "arabic": "صَدَّقَ / يُصَدِّقُ",
+            "indonesian": "membenarkan / mempercayai"
+        },
+        {
+            "arabic": "صُوَر",
+            "indonesian": "gambar / foto (jamak)"
+        },
+        {
+            "arabic": "صَيْد",
+            "indonesian": "perburuan / tangkapan"
+        },
+        {
+            "arabic": "طُيُور",
+            "indonesian": "burung-burung (jamak)"
+        },
+        {
+            "arabic": "عَامِل",
+            "indonesian": "pekerja / faktor"
+        },
+        {
+            "arabic": "عَجِيب",
+            "indonesian": "menakjubkan / aneh"
+        },
+        {
+            "arabic": "عَقْل",
+            "indonesian": "akal / pikiran"
+        },
+        {
+            "arabic": "عَنَاء",
+            "indonesian": "kelelahan / kesusahan"
+        },
+        {
+            "arabic": "غَايَة",
+            "indonesian": "tujuan / target utama"
+        },
+        {
+            "arabic": "غَيَّرَ / يُغَيِّرُ",
+            "indonesian": "mengubah"
+        },
+        {
+            "arabic": "فَائِدَة",
+            "indonesian": "manfaat / keuntungan"
+        },
+        {
+            "arabic": "فَقَطْ",
+            "indonesian": "haja / saja"
+        },
+        {
+            "arabic": "قَتَلَ / يَقْتُلُ",
+            "indonesian": "membunuh"
+        },
+        {
+            "arabic": "قَصَدَ / يَقْصِدُ",
+            "indonesian": "bermaksud / menuju"
+        },
+        {
+            "arabic": "قِصَص",
+            "indonesian": "cerita-cerita / kisah (jamak)"
+        },
+        {
+            "arabic": "قَضَاء",
+            "indonesian": "menghabiskan (waktu) / keputusan"
+        },
+        {
+            "arabic": "قُوَّة",
+            "indonesian": "kekuatan"
+        },
+        {
+            "arabic": "لَا مَانِعَ",
+            "indonesian": "tidak ada keberatan / tidak apa-apa"
+        },
+        {
+            "arabic": "لَعِبَ / يَلْعَبُ - لَعِب",
+            "indonesian": "bermain - permainan"
+        },
+        {
+            "arabic": "مُتْعَة",
+            "indonesian": "kenikmatan / kesenangan"
+        },
+        {
+            "arabic": "مُخَيَّمَات",
+            "indonesian": "perkemahan (jamak)"
+        },
+        {
+            "arabic": "مُسْلِم",
+            "indonesian": "seorang muslim"
+        },
+        {
+            "arabic": "مَشَى",
+            "indonesian": "berjalan kaki"
+        },
+        {
+            "arabic": "مُصِيف",
+            "indonesian": "tempat peristirahatan musim panas"
+        },
+        {
+            "arabic": "نَادَى / يُنَادِي",
+            "indonesian": "memanggil / menyeru"
+        },
+        {
+            "arabic": "نَاقَشَ / يُنَاقِشُ",
+            "indonesian": "mendiskusikan / membahas"
+        },
+        {
+            "arabic": "نَصَبَ / يَنْصِبُ",
+            "indonesian": "mendirikan / menegakkan"
+        },
+        {
+            "arabic": "نَصِيحَة",
+            "indonesian": "nasihat"
+        },
+        {
+            "arabic": "نَفْس",
+            "indonesian": "jiwa / diri sendiri"
+        },
+        {
+            "arabic": "هَدَف",
+            "indonesian": "tujuan / sasaran"
+        },
+        {
+            "arabic": "وَسَائِل",
+            "indonesian": "sarana / media / metode (jamak)"
+        }
+    ],
+    "unit_3": [
+        {
+            "arabic": "آبَاء",
+            "indonesian": "ayah-ayah / orang tua (jamak)"
+        },
+        {
+            "arabic": "أَبْنَاء",
+            "indonesian": "anak-anak lelaki (jamak)"
+        },
+        {
+            "arabic": "أَحْيَانًا",
+            "indonesian": "kadang-kadang"
+        },
+        {
+            "arabic": "اِخْتِفَاء",
+            "indonesian": "penghilangan / lenyapnya"
+        },
+        {
+            "arabic": "اِخْتَفَى / يَخْتَفِي",
+            "indonesian": "menghilang / bersembunyi"
+        },
+        {
+            "arabic": "اِخْتِلَاف",
+            "indonesian": "perbedaan / perselisihan"
+        },
+        {
+            "arabic": "اِسْتَمَعَ / يَسْتَمِعُ",
+            "indonesian": "mendengarkan"
+        },
+        {
+            "arabic": "أَفْرَاد",
+            "indonesian": "individu-individu / anggota (jamak)"
+        },
+        {
+            "arabic": "أُمّ",
+            "indonesian": "ibu"
+        },
+        {
+            "arabic": "أَمَاكِن",
+            "indonesian": "tempat-tempat (jamak)"
+        },
+        {
+            "arabic": "أُمُور",
+            "indonesian": "urusan-urusan / perkara (jamak)"
+        },
+        {
+            "arabic": "اِهْتَمَّ / يَهْتَمُّ - اِهْتِمَام",
+            "indonesian": "memperhatikan / peduli"
+        },
+        {
+            "arabic": "تَحَقَّقَ / يَتَحَقَّقُ",
+            "indonesian": "terwujud / terbukti"
+        },
+        {
+            "arabic": "تَغَيَّرَ / يَتَغَيَّرُ",
+            "indonesian": "berubah"
+        },
+        {
+            "arabic": "ثَارَ / يَثُورُ",
+            "indonesian": "berontak / meletus / emosi"
+        },
+        {
+            "arabic": "جَمَال",
+            "indonesian": "keindahan / ketampanan"
+        },
+        {
+            "arabic": "حَدِيث",
+            "indonesian": "modern / baru / percakapan"
+        },
+        {
+            "arabic": "حَسَبَ",
+            "indonesian": "sesuai dengan / menurut"
+        },
+        {
+            "arabic": "خُرُوج",
+            "indonesian": "keluar (kata benda)"
+        },
+        {
+            "arabic": "خِلَاف",
+            "indonesian": "perbedaan pendapat / perselisihan"
+        },
+        {
+            "arabic": "خَيْر",
+            "indonesian": "kebaikan / lebih baik"
+        },
+        {
+            "arabic": "دَرَى / يَدْرِي",
+            "indonesian": "mengetahui"
+        },
+        {
+            "arabic": "دِين",
+            "indonesian": "agama"
+        },
+        {
+            "arabic": "ذَات",
+            "indonesian": "diri / esensi / memiliki"
+        },
+        {
+            "arabic": "زَوْج / زَوْجَة",
+            "indonesian": "suami / istri"
+        },
+        {
+            "arabic": "شَكَا / يَشْكُو - شَكْوَى",
+            "indonesian": "mengeluh - keluhan"
+        },
+        {
+            "arabic": "ضَرُورَة",
+            "indonesian": "keperluan / darurat / keniscayaan"
+        },
+        {
+            "arabic": "ضَعْف",
+            "indonesian": "kelemahan"
+        },
+        {
+            "arabic": "سَبِيل",
+            "indonesian": "jalan / cara"
+        },
+        {
+            "arabic": "سَعَادَة",
+            "indonesian": "kebahagiaan"
+        },
+        {
+            "arabic": "سَهَر / يَسْهَرُ",
+            "indonesian": "bergadang"
+        },
+        {
+            "arabic": "طُفُولَة",
+            "indonesian": "masa kanak-kanak"
+        },
+        {
+            "arabic": "سِيَاسَة",
+            "indonesian": "politik / kebijakan"
+        },
+        {
+            "arabic": "شَبَاب",
+            "indonesian": "pemuda / masa muda"
+        },
+        {
+            "arabic": "شَخْصِيَّة",
+            "indonesian": "kepribadian / personal"
+        },
+        {
+            "arabic": "عَادَ / يَعُودُ",
+            "indonesian": "kembali / menjenguk"
+        },
+        {
+            "arabic": "عَاشَ / يَعِيشُ",
+            "indonesian": "hidup / tinggal"
+        },
+        {
+            "arabic": "عَجِزَ / يَعْجِزُ",
+            "indonesian": "tidak mampu / lemah"
+        },
+        {
+            "arabic": "عَصْر",
+            "indonesian": "zaman / waktu ashar"
+        },
+        {
+            "arabic": "عَلَاقَة",
+            "indonesian": "hubungan / relasi"
+        },
+        {
+            "arabic": "عَلَيْكَ",
+            "indonesian": "wajib bagimu / atasmu"
+        },
+        {
+            "arabic": "عَنِيدَة",
+            "indonesian": "keras kepala (feminin)"
+        },
+        {
+            "arabic": "غَنِيَّة",
+            "indonesian": "kaya (feminin)"
+        },
+        {
+            "arabic": "طَلَاق",
+            "indonesian": "perceraian"
+        },
+        {
+            "arabic": "طُول",
+            "indonesian": "panjang / sepanjang"
+        },
+        {
+            "arabic": "غَيْر",
+            "indonesian": "selain / bukan"
+        },
+        {
+            "arabic": "فَتَاة",
+            "indonesian": "gadis / pemudi"
+        },
+        {
+            "arabic": "فِعْلًا",
+            "indonesian": "sungguh / benar-benar"
+        },
+        {
+            "arabic": "فَقِيرَة",
+            "indonesian": "miskin (feminin)"
+        },
+        {
+            "arabic": "قَامَ / يَقُومُ",
+            "indonesian": "berdiri / melaksanakan"
+        },
+        {
+            "arabic": "قَدْ",
+            "indonesian": "sungguh / kadang-kadang"
+        },
+        {
+            "arabic": "قَلَق",
+            "indonesian": "kecemasan / kegelisahan"
+        },
+        {
+            "arabic": "مُؤَدَّبَة",
+            "indonesian": "sopan / beradab (feminin)"
+        },
+        {
+            "arabic": "مَال / يَمِيلُ",
+            "indonesian": "harta / cenderung"
+        },
+        {
+            "arabic": "مَبْنِيَّة",
+            "indonesian": "dibangun / didasarkan"
+        },
+        {
+            "arabic": "مُجْتَمَعَات",
+            "indonesian": "masyarakat-masyarakat (jamak)"
+        },
+        {
+            "arabic": "مَسَاء",
+            "indonesian": "sore / malam"
+        },
+        {
+            "arabic": "مُطِيعَة",
+            "indonesian": "patuh / taat (feminin)"
+        },
+        {
+            "arabic": "مُعْظَم",
+            "indonesian": "sebagian besar"
+        },
+        {
+            "arabic": "مُهْمَلَة",
+            "indonesian": "terabaikan / telantar (feminin)"
+        },
+        {
+            "arabic": "نَائِم",
+            "indonesian": "tidur (orang yang tidur)"
+        },
+        {
+            "arabic": "نَاحِيَة",
+            "indonesian": "aspek / segi / arah"
+        },
+        {
+            "arabic": "نَجَاح",
+            "indonesian": "kesuksesan / keberhasilan"
+        },
+        {
+            "arabic": "نِسَاء",
+            "indonesian": "para wanita (jamak)"
+        },
+        {
+            "arabic": "نَسَب",
+            "indonesian": "nasab / keturunan"
+        },
+        {
+            "arabic": "نَظَافَة",
+            "indonesian": "kebersihan"
+        },
+        {
+            "arabic": "نِظَام",
+            "indonesian": "sistem / aturan"
+        },
+        {
+            "arabic": "وَلَدَ",
+            "indonesian": "melahirkan / lahir"
+        }
+    ],
+    "unit_4": [
+        {
+            "arabic": "اِتَّجَهَ / يَتَّجِهُ",
+            "indonesian": "menuju / menghadap"
+        },
+        {
+            "arabic": "آثَار",
+            "indonesian": "peninggalan sejarah / dampak (jamak)"
+        },
+        {
+            "arabic": "اِسْتَمَرَّ / يَسْتَمِرُّ",
+            "indonesian": "berlanjut / terus-menerus"
+        },
+        {
+            "arabic": "إِشَارَة ضَوْئِيَّة",
+            "indonesian": "lampu lalu lintas"
+        },
+        {
+            "arabic": "اِشْتَهَرَ / يَشْتَهِرُ",
+            "indonesian": "terkenal / masyhur"
+        },
+        {
+            "arabic": "أَكْبَر",
+            "indonesian": "lebih besar / terbesar"
+        },
+        {
+            "arabic": "إِمْبَرَاطُور",
+            "indonesian": "kaisar / imperator"
+        },
+        {
+            "arabic": "اَلْأُمَم الْمُتَّحِدَة",
+            "indonesian": "Perserikatan Bangsa-Bangsa (PBB)"
+        },
+        {
+            "arabic": "أَنْشَأَ / يُنْشِئُ",
+            "indonesian": "mendirikan / membangun"
+        },
+        {
+            "arabic": "مَشَى / يَمْشِي",
+            "indonesian": "berjalan kaki"
+        },
+        {
+            "arabic": "اِنْعَطَفَ / يَنْعَطِفُ",
+            "indonesian": "berbelok"
+        },
+        {
+            "arabic": "بَاعَ / يَبِيعُ",
+            "indonesian": "menjual"
+        },
+        {
+            "arabic": "بِالرَّغْمِ",
+            "indonesian": "meskipun / walaupun"
+        },
+        {
+            "arabic": "جِيرَان",
+            "indonesian": "tetangga-tetangga (jamak)"
+        },
+        {
+            "arabic": "حَقّ",
+            "indonesian": "hak / kebenaran"
+        },
+        {
+            "arabic": "حَوَادِث",
+            "indonesian": "kecelakaan / peristiwa (jamak)"
+        },
+        {
+            "arabic": "خَائِفَة",
+            "indonesian": "takut (feminin)"
+        },
+        {
+            "arabic": "دَوَّار",
+            "indonesian": "bundaran jalan / komidi putar"
+        },
+        {
+            "arabic": "دُوَل",
+            "indonesian": "negara-negara (jamak)"
+        },
+        {
+            "arabic": "رَجُل مُرُور",
+            "indonesian": "polisi lalu lintas"
+        },
+        {
+            "arabic": "رَحَلَ / يَرْحَلُ",
+            "indonesian": "bepergian / berangkat / pindah"
+        },
+        {
+            "arabic": "رَعْي",
+            "indonesian": "menggembala"
+        },
+        {
+            "arabic": "رِيف",
+            "indonesian": "pedesaan"
+        },
+        {
+            "arabic": "زَاوِيَة",
+            "indonesian": "sudut / pojok"
+        },
+        {
+            "arabic": "زِرَاعَة",
+            "indonesian": "pertanian"
+        },
+        {
+            "arabic": "زَرَعَ",
+            "indonesian": "menanam"
+        },
+        {
+            "arabic": "زَلَازِل",
+            "indonesian": "gempa bumi (jamak)"
+        },
+        {
+            "arabic": "سَائِق",
+            "indonesian": "sopir / pengemudi"
+        },
+        {
+            "arabic": "سَارَ / يَسِيرُ",
+            "indonesian": "berjalan / melaju"
+        },
+        {
+            "arabic": "سُكَّان",
+            "indonesian": "penduduk / penghuni"
+        },
+        {
+            "arabic": "سَنَة",
+            "indonesian": "tahun"
+        },
+        {
+            "arabic": "شَجَر",
+            "indonesian": "pohon / pepohonan"
+        },
+        {
+            "arabic": "صَيْدَلِيَّة",
+            "indonesian": "apotek"
+        },
+        {
+            "arabic": "طَرِيق",
+            "indonesian": "jalan"
+        },
+        {
+            "arabic": "عَالَم",
+            "indonesian": "dunia / alam semesta"
+        },
+        {
+            "arabic": "عِدَّة",
+            "indonesian": "beberapa / sejumlah"
+        },
+        {
+            "arabic": "عَدَد",
+            "indonesian": "jumlah / angka"
+        },
+        {
+            "arabic": "عِلْم",
+            "indonesian": "ilmu / pengetahuan"
+        },
+        {
+            "arabic": "عِمَارَات",
+            "indonesian": "gedung-gedung / apartemen (jamak)"
+        },
+        {
+            "arabic": "اَلْقَاهِرَة",
+            "indonesian": "Kairo (Ibu kota Mesir)"
+        },
+        {
+            "arabic": "قَرْن",
+            "indonesian": "abad / tanduk"
+        },
+        {
+            "arabic": "مَآذِن",
+            "indonesian": "menara-menara masjid (jamak)"
+        },
+        {
+            "arabic": "مِتْر",
+            "indonesian": "meter"
+        },
+        {
+            "arabic": "مُخَدِّرَات",
+            "indonesian": "narkoba / narkotika"
+        },
+        {
+            "arabic": "مَدَارِس",
+            "indonesian": "sekolah-sekolah (jamak)"
+        },
+        {
+            "arabic": "مُدُن",
+            "indonesian": "kota-kota (jamak)"
+        },
+        {
+            "arabic": "مَسَاجِد",
+            "indonesian": "masjid-masjid (jamak)"
+        },
+        {
+            "arabic": "مَصَارِف",
+            "indonesian": "bank / tempat pengeluaran (jamak)"
+        },
+        {
+            "arabic": "مَصَانِع",
+            "indonesian": "pabrik-pabrik (jamak)"
+        },
+        {
+            "arabic": "مُقَابِل",
+            "indonesian": "berlawanan / imbalan / di depan"
+        },
+        {
+            "arabic": "مِلْيَار / مِلْيَارَات",
+            "indonesian": "miliar"
+        },
+        {
+            "arabic": "نَحْنُ",
+            "indonesian": "kami / kita"
+        },
+        {
+            "arabic": "نَحْوَ (= قَرِيب مِنْ)",
+            "indonesian": "sekitar / menuju / dekat dengan"
+        },
+        {
+            "arabic": "نِسْبَة",
+            "indonesian": "persentase / rasio"
+        },
+        {
+            "arabic": "هَاجَرَ / يُهَاجِرُ - هِجْرَة",
+            "indonesian": "berhijrah / bermigrasi - hijrah"
+        },
+        {
+            "arabic": "وَقَعَ / يَقَعُ",
+            "indonesian": "terletak / jatuh"
+        }
+    ]
+}

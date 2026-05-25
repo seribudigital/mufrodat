@@ -1,0 +1,741 @@
+{
+    "metadata": {
+        "title": "Ringkasan Data Kosakata Dasar",
+        "unit_1": "Unit 1 (Perkenalan / التحية والتعارف): 47 entri (kata ganti أنا, أنت, kata tanya, ungkapan sapaan, profesi, angka 1-5).",
+        "unit_2": "Unit 2 (Keluarga / الأسرة): 45 entri (silsilah keluarga ab, umm, ibn, kegiatan wudu/shalat, ruangan, angka 6-10).",
+        "unit_3": "Unit 3 (Tempat Tinggal / السكن): 52 entri (perabot furnitur, nama-nama hari lengkap dari Ahad sampai Sabtu, istilah jual-beli rumah/apartemen).",
+        "unit_4": "Unit 4 (Kehidupan Sehari-hari / الحياة اليومية): 37 entri (kata kerja harian seperti bangun tidur, mencuci, menyapu, menyetrika, istilah jam, dan hari libur/kerja)."
+    },
+    "unit_1": [
+        {
+            "arabic": "اِثْنَانِ",
+            "indonesian": "dua"
+        },
+        {
+            "arabic": "أَخ",
+            "indonesian": "saudara laki-laki"
+        },
+        {
+            "arabic": "أُخْت",
+            "indonesian": "saudara perempuan"
+        },
+        {
+            "arabic": "أَرْبَعَة",
+            "indonesian": "empat"
+        },
+        {
+            "arabic": "اِسْم",
+            "indonesian": "nama"
+        },
+        {
+            "arabic": "اللَّه",
+            "indonesian": "Allah"
+        },
+        {
+            "arabic": "أَنَا",
+            "indonesian": "saya"
+        },
+        {
+            "arabic": "أَنْتَ",
+            "indonesian": "kamu (laki-laki)"
+        },
+        {
+            "arabic": "أَنْتِ",
+            "indonesian": "kamu (perempuan)"
+        },
+        {
+            "arabic": "أَهْلًا وَسَهْلًا",
+            "indonesian": "selamat datang"
+        },
+        {
+            "arabic": "بَاكِسْتَانِيّ",
+            "indonesian": "orang Pakistan"
+        },
+        {
+            "arabic": "بِخَيْر",
+            "indonesian": "baik / sehat"
+        },
+        {
+            "arabic": "ثَلَاثَة",
+            "indonesian": "tiga"
+        },
+        {
+            "arabic": "جِنْسِيَّة",
+            "indonesian": "kewarganegaraan"
+        },
+        {
+            "arabic": "الْحَمْدُ لِلَّه",
+            "indonesian": "segala puji bagi Allah"
+        },
+        {
+            "arabic": "خَمْسَة",
+            "indonesian": "lima"
+        },
+        {
+            "arabic": "السَّلَامُ عَلَيْكُمْ",
+            "indonesian": "assalamu'alaikum (keselamatan atas kalian)"
+        },
+        {
+            "arabic": "صَدِيق",
+            "indonesian": "teman (laki-laki)"
+        },
+        {
+            "arabic": "صَدِيقَة",
+            "indonesian": "teman (perempuan)"
+        },
+        {
+            "arabic": "طَالِبَة",
+            "indonesian": "mahasiswi / siswi"
+        },
+        {
+            "arabic": "طَبِيبَة",
+            "indonesian": "dokter (perempuan)"
+        },
+        {
+            "arabic": "كِ (الْمُخَاطَب)",
+            "indonesian": "mu / -mu (kata ganti milik perempuan)"
+        },
+        {
+            "arabic": "كَ (الْمُخَاطَب)",
+            "indonesian": "mu / -mu (kata ganti milik laki-laki)"
+        },
+        {
+            "arabic": "كَيْفَ حَالُكَ؟",
+            "indonesian": "bagaimana kabarmu? (laki-laki)"
+        },
+        {
+            "arabic": "كَيْفَ حَالُكِ؟",
+            "indonesian": "bagaimana kabarmu? (perempuan)"
+        },
+        {
+            "arabic": "مُدَرِّس",
+            "indonesian": "guru / pengajar (laki-laki)"
+        },
+        {
+            "arabic": "مَعَ السَّلَامَة",
+            "indonesian": "selamat tinggal / sampai jumpa"
+        },
+        {
+            "arabic": "مِنْ",
+            "indonesian": "dari"
+        },
+        {
+            "arabic": "مَا؟",
+            "indonesian": "apa?"
+        },
+        {
+            "arabic": "مَا اسْمُكَ؟",
+            "indonesian": "siapa namamu? (laki-laki)"
+        },
+        {
+            "arabic": "مَا اسْمُكِ؟",
+            "indonesian": "siapa namamu? (perempuan)"
+        },
+        {
+            "arabic": "مَا جِنْسِيَّتُكَ؟",
+            "indonesian": "apa kewarganegaraanmu? (laki-laki)"
+        },
+        {
+            "arabic": "مَا جِنْسِيَّتُكِ؟",
+            "indonesian": "apa kewarganegaraanmu? (perempuan)"
+        },
+        {
+            "arabic": "مِنْ أَيْنِ أَنْتَ؟",
+            "indonesian": "dari mana kamu berasal?"
+        },
+        {
+            "arabic": "مُهَنْدِس",
+            "indonesian": "insinyur / arsitek"
+        },
+        {
+            "arabic": "نَعَمْ",
+            "indonesian": "ya"
+        },
+        {
+            "arabic": "هَذَا",
+            "indonesian": "ini (laki-laki)"
+        },
+        {
+            "arabic": "هَذِهِ",
+            "indonesian": "ini (perempuan)"
+        },
+        {
+            "arabic": "هَلْ؟",
+            "indonesian": "apakah?"
+        },
+        {
+            "arabic": "هُوَ",
+            "indonesian": "dia (laki-laki)"
+        },
+        {
+            "arabic": "هِيَ",
+            "indonesian": "dia (perempuan)"
+        },
+        {
+            "arabic": "وَ (الْعَطْف)",
+            "indonesian": "dan (kata hubung)"
+        },
+        {
+            "arabic": "وَاحِد",
+            "indonesian": "satu"
+        },
+        {
+            "arabic": "وَعَلَيْكُمُ السَّلَام",
+            "indonesian": "wa'alaikumussalam (dan atas kalian keselamatan)"
+        },
+        {
+            "arabic": "ي (يَاء الْمُتَكَلِّم)",
+            "indonesian": "ku / -ku (kata ganti milik saya)"
+        },
+        {
+            "arabic": "يّ (يَاء النِّسْبَة)",
+            "indonesian": "akhiran penunjuk asal/kebangsaan (nisbah)"
+        },
+        {
+            "arabic": "يْنِ (يَاء الْمُخَاطَبَة)",
+            "indonesian": "akhiran penunjuk subjek kamu perempuan pada fi'il"
+        }
+    ],
+    "unit_2": [
+        {
+            "arabic": "أَب",
+            "indonesian": "ayah"
+        },
+        {
+            "arabic": "اِبْن",
+            "indonesian": "anak laki-laki"
+        },
+        {
+            "arabic": "اِبْنَة",
+            "indonesian": "anak perempuan"
+        },
+        {
+            "arabic": "أَذَان",
+            "indonesian": "azan / panggilan shalat"
+        },
+        {
+            "arabic": "أُسْرَة",
+            "indonesian": "keluarga"
+        },
+        {
+            "arabic": "اللَّهُ أَكْبَرُ",
+            "indonesian": "Allah Maha Besar"
+        },
+        {
+            "arabic": "إِلَى",
+            "indonesian": "ke / kepada"
+        },
+        {
+            "arabic": "أُمّ",
+            "indonesian": "ibu"
+        },
+        {
+            "arabic": "أَوْلَاد",
+            "indonesian": "anak-anak (jamak)"
+        },
+        {
+            "arabic": "أَيْنَ؟",
+            "indonesian": "di mana?"
+        },
+        {
+            "arabic": "تَوَضَّأَ / يَتَوَضَّأُ",
+            "indonesian": "berwudu"
+        },
+        {
+            "arabic": "ثَمَانِيَة",
+            "indonesian": "delapan"
+        },
+        {
+            "arabic": "جَدّ",
+            "indonesian": "kakek"
+        },
+        {
+            "arabic": "جَدَّة",
+            "indonesian": "nenek"
+        },
+        {
+            "arabic": "حَمَّام",
+            "indonesian": "kamar mandi"
+        },
+        {
+            "arabic": "الرَّسُول",
+            "indonesian": "Rasul / utusan (Nabi Muhammad)"
+        },
+        {
+            "arabic": "سَبْعَة",
+            "indonesian": "tujuh"
+        },
+        {
+            "arabic": "سِتَّة",
+            "indonesian": "enam"
+        },
+        {
+            "arabic": "شَجَرَة",
+            "indonesian": "pohon"
+        },
+        {
+            "arabic": "صَلَّى / يُصَلِّي",
+            "indonesian": "shalat / berdoa"
+        },
+        {
+            "arabic": "صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ",
+            "indonesian": "shallallahu 'alaihi wa sallam (semoga Allah memberi shalawat dan salam kepadanya)"
+        },
+        {
+            "arabic": "صُورَة",
+            "indonesian": "gambar / foto"
+        },
+        {
+            "arabic": "طَالِب",
+            "indonesian": "mahasiswa / siswa"
+        },
+        {
+            "arabic": "عَشَرَة",
+            "indonesian": "sepuluh"
+        },
+        {
+            "arabic": "عَمّ",
+            "indonesian": "paman (dari pihak ayah)"
+        },
+        {
+            "arabic": "عَمَّة",
+            "indonesian": "bibi (dari pihak ayah)"
+        },
+        {
+            "arabic": "غُرْفَة",
+            "indonesian": "kamar / ruangan"
+        },
+        {
+            "arabic": "الْفَجْر",
+            "indonesian": "subuh / fajar"
+        },
+        {
+            "arabic": "فِي",
+            "indonesian": "di / di dalam"
+        },
+        {
+            "arabic": "قَرَأَ / يَقْرَأُ",
+            "indonesian": "membaca"
+        },
+        {
+            "arabic": "الْقُرْآن",
+            "indonesian": "Al-Qur'an"
+        },
+        {
+            "arabic": "مَا؟",
+            "indonesian": "apa? (kata tanya)"
+        },
+        {
+            "arabic": "شَاءَ اللَّه !",
+            "indonesian": "atas kehendak Allah (Maa syaa Allah!)"
+        },
+        {
+            "arabic": "مَسْجِد",
+            "indonesian": "masjid"
+        },
+        {
+            "arabic": "مُصَلَّى",
+            "indonesian": "mushala / tempat shalat"
+        },
+        {
+            "arabic": "مِعْطَف",
+            "indonesian": "mantel / jaket"
+        },
+        {
+            "arabic": "مُعَلِّمَة",
+            "indonesian": "guru / pengajar (perempuan)"
+        },
+        {
+            "arabic": "مَنْ؟",
+            "indonesian": "siapa?"
+        },
+        {
+            "arabic": "نَظَّارَة",
+            "indonesian": "kacamata"
+        },
+        {
+            "arabic": "هـ (هَاء الْغَائِب)",
+            "indonesian": "nya / -nya (kata ganti milik dia laki-laki)"
+        },
+        {
+            "arabic": "هَا (هَاء الْغَائِبَة)",
+            "indonesian": "nya / -nya (kata ganti milik dia perempuan)"
+        },
+        {
+            "arabic": "هَيَّا بِنَا",
+            "indonesian": "ayo kita pergi / mari kita"
+        },
+        {
+            "arabic": "وَالِد",
+            "indonesian": "ayah / orang tua laki-laki"
+        },
+        {
+            "arabic": "وَالِدَة",
+            "indonesian": "ibu / orang tua perempuan"
+        },
+        {
+            "arabic": "يَا (النِّدَاء)",
+            "indonesian": "wahai / wahai (kata seru)"
+        }
+    ],
+    "unit_3": [
+        {
+            "arabic": "أextَاث",
+            "indonesian": "perabot / furnitur"
+        },
+        {
+            "arabic": "الِاثْنَيْنِ",
+            "indonesian": "hari Senin"
+        },
+        {
+            "arabic": "الْأَحَد",
+            "indonesian": "hari Minggu"
+        },
+        {
+            "arabic": "آخَر",
+            "indonesian": "yang lain"
+        },
+        {
+            "arabic": "أَرَادَ / يُرِيدُ",
+            "indonesian": "menginginkan / mau"
+        },
+        {
+            "arabic": "الْأَرْبِعَاء",
+            "indonesian": "hari Rabu"
+        },
+        {
+            "arabic": "أَرِيكَة",
+            "indonesian": "sofa / tempat duduk empuk"
+        },
+        {
+            "arabic": "أَيّ خِدْمَة",
+            "indonesian": "ada yang bisa dibantu?"
+        },
+        {
+            "arabic": "بَائِع",
+            "indonesian": "penjual"
+        },
+        {
+            "arabic": "بَاب",
+            "indonesian": "pintu"
+        },
+        {
+            "arabic": "بَعْض",
+            "indonesian": "sebagian / beberapa"
+        },
+        {
+            "arabic": "بَيْت",
+            "indonesian": "rumah"
+        },
+        {
+            "arabic": "تَفَضَّلْ (اُدْخُلْ)",
+            "indonesian": "silakan (silakan masuk)"
+        },
+        {
+            "arabic": "الثُّلَاثَاء",
+            "indonesian": "hari Selasa"
+        },
+        {
+            "arabic": "ثَلَّاجَة",
+            "indonesian": "kulkas / lemari es"
+        },
+        {
+            "arabic": "جَامِعَة",
+            "indonesian": "universitas"
+        },
+        {
+            "arabic": "الْجُمُعَة",
+            "indonesian": "hari Jumat"
+        },
+        {
+            "arabic": "جَمِيلَة",
+            "indonesian": "indah / cantik (feminin)"
+        },
+        {
+            "arabic": "حَيّ",
+            "indonesian": "lingkungan / kawasan / hidup"
+        },
+        {
+            "arabic": "خَامِس",
+            "indonesian": "kelima"
+        },
+        {
+            "arabic": "خَمْس",
+            "indonesian": "lima (bentuk mudzakkar)"
+        },
+        {
+            "arabic": "الْخَمِيس",
+            "indonesian": "hari Kamis"
+        },
+        {
+            "arabic": "دَخَلَ / يَدْخُلُ",
+            "indonesian": "masuk"
+        },
+        {
+            "arabic": "دَوْر",
+            "indonesian": "lantai / tingkat / peran"
+        },
+        {
+            "arabic": "رَقْم",
+            "indonesian": "nomor / angka"
+        },
+        {
+            "arabic": "السَّبْت",
+            "indonesian": "hari Sabtu"
+        },
+        {
+            "arabic": "سِتَارَة",
+            "indonesian": "tirai / gorden"
+        },
+        {
+            "arabic": "سَجَّادَة",
+            "indonesian": "karpet / sajadah"
+        },
+        {
+            "arabic": "سَخَّان",
+            "indonesian": "pemanas air"
+        },
+        {
+            "arabic": "سَرِير",
+            "indonesian": "tempat tidur / ranjang"
+        },
+        {
+            "arabic": "سَكَنَ / يَسْكُنُ",
+            "indonesian": "tinggal / menetap"
+        },
+        {
+            "arabic": "شَقَّة",
+            "indonesian": "apartemen / rumah susun"
+        },
+        {
+            "arabic": "شُكْرًا",
+            "indonesian": "terima kasih"
+        },
+        {
+            "arabic": "شَيْء",
+            "indonesian": "sesuatu / benda"
+        },
+        {
+            "arabic": "غُرَف",
+            "indonesian": "kamar-kamar (jamak)"
+        },
+        {
+            "arabic": "غُرْفَة جُلُوس",
+            "indonesian": "ruang tamu / ruang duduk"
+        },
+        {
+            "arabic": "غُرْفَة نَوْم",
+            "indonesian": "kamar tidur"
+        },
+        {
+            "arabic": "فُرْن",
+            "indonesian": "oven / kompor"
+        },
+        {
+            "arabic": "فِي أَيّ ؟",
+            "indonesian": "di (lantai/bagian) mana?"
+        },
+        {
+            "arabic": "كَمْ ؟",
+            "indonesian": "berapa?"
+        },
+        {
+            "arabic": "لَا (جَوَابِيَّة)",
+            "indonesian": "tidak (untuk jawaban)"
+        },
+        {
+            "arabic": "لَدَى",
+            "indonesian": "mempunyai / memiliki / di sisi"
+        },
+        {
+            "arabic": "مُؤَجِّر",
+            "indonesian": "pemberi sewa / pemilik kontrakan"
+        },
+        {
+            "arabic": "مَا (نَافِيَة)",
+            "indonesian": "tidak (kata ingkar)"
+        },
+        {
+            "arabic": "مَاذَا ？",
+            "indonesian": "apa? (diikuti kata kerja)"
+        },
+        {
+            "arabic": "مِرْآة",
+            "indonesian": "cermin"
+        },
+        {
+            "arabic": "مُسْتَأْجِر",
+            "indonesian": "penyewa / pengontrak"
+        },
+        {
+            "arabic": "مُشَاهَدَة",
+            "indonesian": "menonton / menyaksikan"
+        },
+        {
+            "arabic": "مُشْتَرِي",
+            "indonesian": "pembeli"
+        },
+        {
+            "arabic": "مَطَار",
+            "indonesian": "bandara"
+        },
+        {
+            "arabic": "مَطْبَخ",
+            "indonesian": "dapur"
+        },
+        {
+            "arabic": "مِنْ فَضْلِكَ",
+            "indonesian": "silakan / tolong (permintaan sopan)"
+        }
+    ],
+    "unit_4": [
+        {
+            "arabic": "اِسْتَيْقَظَ / يَسْتَيْقِظُ",
+            "indonesian": "bangun tidur"
+        },
+        {
+            "arabic": "أَطْبَاق",
+            "indonesian": "piring-piring (jamak)"
+        },
+        {
+            "arabic": "أَوْ",
+            "indonesian": "atau"
+        },
+        {
+            "arabic": "أَوَّل",
+            "indonesian": "pertama"
+        },
+        {
+            "arabic": "أَيْضًا",
+            "indonesian": "juga"
+        },
+        {
+            "arabic": "بِـ (حَرْف جَرّ)",
+            "indonesian": "dengan (huruf jar)"
+        },
+        {
+            "arabic": "بَعْدَ",
+            "indonesian": "setelah / sesudah"
+        },
+        {
+            "arabic": "تِلْفَاز",
+            "indonesian": "televisi"
+        },
+        {
+            "arabic": "ثَالِث",
+            "indonesian": "ketiga"
+        },
+        {
+            "arabic": "ثَانِي",
+            "indonesian": "kedua"
+        },
+        {
+            "arabic": "حَافِلَة",
+            "indonesian": "bus / omnibus"
+        },
+        {
+            "arabic": "ذَهَبَ / يَذْهَبُ",
+            "indonesian": "pergi"
+        },
+        {
+            "arabic": "رَابِع",
+            "indonesian": "keempat"
+        },
+        {
+            "arabic": "سَـ",
+            "indonesian": "akan (awalan kata kerja masa depan)"
+        },
+        {
+            "arabic": "سَابِعَة",
+            "indonesian": "jam tujuh / ketujuh"
+        },
+        {
+            "arabic": "السَّاعَة",
+            "indonesian": "jam / waktu"
+        },
+        {
+            "arabic": "سَيَّارَة",
+            "indonesian": "mobil"
+        },
+        {
+            "arabic": "شَاهَدَ / يُشَاهِدُ",
+            "indonesian": "menonton / menyaksikan"
+        },
+        {
+            "arabic": "صَبَاح",
+            "indonesian": "pagi / pagi hari"
+        },
+        {
+            "arabic": "صَحِيفَة",
+            "indonesian": "koran / surat kabar"
+        },
+        {
+            "arabic": "الصَّلَاة",
+            "indonesian": "shalat"
+        },
+        {
+            "arabic": "غَسَلَ / يَغْسِلُ",
+            "indonesian": "mencuci"
+        },
+        {
+            "arabic": "فَعَلَ / يَفْعَلُ",
+            "indonesian": "melakukan / mengerjakan"
+        },
+        {
+            "arabic": "كَبِير",
+            "indonesian": "besar"
+        },
+        {
+            "arabic": "كِتَاب",
+            "indonesian": "buku"
+        },
+        {
+            "arabic": "كَنَسَ / يَكْنُسُ",
+            "indonesian": "menyapu"
+        },
+        {
+            "arabic": "كَوَى / يَكْوِي",
+            "indonesian": "menyetrika"
+        },
+        {
+            "arabic": "لَا (نَافِيَة)",
+            "indonesian": "tidak (penolak/negasi)"
+        },
+        {
+            "arabic": "مُبَكِّرًا",
+            "indonesian": "lebih awal / pagi-pagi sekali"
+        },
+        {
+            "arabic": "مُتَأَخِّرًا",
+            "indonesian": "terlambat / kesiangan"
+        },
+        {
+            "arabic": "مَتَى ؟",
+            "indonesian": "kapan?"
+        },
+        {
+            "arabic": "مَدْرَسَة",
+            "indonesian": "sekolah"
+        },
+        {
+            "arabic": "مَلَابِس",
+            "indonesian": "pakaian / baju (jamak)"
+        },
+        {
+            "arabic": "نَامَ / يَنَامُ",
+            "indonesian": "tidur"
+        },
+        {
+            "arabic": "يَوْم",
+            "indonesian": "hari"
+        },
+        {
+            "arabic": "يَوْم عُطْلَة",
+            "indonesian": "hari libur"
+        },
+        {
+            "arabic": "يَوْم عَمَل",
+            "indonesian": "hari kerja"
+        }
+    ]
+}

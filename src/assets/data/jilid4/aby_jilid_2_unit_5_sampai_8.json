@@ -1,0 +1,937 @@
+{
+    "metadata": {
+        "title": "Ringkasan Data Kosakata Lanjutan",
+        "unit_5": "Unit 5 (Pendidikan & Studi Pascasarjana): 60 kosakata (terkait tingkat pendidikan, gelar akademik seperti ماجستير, دكتوراه, dll.)",
+        "unit_6": "Unit 6 (Pekerjaan, Pengangguran, & Sosial): 64 kosakata (terkait profesi, melamar kerja, perantauan, dll.)",
+        "unit_7": "Unit 7 (Bahasa, Sejarah & Kebudayaan): 55 kosakata (terkait kosa kata bahasa dunia, masa dinasti Abbasiyah, dialek, dll.)",
+        "unit_8": "Unit 8 (Perlombaan, Penghargaan & Karakter): 51 kosakata (terkait perlombaan, beasiswa/hadiah finansial, sifat teladan, dll.)"
+    },
+    "unit_5": [
+        {
+            "arabic": "اِتَّصَلَ / يَتَّصِلُ",
+            "indonesian": "menghubungi / berkomunikasi"
+        },
+        {
+            "arabic": "أَجْر",
+            "indonesian": "upah / pahala / imbalan"
+        },
+        {
+            "arabic": "أَحْوَAL",
+            "indonesian": "keadaan-keadaan / kondisi (jamak)"
+        },
+        {
+            "arabic": "اِخْتِيَارِيّ",
+            "indonesian": "opsional / pilihan"
+        },
+        {
+            "arabic": "أَشْرَفَ / يُشْرِفُ",
+            "indonesian": "mengawasi / membimbing"
+        },
+        {
+            "arabic": "أَعْمَار",
+            "indonesian": "umur-umur / usia (jamak)"
+        },
+        {
+            "arabic": "أَهْل",
+            "indonesian": "keluarga / ahli"
+        },
+        {
+            "arabic": "اِلْتِحَاق",
+            "indonesian": "pendaftaran / bergabung"
+        },
+        {
+            "arabic": "اِنْتَشَرَ / يَنْتَشِرُ",
+            "indonesian": "tersebar / meluas"
+        },
+        {
+            "arabic": "أَنْهَى / يُنْهِي",
+            "indonesian": "menyelesaikan / mengakhiri"
+        },
+        {
+            "arabic": "أَوْرَاق",
+            "indonesian": "kertas-kertas / dokumen (jamak)"
+        },
+        {
+            "arabic": "بَحْث / بُحُوث",
+            "indonesian": "penelitian / skripsi / tesis"
+        },
+        {
+            "arabic": "بَكَالُورْيُوس",
+            "indonesian": "Sarjana (S1 / Bachelor)"
+        },
+        {
+            "arabic": "تَأْثِير",
+            "indonesian": "pengaruh / dampak"
+        },
+        {
+            "arabic": "تَأَخَّرَ / يَتَأَخَّرُ",
+            "indonesian": "terlambat / tertunda"
+        },
+        {
+            "arabic": "تَبَادُل",
+            "indonesian": "pertukaran / saling menukar"
+        },
+        {
+            "arabic": "تَخَصُّص",
+            "indonesian": "spesialisasi / jurusan kuliah"
+        },
+        {
+            "arabic": "تَسْجِيل",
+            "indonesian": "pendaftaran / registrasi / perekaman"
+        },
+        {
+            "arabic": "تَقْرِير / تَقَارِير",
+            "indonesian": "laporan (jamak)"
+        },
+        {
+            "arabic": "ثَقَافَة",
+            "indonesian": "kebudayaan / edukasi luas"
+        },
+        {
+            "arabic": "جَامِعَة",
+            "indonesian": "universitas / perguruan tinggi"
+        },
+        {
+            "arabic": "جِنْسِيَّة",
+            "indonesian": "kewarganegaraan"
+        },
+        {
+            "arabic": "حَاصِل عَلَى",
+            "indonesian": "memperoleh / memegang gelar"
+        },
+        {
+            "arabic": "حُكُومِيّ / (ة)",
+            "indonesian": "pemerintah / negeri (sifat)"
+        },
+        {
+            "arabic": "دِرَاسَات عُلْيَا",
+            "indonesian": "studi pascasarjana (S2/S3)"
+        },
+        {
+            "arabic": "دِيوَان",
+            "indonesian": "kantor / dewan / antologi puisi"
+        },
+        {
+            "arabic": "دُكْتُورَاه",
+            "indonesian": "Doktor (S3 / PhD)"
+        },
+        {
+            "arabic": "رِسَالَة",
+            "indonesian": "surat / tesis / disertasi"
+        },
+        {
+            "arabic": "رَغِبَ فِي / عَنْ",
+            "indonesian": "menyukai / membenci"
+        },
+        {
+            "arabic": "رَفَضَ / يَرْفِضُ",
+            "indonesian": "menolak"
+        },
+        {
+            "arabic": "شَهَادَة",
+            "indonesian": "ijazah / sertifikat / kesaksian"
+        },
+        {
+            "arabic": "صَعْب",
+            "indonesian": "sulit / susah"
+        },
+        {
+            "arabic": "عَالِم / عُلَمَاء",
+            "indonesian": "ilmuwan / orang alim (jamak)"
+        },
+        {
+            "arabic": "عَامّ / (ة)",
+            "indonesian": "umum / publik"
+        },
+        {
+            "arabic": "عَمِيد",
+            "indonesian": "dekan / pimpinan fakultas / kolonel"
+        },
+        {
+            "arabic": "عَهْد / عُهُود",
+            "indonesian": "era / masa / janji"
+        },
+        {
+            "arabic": "غَالِية",
+            "indonesian": "mahal (feminin)"
+        },
+        {
+            "arabic": "فُرْصَة / فُرَص",
+            "indonesian": "kesempatan / peluang (jamak)"
+        },
+        {
+            "arabic": "قَبِلَ / يَقْبَلُ - قَبُول",
+            "indonesian": "menerima - penerimaan"
+        },
+        {
+            "arabic": "قِسْم / أَقْسَام",
+            "indonesian": "bagian / departemen / prodi"
+        },
+        {
+            "arabic": "كُلِّيَّة",
+            "indonesian": "fakultas"
+        },
+        {
+            "arabic": "مَاجِسْتِير",
+            "indonesian": "Magister (S2 / Master)"
+        },
+        {
+            "arabic": "مَادَّة / مَوَاد",
+            "indonesian": "mata kuliah / bahan / materi"
+        },
+        {
+            "arabic": "مَجَّانًا",
+            "indonesian": "gratis / cuma-cuma"
+        },
+        {
+            "arabic": "مَجْلِس",
+            "indonesian": "dewan / majelis / tempat duduk"
+        },
+        {
+            "arabic": "مَرْحَلَة / مَرَاحِل",
+            "indonesian": "tahapan / tingkatan / fase"
+        },
+        {
+            "arabic": "مَرْكَز / مَرَاكِز",
+            "indonesian": "pusat / sentral (jamak)"
+        },
+        {
+            "arabic": "مَسْؤُول",
+            "indonesian": "penanggung jawab / pejabat"
+        },
+        {
+            "arabic": "مَشْرُوع",
+            "indonesian": "proyek / rencana / legal"
+        },
+        {
+            "arabic": "مُعِيد",
+            "indonesian": "asisten dosen / tutor"
+        },
+        {
+            "arabic": "مَعْهَد",
+            "indonesian": "institut / lembaga / pesantren"
+        },
+        {
+            "arabic": "مَقْعَد / مَقَاعِد",
+            "indonesian": "bangku / kursi / tempat duduk"
+        },
+        {
+            "arabic": "مَكْتَبَة",
+            "indonesian": "perpustakaan / toko buku"
+        },
+        {
+            "arabic": "مِنْحَة / مِنَح",
+            "indonesian": "beasiswa / pemberian (jamak)"
+        },
+        {
+            "arabic": "مِهْنَة / مِهَن",
+            "indonesian": "profesi / pekerjaan (jamak)"
+        },
+        {
+            "arabic": "مُوَافَقَة",
+            "indonesian": "persetujuan / kesepakatan"
+        },
+        {
+            "arabic": "نَتِيجَة / نَتَائِج",
+            "indonesian": "hasil / nilai (jamak)"
+        },
+        {
+            "arabic": "نِظَامِيّ",
+            "indonesian": "reguler / formal / tertata"
+        },
+        {
+            "arabic": "نَوْع / أَنْوَاع",
+            "indonesian": "macam / jenis (jamak)"
+        },
+        {
+            "arabic": "وَظِيفَة / وَظَائِف",
+            "indonesian": "pekerjaan / posisi / jabatan"
+        }
+    ],
+    "unit_6": [
+        {
+            "arabic": "اِبْتَعَدَ / يَبْتَعِدُ",
+            "indonesian": "menjauh / menghindari"
+        },
+        {
+            "arabic": "أَجْنَبِيّ",
+            "indonesian": "asing / orang luar"
+        },
+        {
+            "arabic": "اِخْتَارَ / يَخْتَارُ",
+            "indonesian": "memilih"
+        },
+        {
+            "arabic": "اِخْتِبَار",
+            "indonesian": "ujian / tes"
+        },
+        {
+            "arabic": "أَرْسَلَ / يُرْسِلُ",
+            "indonesian": "mengirim"
+        },
+        {
+            "arabic": "أَسَاسِيّ",
+            "indonesian": "mendasar / pokok / utama"
+        },
+        {
+            "arabic": "أَسْهَمَ / يُسْهِمُ",
+            "indonesian": "berkontribusi / andil"
+        },
+        {
+            "arabic": "إِعْلَان",
+            "indonesian": "iklan / pengumuman"
+        },
+        {
+            "arabic": "أَقَامَ / يُقِيمُ - إِقَامَة",
+            "indonesian": "tinggal / menetap / izin tinggal"
+        },
+        {
+            "arabic": "أَقَلّ",
+            "indonesian": "lebih sedikit / paling minim"
+        },
+        {
+            "arabic": "أَمَان",
+            "indonesian": "keamanan / rasa aman"
+        },
+        {
+            "arabic": "أَمْس",
+            "indonesian": "kemarin"
+        },
+        {
+            "arabic": "إِنْتَاج",
+            "indonesian": "produksi / hasil kerja"
+        },
+        {
+            "arabic": "بَحَثَ عَنْ",
+            "indonesian": "mencari"
+        },
+        {
+            "arabic": "بَطَالَة",
+            "indonesian": "pengangguran"
+        },
+        {
+            "arabic": "بِلَاد / بُلْدَان",
+            "indonesian": "negara-negara / wilayah (jamak)"
+        },
+        {
+            "arabic": "تَأْشِيرَة",
+            "indonesian": "visa"
+        },
+        {
+            "arabic": "تَأْمِين",
+            "indonesian": "asuransi / penjaminan"
+        },
+        {
+            "arabic": "تَجْرِبَة / تَجَارِب",
+            "indonesian": "pengalaman / eksperimen"
+        },
+        {
+            "arabic": "تَرَكَ / يَتْرُكُ",
+            "indonesian": "meninggalkan / membiarkan"
+        },
+        {
+            "arabic": "تَقَاعُد",
+            "indonesian": "pensiun"
+        },
+        {
+            "arabic": "تَقَدَّمَ لِـ (طَلَب)",
+            "indonesian": "melamar / mengajukan permohonan"
+        },
+        {
+            "arabic": "تَكْفِي",
+            "indonesian": "cukup / memadai"
+        },
+        {
+            "arabic": "تَوْظِيف",
+            "indonesian": "rekrutmen / ketenagakerjaan"
+        },
+        {
+            "arabic": "ثَانِيَة",
+            "indonesian": "kedua / detik"
+        },
+        {
+            "arabic": "جَوَاز سَفَر",
+            "indonesian": "paspor"
+        },
+        {
+            "arabic": "حَاجَة",
+            "indonesian": "kebutuhan / keperluan"
+        },
+        {
+            "arabic": "حَصَلَ عَلَى",
+            "indonesian": "mendapatkan / memperoleh"
+        },
+        {
+            "arabic": "خِبْرَة",
+            "indonesian": "pengalaman kerja / keahlian"
+        },
+        {
+            "arabic": "خِرِّيج",
+            "indonesian": "lulusan / alumni"
+        },
+        {
+            "arabic": "خُطْوَة / خُطُوَات",
+            "indonesian": "langkah (jamak)"
+        },
+        {
+            "arabic": "رَاتِب / رَوَاتِب",
+            "indonesian": "gaji / upah bulanan (jamak)"
+        },
+        {
+            "arabic": "رَئِيسِيّ",
+            "indonesian": "utama / pokok / krusial"
+        },
+        {
+            "arabic": "سَبَب / أَسْبَاب",
+            "indonesian": "sebab / alasan (jamak)"
+        },
+        {
+            "arabic": "سِيرَة ذَاتِيَّة",
+            "indonesian": "CV / daftar riwayat hidup"
+        },
+        {
+            "arabic": "شَرِكَة / شَرِكَات",
+            "indonesian": "perusahaan (jamak)"
+        },
+        {
+            "arabic": "شُرُوط",
+            "indonesian": "syarat-syarat / ketentuan"
+        },
+        {
+            "arabic": "شَهْر / شُهُور",
+            "indonesian": "bulan (kalender)"
+        },
+        {
+            "arabic": "صَاحِب عَمَل",
+            "indonesian": "pemilik usaha / bos / majikan"
+        },
+        {
+            "arabic": "صِنَاعَة",
+            "indonesian": "industri / pembuatan"
+        },
+        {
+            "arabic": "طَبِيعَة",
+            "indonesian": "alam / karakteristik / sifat"
+        },
+        {
+            "arabic": "طَلَبَ / يَطْلُبُ",
+            "indonesian": "meminta / memohon"
+        },
+        {
+            "arabic": "عَاطِل عَنِ الْعَمَل",
+            "indonesian": "pengangguran / tidak bekerja"
+        },
+        {
+            "arabic": "عَقْد / عُقُود",
+            "indonesian": "kontrak / akad / dekade"
+        },
+        {
+            "arabic": "عَمَلِيَّات",
+            "indonesian": "operasi / proses (jamak)"
+        },
+        {
+            "arabic": "عَمِيل / عُمَلَاء",
+            "indonesian": "klien / pelanggan / agen"
+        },
+        {
+            "arabic": "غُرْبَة",
+            "indonesian": "perantauan / keterasingan"
+        },
+        {
+            "arabic": "فَتْرَة / فَتَرَات",
+            "indonesian": "periode / kurun waktu"
+        },
+        {
+            "arabic": "قَبُول",
+            "indonesian": "penerimaan / persetujuan"
+        },
+        {
+            "arabic": "قَدَّمَ طَلَبًا",
+            "indonesian": "mengajukan lamaran / permohonan"
+        },
+        {
+            "arabic": "قَرار",
+            "indonesian": "keputusan"
+        },
+        {
+            "arabic": "كَسَبَ / يَكْسِبُ",
+            "indonesian": "menghasilkan / mendapatkan uang"
+        },
+        {
+            "arabic": "مُؤَهِّل / مُؤَهِّلَات",
+            "indonesian": "kualifikasi / syarat akademik"
+        },
+        {
+            "arabic": "مُؤَسَّسَة",
+            "indonesian": "institusi / lembaga / yayasan"
+        },
+        {
+            "arabic": "مُقَابَلَة PERSONAl",
+            "indonesian": "wawancara kerja / interview"
+        },
+        {
+            "arabic": "مُوَظَّف",
+            "indonesian": "karyawan / pegawai"
+        },
+        {
+            "arabic": "مَجَال / مَجَالَات",
+            "indonesian": "bidang / ranah / sektor"
+        },
+        {
+            "arabic": "مُدِير",
+            "indonesian": "direktur / manajer / kepala"
+        },
+        {
+            "arabic": "مُسْتَقْبَل",
+            "indonesian": "masa depan"
+        },
+        {
+            "arabic": "مَصْدَر / مَصَادِر",
+            "indonesian": "sumber / asal-usul (jamak)"
+        },
+        {
+            "arabic": "مَصْنَع",
+            "indonesian": "pabrik"
+        },
+        {
+            "arabic": "مَكْتَب",
+            "indonesian": "kantor / meja kerja"
+        },
+        {
+            "arabic": "مِهَنِيّ",
+            "indonesian": "profesional / kejuruan"
+        },
+        {
+            "arabic": "هَاجَرَ / يُهَاجِرُ",
+            "indonesian": "bermigrasi / merantau ke luar negeri"
+        }
+    ],
+    "unit_7": [
+        {
+            "arabic": "اِتَّسَعَ / يَتَّسِعُ",
+            "indonesian": "memuat / luas / menampung"
+        },
+        {
+            "arabic": "اِخْتَلَفَ / يَخْتَلِفُ",
+            "indonesian": "berbeda / bervariasi"
+        },
+        {
+            "arabic": "اِسْتَخْدَمَ / يَسْتَخْدِمُ",
+            "indonesian": "menggunakan / memakai"
+        },
+        {
+            "arabic": "اِسْتَعْمَرَ / يَسْتَعْمِرُ",
+            "indonesian": "menjajah / mengkolonisasi"
+        },
+        {
+            "arabic": "أَصْل / أُصُول",
+            "indonesian": "asal-usul / dasar / pokok"
+        },
+        {
+            "arabic": "أَلْف / آلَاف",
+            "indonesian": "seribu / ribuan"
+        },
+        {
+            "arabic": "أُمَّة / أُمَم",
+            "indonesian": "umat / bangsa (jamak)"
+        },
+        {
+            "arabic": "أَهَمِّيَّة",
+            "indonesian": "pentingnya / urgensi"
+        },
+        {
+            "arabic": "اِنْتَقَلَ / يَنْتَقِلُ",
+            "indonesian": "berpindah / bermigrasi"
+        },
+        {
+            "arabic": "بَاحِث",
+            "indonesian": "peneliti / akademisi"
+        },
+        {
+            "arabic": "بَدَأَ / يَبْدَأُ",
+            "indonesian": "mulai / memulai"
+        },
+        {
+            "arabic": "تَارِيخ",
+            "indonesian": "sejarah / tanggal"
+        },
+        {
+            "arabic": "تَرْجَمَ / يُتَرْجِمُ",
+            "indonesian": "menerjemahkan"
+        },
+        {
+            "arabic": "تَرْجَمَة",
+            "indonesian": "penerjemahan / terjemah"
+        },
+        {
+            "arabic": "تَعَلَّمَ / يَتَعَلَّمُ",
+            "indonesian": "belajar / mempelajari"
+        },
+        {
+            "arabic": "تَكَلَّمَ / يَتَكَلَّمُ",
+            "indonesian": "berbicara"
+        },
+        {
+            "arabic": "ثَقَافَة / ثَقَافَات",
+            "indonesian": "budaya / peradaban (jamak)"
+        },
+        {
+            "arabic": "جِيل / أَجْيَال",
+            "indonesian": "generasi (jamak)"
+        },
+        {
+            "arabic": "حَضَارَة / حَضَارَات",
+            "indonesian": "peradaban (jamak)"
+        },
+        {
+            "arabic": "حَفِظَ / يَحْفَظُ",
+            "indonesian": "menjaga / menghafal"
+        },
+        {
+            "arabic": "خِلَافَة",
+            "indonesian": "kekhalifahan / pemerintahan Islam"
+        },
+        {
+            "arabic": "دَوْلَة / دُوَل",
+            "indonesian": "negara (jamak)"
+        },
+        {
+            "arabic": "دِينِيّ",
+            "indonesian": "bersifat keagamaan / religius"
+        },
+        {
+            "arabic": "رَسْمِيّ",
+            "indonesian": "resmi / formal"
+        },
+        {
+            "arabic": "زَمَن / أَزْمِنَة",
+            "indonesian": "waktu / masa / era"
+        },
+        {
+            "arabic": "سَبَب / أَسْبَاب",
+            "indonesian": "sebab / pemicu (jamak)"
+        },
+        {
+            "arabic": "سَادَ / يَسُودُ",
+            "indonesian": "mendominasi / memimpin"
+        },
+        {
+            "arabic": "شَعْب / شُعُوب",
+            "indonesian": "rakyat / suku bangsa (jamak)"
+        },
+        {
+            "arabic": "شَكْل / أَشْكَال",
+            "indonesian": "bentuk / ragam / rupa"
+        },
+        {
+            "arabic": "عَالَمِيّ",
+            "indonesian": "internasional / sejagat / global"
+        },
+        {
+            "arabic": "عَبَّاسِيّ",
+            "indonesian": "Dinasti Abbasiyah"
+        },
+        {
+            "arabic": "عَرَبِيّ",
+            "indonesian": "orang Arab / bahasa Arab"
+        },
+        {
+            "arabic": "عَصْر / عُصُور",
+            "indonesian": "era / zaman / abad (jamak)"
+        },
+        {
+            "arabic": "عِلْم / عُلُوم",
+            "indonesian": "ilmu / sains (jamak)"
+        },
+        {
+            "arabic": "عَامِّيَّة",
+            "indonesian": "bahasa populer / dialek / ammiyah"
+        },
+        {
+            "arabic": "غَرْب",
+            "indonesian": "barat"
+        },
+        {
+            "arabic": "فُصْحَى",
+            "indonesian": "bahasa baku / fusha / formal"
+        },
+        {
+            "arabic": "قَرْن / قُرُون",
+            "indonesian": "abad (jamak)"
+        },
+        {
+            "arabic": "قَدِيم / (ة)",
+            "indonesian": "kuno / lama / lampau"
+        },
+        {
+            "arabic": "قَامُوس / قَوَامِيس",
+            "indonesian": "kamus (jamak)"
+        },
+        {
+            "arabic": "كِتَابَة",
+            "indonesian": "tulisan / penulisan"
+        },
+        {
+            "arabic": "كَلِمَة / كَلِمَات",
+            "indonesian": "kata / kosakata (jamak)"
+        },
+        {
+            "arabic": "لُغَة / لُغَات",
+            "indonesian": "bahasa (jamak)"
+        },
+        {
+            "arabic": "لَهْجَة / لَهَجَات",
+            "indonesian": "dialek / aksen (jamak)"
+        },
+        {
+            "arabic": "مَاضٍ",
+            "indonesian": "masa lalu / lampau"
+        },
+        {
+            "arabic": "مُتَرْجِم",
+            "indonesian": "penerjemah / translator"
+        },
+        {
+            "arabic": "مُتَحَدِّث",
+            "indonesian": "pembicara / penutur"
+        },
+        {
+            "arabic": "مَخْطُوطَة",
+            "indonesian": "manuskrip / naskah kuno"
+        },
+        {
+            "arabic": "مَرْكَز / مَرَاكِز",
+            "indonesian": "pusat / sentral"
+        },
+        {
+            "arabic": "مُسْتَعْمِر",
+            "indonesian": "penjajah / kolonial"
+        },
+        {
+            "arabic": "مُسْلِم / مُسْلِمُونَ",
+            "indonesian": "orang muslim (jamak)"
+        },
+        {
+            "arabic": "مَصْدَر / مَصَادِر",
+            "indonesian": "sumber (jamak)"
+        },
+        {
+            "arabic": "مَعْنَى / مَعَانٍ",
+            "indonesian": "arti / makna (jamak)"
+        },
+        {
+            "arabic": "نَشَرَ / يَنْشُرُ",
+            "indonesian": "menyebarkan / menerbitkan"
+        },
+        {
+            "arabic": "وَطَن / أَوْطَان",
+            "indonesian": "tanah air / negara asal"
+        }
+    ],
+    "unit_8": [
+        {
+            "arabic": "اِبْتَكَرَ / يَبْتَكِرُ",
+            "indonesian": "menciptakan / berinovasi"
+        },
+        {
+            "arabic": "أَمِين / (ة)",
+            "indonesian": "amanah / jujur / tepercaya"
+        },
+        {
+            "arabic": "إِنْجَاز / إِنْجَازَات",
+            "indonesian": "pencapaian / prestasi"
+        },
+        {
+            "arabic": "بَطَل / أَبْطَال",
+            "indonesian": "juara / pahlawan (jamak)"
+        },
+        {
+            "arabic": "بُطُولَة",
+            "indonesian": "kejuaraan / turnamen"
+        },
+        {
+            "arabic": "تَقْدِير",
+            "indonesian": "apresiasi / penghargaan / prediksi"
+        },
+        {
+            "arabic": "تَنَافُس",
+            "indonesian": "persaingan / kompetisi sehat"
+        },
+        {
+            "arabic": "تَفَوُّق",
+            "indonesian": "keunggulan / prestasi gemilang"
+        },
+        {
+            "arabic": "جَائِزَة / جَوَائِز",
+            "indonesian": "hadiah / penghargaan (jamak)"
+        },
+        {
+            "arabic": "خُلُق / أَخْلَاق",
+            "indonesian": "akhlak / karakter / moral"
+        },
+        {
+            "arabic": "رِيَاضَة",
+            "indonesian": "olahraga"
+        },
+        {
+            "arabic": "رِيَاضِيّ",
+            "indonesian": "atlet / bersifat olahraga"
+        },
+        {
+            "arabic": "شَارَكَ / يُشَارِكُ",
+            "indonesian": "ikut serta / berpartisipasi"
+        },
+        {
+            "arabic": "شَجَاعَة",
+            "indonesian": "keberanian"
+        },
+        {
+            "arabic": "شَجِيع",
+            "indonesian": "pemberani"
+        },
+        {
+            "arabic": "شَهَادَة تَقْدِير",
+            "indonesian": "piagam penghargaan"
+        },
+        {
+            "arabic": "صَادِق / (ة)",
+            "indonesian": "jujur / benar (kata sifat)"
+        },
+        {
+            "arabic": "صِدْق",
+            "indonesian": "kejujuran / kebenaran"
+        },
+        {
+            "arabic": "صَبْر",
+            "indonesian": "kesabaran"
+        },
+        {
+            "arabic": "صَبُور",
+            "indonesian": "penyabar"
+        },
+        {
+            "arabic": "طُمُوح",
+            "indonesian": "ambisi / cita-cita tinggi"
+        },
+        {
+            "arabic": "عَادِل",
+            "indonesian": "adil"
+        },
+        {
+            "arabic": "عَدْل",
+            "indonesian": "keadilan"
+        },
+        {
+            "arabic": "فَازَ / يَفُوزُ",
+            "indonesian": "menang / meraih juara"
+        },
+        {
+            "arabic": "فَائِز / (ة)",
+            "indonesian": "pemenang / juara"
+        },
+        {
+            "arabic": "فَوْز",
+            "indonesian": "kemenangan"
+        },
+        {
+            "arabic": "قِيمَة / قِيَم",
+            "indonesian": "nilai / norma / value (jamak)"
+        },
+        {
+            "arabic": "قَوِيّ / أَقْوِيَاء",
+            "indonesian": "kuat (jamak)"
+        },
+        {
+            "arabic": "كَرَم",
+            "indonesian": "kedermawanan / kemuliaan"
+        },
+        {
+            "arabic": "كَرِيم",
+            "indonesian": "dermawan / mulia"
+        },
+        {
+            "arabic": "لَجْنَة / لِجَان",
+            "indonesian": "komite / dewan juri / panitia"
+        },
+        {
+            "arabic": "لَقَب / أَلْقَاب",
+            "indonesian": "gelar / julukan (jamak)"
+        },
+        {
+            "arabic": "مُبَارَاة / مُبَارَيَات",
+            "indonesian": "pertandingan / laga (jamak)"
+        },
+        {
+            "arabic": "مُبْتَكِر",
+            "indonesian": "kreatif / inovatif"
+        },
+        {
+            "arabic": "مَبْلَغ",
+            "indonesian": "jumlah uang / nominal"
+        },
+        {
+            "arabic": "مَحْبُوب",
+            "indonesian": "dicintai / populer / favorit"
+        },
+        {
+            "arabic": "مُسَابَقَة",
+            "indonesian": "perlombaan / kompetisi"
+        },
+        {
+            "arabic": "مَشْهُور",
+            "indonesian": "terkenal / masyhur"
+        },
+        {
+            "arabic": "مَظْهَر",
+            "indonesian": "penampilan / aspek lahiriah"
+        },
+        {
+            "arabic": "مَعْلُومَات",
+            "indonesian": "informasi (jamak)"
+        },
+        {
+            "arabic": "مُكَافَأَة",
+            "indonesian": "hadiah / bonus / imbalan finansial"
+        },
+        {
+            "arabic": "مُلَخَّص",
+            "indonesian": "ringkasan / rangkuman"
+        },
+        {
+            "arabic": "مُنَافَسَة",
+            "indonesian": "persaingan / kompetisi"
+        },
+        {
+            "arabic": "مَنَعَ / يَمْنَعُ",
+            "indonesian": "melarang / mencegah (diulang di tabel)"
+        },
+        {
+            "arabic": "مَوْلُود",
+            "indonesian": "bayi lahir / dilahirkan"
+        },
+        {
+            "arabic": "مِيْدَالِيَّة",
+            "indonesian": "medali"
+        },
+        {
+            "arabic": "نَافَسَ / يُنَافِسُ",
+            "indonesian": "bersaing / berkompetisi"
+        },
+        {
+            "arabic": "نَالَ / يَنَالُ",
+            "indonesian": "memperoleh / mendapatkan"
+        },
+        {
+            "arabic": "نَجَاح",
+            "indonesian": "keberhasilan"
+        },
+        {
+            "arabic": "هِمَّة",
+            "indonesian": "semangat / tekad baja"
+        },
+        {
+            "arabic": "وَفَاء",
+            "indonesian": "kesetiaan / ketepatan janji"
+        }
+    ]
+}

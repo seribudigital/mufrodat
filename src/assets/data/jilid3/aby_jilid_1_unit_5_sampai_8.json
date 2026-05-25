@@ -1,0 +1,513 @@
+{
+    "metadata": {
+        "title": "Ringkasan Data Kosakata Lanjutan (Part 2)",
+        "unit_5": "Unit 5 (Makanan & Minuman / الطعام والشراب): 39 entri (kosa kata bahan makanan pokok, sayur, buah, kata kerja makan/minum, istilah porsi, keadaan lapar/kenyang/gemuk/kurus, serta memesan makanan di restoran).",
+        "unit_6": "Unit 6 (Ibadah Shalat / الصلاة): 28 entri (istilah azan, nama-nama masjid utama seperti Al-Haram, Nabawi, dan Al-Aqsha, nama shalat lima waktu, kondisi musafir/sakit/malas, serta tata cara shalat seperti ruku, sujud, dan rakaat).",
+        "unit_7": "Unit 7 (Studi & Pendidikan / الدراسة): 31 entri (jadwal pelajaran, mata pelajaran seperti matematika/sains/bahasa Arab, fasilitas seperti laboratorium/perpustakaan, nama-nama fakultas, serta profesi bidang akademik).",
+        "unit_8": "Unit 8 (Pekerjaan & Profesi / العمل): 26 entri (tempat kerja seperti perusahaan/rumah sakit, macam-macam profesi seperti apoteker/perawat/penjahit/koki, jenjang pendidikan sekolah dari tingkat SD/Ibtidaiyah hingga perkuliahan, dan hitungan jam kerja)."
+    },
+    "unit_5": [
+        {
+            "arabic": "أَكَلَ / يَأْكُلُ",
+            "indonesian": "makan"
+        },
+        {
+            "arabic": "الْأَكْل",
+            "indonesian": "makanan / hal makan"
+        },
+        {
+            "arabic": "أُرْز",
+            "indonesian": "nasi"
+        },
+        {
+            "arabic": "بَصَل",
+            "indonesian": "bawang merah / bawang bombay"
+        },
+        {
+            "arabic": "تَمْر",
+            "indonesian": "kurma"
+        },
+        {
+            "arabic": "تَفَّاح",
+            "indonesian": "apel"
+        },
+        {
+            "arabic": "ثَوْم",
+            "indonesian": "bawang putih"
+        },
+        {
+            "arabic": "جَاج (دَجَاج)",
+            "indonesian": "ayam"
+        },
+        {
+            "arabic": "حَلِيب",
+            "indonesian": "susu"
+        },
+        {
+            "arabic": "خُبْز",
+            "indonesian": "roti"
+        },
+        {
+            "arabic": "خَضْرَاوَات",
+            "indonesian": "sayur-sayuran (jamak)"
+        },
+        {
+            "arabic": "شَاي",
+            "indonesian": "teh"
+        },
+        {
+            "arabic": "شَرِبَ / يَشْرَبُ",
+            "indonesian": "minum"
+        },
+        {
+            "arabic": "طَعَام",
+            "indonesian": "makanan"
+        },
+        {
+            "arabic": "طَمَاطِم",
+            "indonesian": "tomat"
+        },
+        {
+            "arabic": "عِنَب",
+            "indonesian": "anggur"
+        },
+        {
+            "arabic": "فَاكِهَة / فَوَاكِه",
+            "indonesian": "buah / buah-buahan"
+        },
+        {
+            "arabic": "قَهْوَة",
+            "indonesian": "kopi"
+        },
+        {
+            "arabic": "لَحْم",
+            "indonesian": "daging"
+        },
+        {
+            "arabic": "مَاء",
+            "indonesian": "air"
+        },
+        {
+            "arabic": "مَوْز",
+            "indonesian": "pisang"
+        },
+        {
+            "arabic": "وَجْبَة / وَجَبَات",
+            "indonesian": "porsi makanan / menu makan (jamak)"
+        },
+        {
+            "arabic": "الْفُطُور",
+            "indonesian": "sarapan pagi"
+        },
+        {
+            "arabic": "الْغَدَاء",
+            "indonesian": "makan siang"
+        },
+        {
+            "arabic": "الْعَشَاء",
+            "indonesian": "makan malam"
+        },
+        {
+            "arabic": "ضَيْف / ضُيُوف",
+            "indonesian": "tamu / tamu-tamu (jamak)"
+        },
+        {
+            "arabic": "مَائِدَة",
+            "indonesian": "meja makan / hidangan makanan"
+        },
+        {
+            "arabic": "جَوْعَان",
+            "indonesian": "lapar"
+        },
+        {
+            "arabic": "شَبْعَان",
+            "indonesian": "kenyang"
+        },
+        {
+            "arabic": "سَمِين",
+            "indonesian": "gemuk"
+        },
+        {
+            "arabic": "نَحِيف",
+            "indonesian": "kurus"
+        },
+        {
+            "arabic": "وَزْن",
+            "indonesian": "berat badan"
+        },
+        {
+            "arabic": "كَثِير",
+            "indonesian": "banyak"
+        },
+        {
+            "arabic": "قَلِيل",
+            "indonesian": "sedikit"
+        },
+        {
+            "arabic": "مَطْعَم",
+            "indonesian": "restoran / rumah makan"
+        },
+        {
+            "arabic": "مَطْلُوب",
+            "indonesian": "yang diminta / dipesan / dicari"
+        },
+        {
+            "arabic": "سَمَك",
+            "indonesian": "ikan"
+        },
+        {
+            "arabic": "سَلَطَة",
+            "indonesian": "selada / salad"
+        },
+        {
+            "arabic": "حِسَاب",
+            "indonesian": "hitungan / nota / tagihan"
+        }
+    ],
+    "unit_6": [
+        {
+            "arabic": "الْأَذَان",
+            "indonesian": "azan (diulang di bab ini)"
+        },
+        {
+            "arabic": "أَذَّنَ / يُؤَذِّنُ",
+            "indonesian": "mengumandangkan azan"
+        },
+        {
+            "arabic": "الْمَسْجِدِ الْحَرَام",
+            "indonesian": "Masjidil Haram (di Makkah)"
+        },
+        {
+            "arabic": "الْمَسْجِدِ النَّبَوِيّ",
+            "indonesian": "Masjid Nabawi (di Madinah)"
+        },
+        {
+            "arabic": "مَسْجِد عُمَر",
+            "indonesian": "Masjid Umar"
+        },
+        {
+            "arabic": "الصَّلَوَات الْخَمْس",
+            "indonesian": "shalat lima waktu"
+        },
+        {
+            "arabic": "الظُّهْر",
+            "indonesian": "zhuhur"
+        },
+        {
+            "arabic": "الْعَصْر",
+            "indonesian": "ashar"
+        },
+        {
+            "arabic": "الْمَغْرِب",
+            "indonesian": "magrib"
+        },
+        {
+            "arabic": "الْعِشَاء",
+            "indonesian": "isya"
+        },
+        {
+            "arabic": "مَرِيض",
+            "indonesian": "sakit / orang sakit"
+        },
+        {
+            "arabic": "كَسْلَان",
+            "indonesian": "malas"
+        },
+        {
+            "arabic": "سَفَر",
+            "indonesian": "perjalanan / safar"
+        },
+        {
+            "arabic": "مُسَافِر",
+            "indonesian": "orang yang bepergian / musafir"
+        },
+        {
+            "arabic": "قَرِيب",
+            "indonesian": "dekat"
+        },
+        {
+            "arabic": "بَعِيد",
+            "indonesian": "jauh"
+        },
+        {
+            "arabic": "اِنْتَظَرَ / يَنْتَظِرُ",
+            "indonesian": "menunggu"
+        },
+        {
+            "arabic": "سَمِعَ / يَسْمَعُ",
+            "indonesian": "mendengar"
+        },
+        {
+            "arabic": "فَاتَ / يَفُوتُ",
+            "indonesian": "terlewat / ketinggalan"
+        },
+        {
+            "arabic": "أَدDRَكَ / يُدْرِكُ",
+            "indonesian": "menyusul / mendapati / memahami"
+        },
+        {
+            "arabic": "جَمَاعَة",
+            "indonesian": "berjamaah / kelompok"
+        },
+        {
+            "arabic": "الْمَسْجِد أَقْصَى (الْأَقْصَى)",
+            "indonesian": "Masjidil Aqsa (di Palestina)"
+        },
+        {
+            "arabic": "إِمَام",
+            "indonesian": "imam shalat"
+        },
+        {
+            "arabic": "صَفّ / صُفُوف",
+            "indonesian": "shaf / barisan (jamak)"
+        },
+        {
+            "arabic": "رَكْعَة / رَكَعَات",
+            "indonesian": "rakaat (jamak)"
+        },
+        {
+            "arabic": "سَجَدَ / يَسْجُدُ",
+            "indonesian": "sujud"
+        },
+        {
+            "arabic": "رَكَعَ / يَرْكَعُ",
+            "indonesian": "ruku"
+        },
+        {
+            "arabic": "دَعَا / يَدْعُو",
+            "indonesian": "berdoa / memanggil"
+        }
+    ],
+    "unit_7": [
+        {
+            "arabic": "دَرَسَ / يَدْرُسُ",
+            "indonesian": "belajar"
+        },
+        {
+            "arabic": "الدِّرَاسَة",
+            "indonesian": "studi / pembelajaran"
+        },
+        {
+            "arabic": "عَام دِرَاسِيّ",
+            "indonesian": "tahun ajaran / tahun akademik"
+        },
+        {
+            "arabic": "عُطْلَة",
+            "indonesian": "liburan"
+        },
+        {
+            "arabic": "جَدْوَل دِرَاسِيّ",
+            "indonesian": "jadwal pelajaran / perkuliahan"
+        },
+        {
+            "arabic": "مَادَّة / مَوَادّ",
+            "indonesian": "mata pelajaran / bahan (jamak)"
+        },
+        {
+            "arabic": "الثَّقَافَة الْإِسْلَامِيَّة",
+            "indonesian": "Kebudayaan Islam"
+        },
+        {
+            "arabic": "اللُّغَة الْعَرَبِيَّة",
+            "indonesian": "Bahasa Arab"
+        },
+        {
+            "arabic": "الرِّيَاضِيَّات",
+            "indonesian": "Matematika"
+        },
+        {
+            "arabic": "الْعُلُوم",
+            "indonesian": "Sains / IPA"
+        },
+        {
+            "arabic": "الْحَاسُوب",
+            "indonesian": "Komputer"
+        },
+        {
+            "arabic": "اخْتِبَار / اخْتِبَارَات",
+            "indonesian": "ujian / tes (jamak)"
+        },
+        {
+            "arabic": "بَدَأَ / يَبْدَأُ",
+            "indonesian": "mulai / dimulai"
+        },
+        {
+            "arabic": "اِنْتَهَى / يَنْتَهِي",
+            "indonesian": "berakhir / selesai"
+        },
+        {
+            "arabic": "كَتَبَ / يَكْتُبُ",
+            "indonesian": "menulis"
+        },
+        {
+            "arabic": "لَوْح / لَوْحَة",
+            "indonesian": "papan tulis / papan"
+        },
+        {
+            "arabic": "صَفّ / فَصْل",
+            "indonesian": "kelas / tingkatan"
+        },
+        {
+            "arabic": "مُخْتَبَر",
+            "indonesian": "laboratorium"
+        },
+        {
+            "arabic": "مَكْتَبَة",
+            "indonesian": "perpustakaan / toko buku"
+        },
+        {
+            "arabic": "حِصَّة / حِصَص",
+            "indonesian": "jam pelajaran / sesi (jamak)"
+        },
+        {
+            "arabic": "الِاسْتِرَاحَة",
+            "indonesian": "istirahat"
+        },
+        {
+            "arabic": "جَامِعَة",
+            "indonesian": "universitas"
+        },
+        {
+            "arabic": "كُلِّيَّة",
+            "indonesian": "fakultas"
+        },
+        {
+            "arabic": "كُلِّيَّة التَّرْبِيَة",
+            "indonesian": "Fakultas Tarbiyah / Keguruan"
+        },
+        {
+            "arabic": "كُلِّيَّة الطِّبّ",
+            "indonesian": "Fakultas Kedokteran"
+        },
+        {
+            "arabic": "كُلِّيَّة الْهَنْدَسَة",
+            "indonesian": "Fakultas Teknik / Arsitektur"
+        },
+        {
+            "arabic": "كُلِّيَّة الطَّيَرَان",
+            "indonesian": "Fakultas Penerbangan"
+        },
+        {
+            "arabic": "طَيَّار",
+            "indonesian": "pilot / penerbang"
+        },
+        {
+            "arabic": "مُهَنْدِس",
+            "indonesian": "insinyur"
+        },
+        {
+            "arabic": "مُدَرِّس",
+            "indonesian": "guru / dosen / pengajar"
+        },
+        {
+            "arabic": "طَبِيب",
+            "indonesian": "dokter"
+        }
+    ],
+    "unit_8": [
+        {
+            "arabic": "عَمِلَ / يَعْمَلُ",
+            "indonesian": "bekerja"
+        },
+        {
+            "arabic": "الْعَمَل",
+            "indonesian": "pekerjaan"
+        },
+        {
+            "arabic": "مِهْنَة / مِهَن",
+            "indonesian": "profesi / karir (jamak)"
+        },
+        {
+            "arabic": "مُسْتَشْفَى",
+            "indonesian": "rumah sakit"
+        },
+        {
+            "arabic": "شَرِكَة",
+            "indonesian": "perusahaan"
+        },
+        {
+            "arabic": "طَيَرَان",
+            "indonesian": "penerbangan"
+        },
+        {
+            "arabic": "جَامِعَة",
+            "indonesian": "universitas (diulang di bab ini)"
+        },
+        {
+            "arabic": "مَدْرَسَة",
+            "indonesian": "sekolah (diulang di bab ini)"
+        },
+        {
+            "arabic": "صَيْدَلِيّ",
+            "indonesian": "apoteker / ahli farmasi"
+        },
+        {
+            "arabic": "صَيْدَلِيَّة",
+            "indonesian": "apotek / toko obat"
+        },
+        {
+            "arabic": "مُمَرِّض / مُمَرِّضَة",
+            "indonesian": "perawat (laki-laki / perempuan)"
+        },
+        {
+            "arabic": "خَيَّاط / خَيَّاطَة",
+            "indonesian": "penjahit"
+        },
+        {
+            "arabic": "طَبَّاخ / طَبَّاخَة",
+            "indonesian": "koki / juru masak"
+        },
+        {
+            "arabic": "أُحِبُّ",
+            "indonesian": "saya mencintai / menyukai"
+        },
+        {
+            "arabic": "يُحِبُّ",
+            "indonesian": "dia mencintai / menyukai"
+        },
+        {
+            "arabic": "مَرْحَلَة / مَرَاحِل",
+            "indonesian": "tahap / fase (jamak)"
+        },
+        {
+            "arabic": "الْمَرْحَلَة الِابْتِدَائِيَّة",
+            "indonesian": "Tingkat SD / Madrasah Ibtidaiyah"
+        },
+        {
+            "arabic": "الْمَرْحَلَة الْمُتَوَسِّطَة",
+            "indonesian": "Tingkat SMP / MTs"
+        },
+        {
+            "arabic": "الْمَرْحَلَة الثَّانَوِيَّة",
+            "indonesian": "Tingkat SMA / MA / Aliyah"
+        },
+        {
+            "arabic": "الْمَرْحَلَة الْجَامِعِيَّة",
+            "indonesian": "Tingkat Kuliah / Universitas"
+        },
+        {
+            "arabic": "أَطْفَال",
+            "indonesian": "anak-anak (jamak dari tifl)"
+        },
+        {
+            "arabic": "تِلْمِيذ / تَلَامِيذ",
+            "indonesian": "murid / siswa (jamak)"
+        },
+        {
+            "arabic": "سَاعَة / سَاعَات",
+            "indonesian": "jam / waktu pelajaran (jamak)"
+        },
+        {
+            "arabic": "كَمْ سَاعَة ؟",
+            "indonesian": "berapa jam?"
+        },
+        {
+            "arabic": "سَبْع سَاعَات",
+            "indonesian": "tujuh jam"
+        },
+        {
+            "arabic": "ثَمَانِي سَاعَات",
+            "indonesian": "delapan jam"
+        }
+    ]
+}

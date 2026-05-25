@@ -21,10 +21,32 @@ export const loadLevelDataset = async (jilid: number, level: number): Promise<Mu
   };
 
   const levelMapJilid3: Record<number, string[]> = {
-    1: ['aby_jilid_1_bab_1_4.json'],
-    2: ['aby_jilid_1_bab_5_8.json'],
-    3: ['aby_jilid_1_bab_9_12.json'],
-    4: ['aby_jilid_1_bab_13_16.json'],
+    1: ['aby_jilid_1_unit_1_sampai_4.json'],
+    2: ['aby_jilid_1_unit_1_sampai_4.json'],
+    3: ['aby_jilid_1_unit_5_sampai_8.json'],
+    4: ['aby_jilid_1_unit_5_sampai_8.json'],
+  };
+
+  const levelMapJilid4: Record<number, string[]> = {
+    1: ['aby_jilid_2_unit_1_sampai_4.json'],
+    2: ['aby_jilid_2_unit_1_sampai_4.json'],
+    3: ['aby_jilid_2_unit_5_sampai_8.json'],
+    4: ['aby_jilid_2_unit_5_sampai_8.json'],
+  };
+
+  const allowedUnitsMap: Record<number, Record<number, string[]>> = {
+    3: {
+      1: ['unit_1', 'unit_2'],
+      2: ['unit_3', 'unit_4'],
+      3: ['unit_5', 'unit_6'],
+      4: ['unit_7', 'unit_8'],
+    },
+    4: {
+      1: ['unit_1', 'unit_2'],
+      2: ['unit_3', 'unit_4'],
+      3: ['unit_5', 'unit_6'],
+      4: ['unit_7', 'unit_8'],
+    }
   };
 
   let levelMap = levelMapJilid1;
@@ -32,6 +54,8 @@ export const loadLevelDataset = async (jilid: number, level: number): Promise<Mu
     levelMap = levelMapJilid2;
   } else if (jilid === 3) {
     levelMap = levelMapJilid3;
+  } else if (jilid === 4) {
+    levelMap = levelMapJilid4;
   }
 
   const allowedParts = levelMap[level] || levelMap[4];
@@ -41,21 +65,29 @@ export const loadLevelDataset = async (jilid: number, level: number): Promise<Mu
     const fileName = path.split('/').pop() || '';
     if (isTargetJilid && allowedParts.includes(fileName)) {
       const mod = await modules[path]();
-      if (jilid === 3) {
-        const rawData = mod.default as Record<string, Array<{ bahasa_indonesia: string; bahasa_arab: string }>>;
+      if (jilid === 3 || jilid === 4) {
+        const rawData = mod.default;
+        const metadata = rawData.metadata || {};
+        const targetUnits = allowedUnitsMap[jilid]?.[level] || [];
+        
         let counter = allData.length + 1;
-        for (const babName in rawData) {
-          const babNumber = parseInt(babName.replace(/\D/g, '')) || 1;
-          const items = rawData[babName];
-          for (const item of items) {
-            allData.push({
-              no: counter++,
-              arab: item.bahasa_arab,
-              indonesia: item.bahasa_indonesia,
-              dars: babNumber,
-              kategori_1: babName,
-              kategori_2: 'mufrad',
-            });
+        for (const unitKey of targetUnits) {
+          if (rawData[unitKey]) {
+            const items = rawData[unitKey];
+            const unitDesc = metadata[unitKey] || '';
+            const unitName = unitKey.replace('_', ' ').replace(/\b\w/g, c => c.toUpperCase());
+            for (const item of items) {
+              allData.push({
+                no: counter++,
+                arab: item.arabic,
+                indonesia: item.indonesian,
+                dars: parseInt(unitKey.replace(/\D/g, '')) || 1,
+                kategori_1: unitKey,
+                kategori_2: 'mufrad',
+                unit: unitName,
+                unitDescription: unitDesc
+              });
+            }
           }
         }
       } else {
