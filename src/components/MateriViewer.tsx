@@ -1,13 +1,15 @@
 import React from 'react';
-import type { MufrodatItem } from '../types';
+import type { MufrodatItem, KitabType } from '../types';
 
 interface MateriViewerProps {
   dataset: MufrodatItem[];
   onBack: () => void;
   level: number;
+  kitab: KitabType;
+  jilid: number;
 }
 
-const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level }) => {
+const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level, kitab, jilid }) => {
   interface UnitGroup {
     unitName: string;
     description: string;
@@ -66,7 +68,26 @@ const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level }) =
       </div>
 
       <div style={{ textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2rem', color: 'var(--primary-color)', marginBottom: '0.5rem' }}>Materi Level {level}</h2>
+        <div style={{
+          fontSize: '0.85rem',
+          color: 'var(--text-muted)',
+          marginBottom: '0.75rem',
+          fontWeight: 600,
+          letterSpacing: '0.03em',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '0.4rem',
+          background: 'rgba(255, 255, 255, 0.6)',
+          padding: '0.25rem 0.75rem',
+          borderRadius: '20px',
+          border: '1px solid var(--border-color)',
+          boxShadow: 'var(--shadow-sm)'
+        }}>
+          <span>{kitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
+          <span style={{ opacity: 0.5 }}>/</span>
+          <span>Jilid {jilid}</span>
+        </div>
+        <h2 style={{ fontSize: '2rem', color: kitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)', marginBottom: '0.5rem' }}>Materi Level {level}</h2>
         <p style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>Daftar {dataset.length} kosakata</p>
       </div>
 

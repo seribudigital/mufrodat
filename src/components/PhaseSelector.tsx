@@ -1,13 +1,17 @@
 import React from 'react';
-import type { PhaseType } from '../types';
+import type { PhaseType, KitabType } from '../types';
 
 interface PhaseSelectorProps {
   level: number;
+  kitab: KitabType;
+  jilid: number;
   onSelect: (phase: PhaseType) => void;
   onBack: () => void;
 }
 
-const PhaseSelector: React.FC<PhaseSelectorProps> = ({ level, onSelect, onBack }) => {
+const PhaseSelector: React.FC<PhaseSelectorProps> = ({ level, kitab, jilid, onSelect, onBack }) => {
+  const themeColor = kitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)';
+
   return (
     <div className="fade-in islamic-bg" style={{
       display: 'flex',
@@ -21,7 +25,26 @@ const PhaseSelector: React.FC<PhaseSelectorProps> = ({ level, onSelect, onBack }
       padding: '2rem 1rem'
     }}>
       <div style={{ textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', color: 'var(--primary-color)' }}>Level {level}</h2>
+        <div style={{
+          fontSize: '0.85rem',
+          color: 'var(--text-muted)',
+          marginBottom: '0.75rem',
+          fontWeight: 600,
+          letterSpacing: '0.03em',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '0.4rem',
+          background: 'rgba(255, 255, 255, 0.6)',
+          padding: '0.25rem 0.75rem',
+          borderRadius: '20px',
+          border: '1px solid var(--border-color)',
+          boxShadow: 'var(--shadow-sm)'
+        }}>
+          <span>{kitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
+          <span style={{ opacity: 0.5 }}>/</span>
+          <span>Jilid {jilid}</span>
+        </div>
+        <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', color: themeColor }}>Level {level}</h2>
         <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '1.5rem' }}>Pilih fase pembelajaran</p>
       </div>
 

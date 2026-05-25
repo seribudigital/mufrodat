@@ -186,6 +186,8 @@ function App() {
     return (
       <PhaseSelector 
         level={currentLevel} 
+        kitab={currentKitab}
+        jilid={currentJilid}
         onSelect={handleSelectPhase} 
         onBack={() => window.history.back()} 
       />
@@ -197,6 +199,8 @@ function App() {
       <MateriViewer 
         dataset={rawDataset} 
         level={currentLevel}
+        kitab={currentKitab}
+        jilid={currentJilid}
         onBack={() => window.history.back()} 
       />
     );
@@ -225,6 +229,26 @@ function App() {
         textAlign: 'center' 
       }}>
         <div style={{ textAlign: 'center' }}>
+          <div style={{
+            fontSize: '0.8rem',
+            color: 'var(--text-muted)',
+            fontWeight: 600,
+            letterSpacing: '0.03em',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.35rem',
+            background: 'var(--bg-color)',
+            padding: '0.2rem 0.6rem',
+            borderRadius: '20px',
+            border: '1px solid var(--border-color)',
+            marginBottom: '0.75rem'
+          }}>
+            <span>{currentKitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
+            <span style={{ opacity: 0.5 }}>/</span>
+            <span>Jilid {currentJilid}</span>
+            <span style={{ opacity: 0.5 }}>/</span>
+            <span style={{ color: currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)' }}>Level {currentLevel}</span>
+          </div>
           {identity && (
             <div style={{ 
               marginBottom: '1rem', 
@@ -240,7 +264,7 @@ function App() {
               👤 {identity.name} - Kelas {identity.studentClass}
             </div>
           )}
-          <h1 style={{ fontSize: '4rem', color: 'var(--primary-color)', marginBottom: '0.5rem', lineHeight: 1 }}>{finalScore}</h1>
+          <h1 style={{ fontSize: '4rem', color: currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)', marginBottom: '0.5rem', lineHeight: 1 }}>{finalScore}</h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', fontWeight: 600 }}>{feedbackText}</p>
         </div>
         
@@ -314,13 +338,41 @@ function App() {
         <div className={pulseStreak ? 'animate-pulse-quick' : ''} style={{ 
           fontWeight: 700, 
           fontSize: '1.1rem',
-          color: streak > 2 ? '#f97316' : 'var(--primary-color)',
+          color: streak > 2 ? '#f97316' : (currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)'),
           display: 'flex',
           alignItems: 'center',
           gap: '0.25rem',
           transition: 'color 0.3s ease'
         }}>
           {streak > 0 && `🔥 x${streak}`}
+        </div>
+      </div>
+
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center',
+        marginBottom: '1rem',
+      }}>
+        <div style={{
+          fontSize: '0.8rem',
+          color: 'var(--text-muted)',
+          fontWeight: 600,
+          letterSpacing: '0.03em',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '0.35rem',
+          background: 'rgba(255, 255, 255, 0.6)',
+          padding: '0.2rem 0.6rem',
+          borderRadius: '20px',
+          border: '1px solid var(--border-color)',
+          boxShadow: 'var(--shadow-sm)'
+        }}>
+          <span>{currentKitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
+          <span style={{ opacity: 0.5 }}>/</span>
+          <span>Jilid {currentJilid}</span>
+          <span style={{ opacity: 0.5 }}>/</span>
+          <span style={{ color: currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)' }}>Level {currentLevel}</span>
         </div>
       </div>
 
