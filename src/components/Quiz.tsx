@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import type { QuizQuestion, PhaseType } from '../types';
+import SpeakerButton from './SpeakerButton';
 
 interface QuizProps {
   question: QuizQuestion;
   timeLimit: number;
   phase?: PhaseType;
-  onAnswer: (isCorrect: boolean, isTimeUp?: boolean) => void;
+  onAnswer: (isCorrect: boolean, isTimeUp: boolean, userAnswer: string) => void;
 }
 
 const Quiz: React.FC<QuizProps> = ({ question, timeLimit, phase, onAnswer }) => {
@@ -36,7 +37,7 @@ const Quiz: React.FC<QuizProps> = ({ question, timeLimit, phase, onAnswer }) => 
           
           setTimeout(() => {
             document.body.classList.remove('bg-flash-wrong');
-            onAnswer(false, true); // Auto-fail
+            onAnswer(false, true, ''); // Auto-fail, empty userAnswer
           }, delay);
           return 0;
         }
@@ -47,13 +48,14 @@ const Quiz: React.FC<QuizProps> = ({ question, timeLimit, phase, onAnswer }) => 
     return () => clearInterval(timer);
   }, [question, isTransitioning, onAnswer, phase]);
 
-  const handleSelect = (idx: number) => {
+  const handleSelect = useCallback((idx: number) => {
     if (isTransitioning) return;
 
     setSelectedIdx(idx);
     setIsTransitioning(true);
     
-    const isCorrect = question.options[idx] === question.item.indonesia;
+    const selectedAnswer = question.options[idx];
+    const isCorrect = selectedAnswer === question.item.indonesia;
 
     if (isCorrect) {
       document.body.classList.add('bg-flash-correct');
@@ -65,9 +67,9 @@ const Quiz: React.FC<QuizProps> = ({ question, timeLimit, phase, onAnswer }) => 
     
     setTimeout(() => {
       document.body.classList.remove('bg-flash-correct', 'bg-flash-wrong');
-      onAnswer(isCorrect, false);
+      onAnswer(isCorrect, false, selectedAnswer);
     }, delay);
-  };
+  }, [isTransitioning, question, phase, onAnswer]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -79,7 +81,11 @@ const Quiz: React.FC<QuizProps> = ({ question, timeLimit, phase, onAnswer }) => 
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [question, isTransitioning]);
+  }, [handleSelect]);
+
+  // Timer bar calculations
+  const timerPercentage = (timeLeft / timeLimit) * 100;
+  const timerColorClass = timerPercentage > 50 ? 'timer-safe' : timerPercentage > 25 ? 'timer-warn' : 'timer-danger';
 
   return (
     <div key={animationKey} className="fade-in" style={{
@@ -89,33 +95,49 @@ const Quiz: React.FC<QuizProps> = ({ question, timeLimit, phase, onAnswer }) => 
       justifyContent: 'center',
       gap: '1rem'
     }}>
+      {/* Visual Timer Bar */}
       <div style={{
         display: 'flex',
-        justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: '-1rem',
-        zIndex: 10
+        gap: '0.75rem',
+        padding: '0 0.25rem',
       }}>
+        <div className="quiz-timer-bar-container" style={{ flex: 1 }}>
+          <div 
+            className={`quiz-timer-bar-fill ${timerColorClass}`}
+            style={{ width: `${timerPercentage}%` }}
+          />
+        </div>
         <div style={{
-          background: timeLeft <= 2 ? 'var(--error-color)' : 'var(--primary-color)',
-          color: '#fff',
-          padding: '0.5rem 1.5rem',
-          borderRadius: '20px',
           fontWeight: 700,
-          fontSize: '1.2rem',
-          boxShadow: 'var(--shadow-sm)',
-          transition: 'background 0.3s ease'
-        }}>
-          00:{timeLeft.toString().padStart(2, '0')}
+          fontSize: '1rem',
+          color: timerPercentage <= 25 ? 'var(--error-color)' : 'var(--text-muted)',
+          minWidth: '2.5rem',
+          textAlign: 'center',
+          transition: 'color 0.3s ease',
+          fontVariantNumeric: 'tabular-nums',
+        }}
+          role="timer"
+          aria-live="assertive"
+          aria-label={`Sisa waktu ${timeLeft} detik`}
+        >
+          {timeLeft}s
         </div>
       </div>
 
-      <div className="arab-card" style={{ marginTop: '0.5rem' }}>
+      {/* Arabic Word Card */}
+      <div className="arab-card" style={{ marginTop: '0.25rem', position: 'relative' }}>
         <div className="arab-text">
           {question.item.arab}
         </div>
       </div>
 
+      {/* Speaker Button */}
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '-1.5rem', marginBottom: '0.25rem' }}>
+        <SpeakerButton text={question.item.arab} size="md" />
+      </div>
+
+      {/* Answer Options */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: '1fr',

@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import confetti from 'canvas-confetti';
 import LevelSelector from './components/LevelSelector';
 import PhaseSelector from './components/PhaseSelector';
 import MateriViewer from './components/MateriViewer';
@@ -6,8 +7,9 @@ import Quiz from './components/Quiz';
 import ProgressBar from './components/ProgressBar';
 import HistoryViewer from './components/HistoryViewer';
 import Welcome from './components/Welcome';
+import SpeakerButton from './components/SpeakerButton';
 import { loadLevelDataset, generateQuestions } from './utils/dataFetcher';
-import type { QuizQuestion, HistoryEntry, UserIdentity, PhaseType, MufrodatItem, KitabType } from './types';
+import type { QuizQuestion, HistoryEntry, UserIdentity, PhaseType, MufrodatItem, KitabType, WrongAnswer } from './types';
 
 function App() {
   const [currentKitab, setCurrentKitab] = useState<KitabType>('dl');
@@ -23,6 +25,10 @@ function App() {
   const [maxStreak, setMaxStreak] = useState(0);
   const [score, setScore] = useState({ correct: 0, wrong: 0, timesUp: 0 });
   const [pulseStreak, setPulseStreak] = useState(false);
+  const [wrongAnswers, setWrongAnswers] = useState<WrongAnswer[]>([]);
+  const [displayedScore, setDisplayedScore] = useState(0);
+  const confettiFired = useRef(false);
+  const historySaved = useRef(false);
 
   const [identity, setIdentity] = useState<UserIdentity | null>(() => {
     const saved = localStorage.getItem('mufrodat_identity');
@@ -61,6 +67,71 @@ function App() {
     };
   }, [identity]);
 
+  // Confetti effect — fires when summary is shown with high score
+  useEffect(() => {
+    if (view !== 'summary') return;
+    const totalQ = questions.length;
+    if (totalQ === 0) return;
+    const fs = Math.round((score.correct / totalQ) * 100);
+    if (fs >= 80 && !confettiFired.current) {
+      confettiFired.current = true;
+      const fireConfetti = () => {
+        confetti({ particleCount: 80, spread: 70, origin: { y: 0.6, x: 0.3 } });
+        setTimeout(() => {
+          confetti({ particleCount: 60, spread: 80, origin: { y: 0.5, x: 0.7 } });
+        }, 300);
+        setTimeout(() => {
+          confetti({ particleCount: 100, spread: 100, origin: { y: 0.7, x: 0.5 } });
+        }, 600);
+      };
+      setTimeout(fireConfetti, 400);
+    }
+  }, [view, score.correct, questions.length]);
+
+  // Animated score counting effect
+  useEffect(() => {
+    if (view !== 'summary') return;
+    const totalQ = questions.length;
+    if (totalQ === 0) return;
+    const fs = Math.round((score.correct / totalQ) * 100);
+    if (displayedScore < fs) {
+      const step = Math.max(1, Math.ceil(fs / 40));
+      const timer = setTimeout(() => {
+        setDisplayedScore(prev => Math.min(prev + step, fs));
+      }, 25);
+      return () => clearTimeout(timer);
+    }
+  }, [view, displayedScore, score.correct, questions.length]);
+
+  // Save history when summary is shown (uses flushed state for accurate scores)
+  useEffect(() => {
+    if (view !== 'summary' || currentPhase !== 'ujian' || historySaved.current) return;
+    if (questions.length === 0) return;
+    historySaved.current = true;
+
+    const finalScore = Math.round((score.correct / questions.length) * 100);
+    const entry: HistoryEntry = {
+      id: Date.now().toString(),
+      date: new Date().toISOString(),
+      kitab: currentKitab,
+      jilid: currentJilid,
+      level: currentLevel,
+      score: finalScore,
+      correct: score.correct,
+      wrong: score.wrong + score.timesUp,
+    };
+    const historyKey = `mufrodat_history_${currentKitab}_jilid${currentJilid}`;
+    const raw = localStorage.getItem(historyKey);
+    let history: HistoryEntry[] = [];
+    if (raw) {
+      try {
+        history = JSON.parse(raw);
+      } catch (e) { console.error('Failed to parse history:', e); }
+    }
+    history.push(entry);
+    localStorage.setItem(historyKey, JSON.stringify(history));
+  }, [view, currentPhase, score, questions.length, currentKitab, currentJilid, currentLevel]);
+
   const handleStart = (name: string, studentClass: string) => {
     const newIdentity = { name, studentClass };
     setIdentity(newIdentity);
@@ -98,59 +169,48 @@ function App() {
     setCurrentIdx(0);
     setStreak(0);
     setScore({ correct: 0, wrong: 0, timesUp: 0 });
+    setWrongAnswers([]);
+    setDisplayedScore(0);
+    confettiFired.current = false;
+    historySaved.current = false;
     pushView('quiz');
   };
 
-  const handleAnswer = (isCorrect: boolean, isTimeUp: boolean = false) => {
-    let newScoreObj = { ...score };
+  const handleAnswer = (isCorrect: boolean, isTimeUp: boolean = false, userAnswer: string = '') => {
+    const currentQuestion = questions[currentIdx];
+
     if (isTimeUp) {
       setStreak(0);
-      newScoreObj.timesUp += 1;
+      setScore(prev => ({ ...prev, timesUp: prev.timesUp + 1 }));
+      setWrongAnswers(prev => [...prev, {
+        arab: currentQuestion.item.arab,
+        indonesia: currentQuestion.item.indonesia,
+        userAnswer: '(Waktu Habis)',
+      }]);
     } else if (isCorrect) {
       setStreak(s => {
         const newStreak = s + 1;
         setMaxStreak(m => Math.max(m, newStreak));
         return newStreak;
       });
-      newScoreObj.correct += 1;
+      setScore(prev => ({ ...prev, correct: prev.correct + 1 }));
       
       setPulseStreak(true);
       setTimeout(() => setPulseStreak(false), 300);
     } else {
       setStreak(0);
-      newScoreObj.wrong += 1;
+      setScore(prev => ({ ...prev, wrong: prev.wrong + 1 }));
+      setWrongAnswers(prev => [...prev, {
+        arab: currentQuestion.item.arab,
+        indonesia: currentQuestion.item.indonesia,
+        userAnswer: userAnswer,
+      }]);
     }
-    
-    setScore(newScoreObj);
 
     if (currentIdx + 1 < questions.length) {
       setCurrentIdx(i => i + 1);
     } else {
-      const finalScore = Math.round((newScoreObj.correct / questions.length) * 100);
-      
-      if (currentPhase === 'ujian') {
-        const entry: HistoryEntry = {
-          id: Date.now().toString(),
-          date: new Date().toISOString(),
-          kitab: currentKitab,
-          jilid: currentJilid,
-          level: currentLevel,
-          score: finalScore,
-          correct: newScoreObj.correct,
-          wrong: newScoreObj.wrong + newScoreObj.timesUp,
-        };
-        const historyKey = `mufrodat_history_${currentKitab}_jilid${currentJilid}`;
-        const raw = localStorage.getItem(historyKey);
-        let history: HistoryEntry[] = [];
-        if (raw) {
-          try {
-            history = JSON.parse(raw);
-          } catch (e) {}
-        }
-        history.push(entry);
-        localStorage.setItem(historyKey, JSON.stringify(history));
-      }
-
+      // History saving is handled by the useEffect above
       pushView('summary', true);
     }
   };
@@ -211,10 +271,13 @@ function App() {
     // Base score solely on correct answers
     const finalScore = Math.round((score.correct / totalQuestions) * 100);
     
-    let feedbackText = "";
-    if (finalScore >= 90) feedbackText = "Mumtaz! (Luar Biasa)";
-    else if (finalScore >= 70) feedbackText = "Jayyid Jiddan (Sangat Baik)";
-    else feedbackText = "Barakallahu Fiik, ayo coba lagi!";
+    const getFeedback = (s: number) => {
+      if (s >= 95) return { emoji: "🏆", text: "Mumtaz! Luar Biasa!" };
+      if (s >= 80) return { emoji: "🌟", text: "Jayyid Jiddan!" };
+      if (s >= 70) return { emoji: "💪", text: "Jayyid, Terus Berlatih!" };
+      return { emoji: "📖", text: "Barakallahu Fiik, ayo coba lagi!" };
+    };
+    const { emoji: feedbackEmoji, text: feedbackText } = getFeedback(finalScore);
 
     return (
       <div className="card fade-in" style={{ 
@@ -264,7 +327,8 @@ function App() {
               👤 {identity.name} - Kelas {identity.studentClass}
             </div>
           )}
-          <h1 style={{ fontSize: '4rem', color: currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)', marginBottom: '0.5rem', lineHeight: 1 }}>{finalScore}</h1>
+          <div style={{ fontSize: '3rem', marginBottom: '0.25rem' }}>{feedbackEmoji}</div>
+          <h1 className="score-count-up" style={{ fontSize: '4rem', color: currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)', marginBottom: '0.5rem', lineHeight: 1 }}>{displayedScore}</h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', fontWeight: 600 }}>{feedbackText}</p>
         </div>
         
@@ -286,6 +350,33 @@ function App() {
             <span style={{ color: '#f97316', fontWeight: 700 }}>🔥 {maxStreak}</span>
           </div>
         </div>
+
+        {/* Wrong Answers Review */}
+        {wrongAnswers.length > 0 ? (
+          <div style={{ width: '100%' }}>
+            <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--error-color)', marginBottom: '0.75rem', textAlign: 'left' }}>
+              📝 Kata yang Perlu Dipelajari Ulang ({wrongAnswers.length})
+            </h3>
+            <div className="wrong-answers-section">
+              {wrongAnswers.map((wa, idx) => (
+                <div key={idx} className="wrong-answer-item">
+                  <div className="wrong-answer-left">
+                    <span className="wrong-answer-correct">✓ {wa.indonesia}</span>
+                    <span className="wrong-answer-user">✗ {wa.userAnswer}</span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                    <span className="wrong-answer-arab">{wa.arab}</span>
+                    <SpeakerButton text={wa.arab} size="sm" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div className="perfect-badge">
+            🌟 Sempurna! Semua Jawaban Benar
+          </div>
+        )}
         
         {currentPhase === 'latihan' && (
           <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: '-0.5rem' }}>

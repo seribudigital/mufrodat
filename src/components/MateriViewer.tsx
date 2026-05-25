@@ -1,5 +1,6 @@
 import React from 'react';
 import type { MufrodatItem, KitabType } from '../types';
+import SpeakerButton from './SpeakerButton';
 
 interface MateriViewerProps {
   dataset: MufrodatItem[];
@@ -138,8 +139,11 @@ const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level, kit
                     <div className="materi-item-indonesia">
                       {item.indonesia}
                     </div>
-                    <div className="materi-item-arab">
-                      {item.arab}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                      <div className="materi-item-arab">
+                        {item.arab}
+                      </div>
+                      <SpeakerButton text={item.arab} size="sm" />
                     </div>
                   </div>
                 ))}
@@ -166,8 +170,11 @@ const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level, kit
                 <div className="materi-item-indonesia">
                   {item.indonesia}
                 </div>
-                <div className="materi-item-arab">
-                  {item.arab}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                  <div className="materi-item-arab">
+                    {item.arab}
+                  </div>
+                  <SpeakerButton text={item.arab} size="sm" />
                 </div>
               </div>
             ))}

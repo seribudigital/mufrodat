@@ -14,6 +14,12 @@ export interface QuizQuestion {
   options: string[]; // 2 or 4 options in Indonesian
 }
 
+export interface WrongAnswer {
+  arab: string;
+  indonesia: string;     // jawaban benar
+  userAnswer: string;     // jawaban yang dipilih siswa (kosong jika waktu habis)
+}
+
 export type PhaseType = 'materi' | 'latihan' | 'ujian' | null;
 
 export type KitabType = 'dl' | 'aby';
