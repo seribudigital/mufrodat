@@ -16,9 +16,12 @@ export interface QuizQuestion {
 
 export type PhaseType = 'materi' | 'latihan' | 'ujian' | null;
 
+export type KitabType = 'dl' | 'aby';
+
 export interface HistoryEntry {
   id: string;
   date: string; // ISO string
+  kitab?: KitabType;
   jilid?: number;
   level: number;
   score: number;

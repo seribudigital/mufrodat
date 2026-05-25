@@ -1,40 +1,68 @@
-import type { MufrodatItem, QuizQuestion } from '../types';
+import type { MufrodatItem, QuizQuestion, KitabType } from '../types';
 
 // Dynamically import all part JSON files from the assets folder.
-const modules = import.meta.glob<{ default: any }>('../assets/data/jilid*/*.json');
+const modules = import.meta.glob<{ default: any }>('../assets/data/**/*.json');
 
-export const loadLevelDataset = async (jilid: number, level: number): Promise<MufrodatItem[]> => {
+export const loadLevelDataset = async (kitab: KitabType, jilid: number, level: number): Promise<MufrodatItem[]> => {
   let allData: MufrodatItem[] = [];
   
-  const levelMapJilid1: Record<number, string[]> = {
+  // Durusul Lughah Level Maps
+  const dlLevelMapJilid1: Record<number, string[]> = {
     1: ['part1.json', 'part2.json'],
     2: ['part1.json', 'part2.json', 'part3.json', 'part4.json'],
     3: ['part1.json', 'part2.json', 'part3.json', 'part4.json', 'part5.json', 'part6.json'],
     4: ['part1.json', 'part2.json', 'part3.json', 'part4.json', 'part5.json', 'part6.json', 'part7.json', 'part8.json'],
   };
 
-  const levelMapJilid2: Record<number, string[]> = {
+  const dlLevelMapJilid2: Record<number, string[]> = {
     1: ['part1.json', 'part2.json'],
     2: ['part3.json', 'part4.json'],
     3: ['part5.json', 'part6.json'],
     4: ['part7.json', 'part8.json'],
   };
 
-  const levelMapJilid3: Record<number, string[]> = {
+  // ABY Level Maps
+  const abyLevelMapJilid1: Record<number, string[]> = {
     1: ['aby_jilid_1_unit_1_sampai_4.json'],
     2: ['aby_jilid_1_unit_1_sampai_4.json'],
     3: ['aby_jilid_1_unit_5_sampai_8.json'],
     4: ['aby_jilid_1_unit_5_sampai_8.json'],
   };
 
-  const levelMapJilid4: Record<number, string[]> = {
+  const abyLevelMapJilid2: Record<number, string[]> = {
     1: ['aby_jilid_2_unit_1_sampai_4.json'],
     2: ['aby_jilid_2_unit_1_sampai_4.json'],
     3: ['aby_jilid_2_unit_5_sampai_8.json'],
     4: ['aby_jilid_2_unit_5_sampai_8.json'],
   };
 
-  const allowedUnitsMap: Record<number, Record<number, string[]>> = {
+  const abyLevelMapJilid3: Record<number, string[]> = {
+    1: ['aby_jilid_3_unit_1_sampai_4.json'],
+    2: ['aby_jilid_3_unit_1_sampai_4.json'],
+    3: ['aby_jilid_3_unit_5_sampai_8.json'],
+    4: ['aby_jilid_3_unit_5_sampai_8.json'],
+  };
+
+  const abyLevelMapJilid4: Record<number, string[]> = {
+    1: ['aby_jilid_4_unit_1_sampai_4.json'],
+    2: ['aby_jilid_4_unit_1_sampai_4.json'],
+    3: ['aby_jilid_4_unit_5_sampai_8.json'],
+    4: ['aby_jilid_4_unit_5_sampai_8.json'],
+  };
+
+  const abyAllowedUnitsMap: Record<number, Record<number, string[]>> = {
+    1: {
+      1: ['unit_1', 'unit_2'],
+      2: ['unit_3', 'unit_4'],
+      3: ['unit_5', 'unit_6'],
+      4: ['unit_7', 'unit_8'],
+    },
+    2: {
+      1: ['unit_1', 'unit_2'],
+      2: ['unit_3', 'unit_4'],
+      3: ['unit_5', 'unit_6'],
+      4: ['unit_7', 'unit_8'],
+    },
     3: {
       1: ['unit_1', 'unit_2'],
       2: ['unit_3', 'unit_4'],
@@ -49,26 +77,35 @@ export const loadLevelDataset = async (jilid: number, level: number): Promise<Mu
     }
   };
 
-  let levelMap = levelMapJilid1;
-  if (jilid === 2) {
-    levelMap = levelMapJilid2;
-  } else if (jilid === 3) {
-    levelMap = levelMapJilid3;
-  } else if (jilid === 4) {
-    levelMap = levelMapJilid4;
+  let levelMap = dlLevelMapJilid1;
+  if (kitab === 'dl') {
+    if (jilid === 2) {
+      levelMap = dlLevelMapJilid2;
+    }
+  } else if (kitab === 'aby') {
+    if (jilid === 1) {
+      levelMap = abyLevelMapJilid1;
+    } else if (jilid === 2) {
+      levelMap = abyLevelMapJilid2;
+    } else if (jilid === 3) {
+      levelMap = abyLevelMapJilid3;
+    } else if (jilid === 4) {
+      levelMap = abyLevelMapJilid4;
+    }
   }
 
   const allowedParts = levelMap[level] || levelMap[4];
 
   for (const path in modules) {
+    const isTargetKitab = path.includes(`/${kitab}/`);
     const isTargetJilid = path.includes(`/jilid${jilid}/`);
     const fileName = path.split('/').pop() || '';
-    if (isTargetJilid && allowedParts.includes(fileName)) {
+    if (isTargetKitab && isTargetJilid && allowedParts.includes(fileName)) {
       const mod = await modules[path]();
-      if (jilid === 3 || jilid === 4) {
+      if (kitab === 'aby') {
         const rawData = mod.default;
         const metadata = rawData.metadata || {};
-        const targetUnits = allowedUnitsMap[jilid]?.[level] || [];
+        const targetUnits = abyAllowedUnitsMap[jilid]?.[level] || [];
         
         let counter = allData.length + 1;
         for (const unitKey of targetUnits) {

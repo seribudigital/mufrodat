@@ -7,9 +7,10 @@ import ProgressBar from './components/ProgressBar';
 import HistoryViewer from './components/HistoryViewer';
 import Welcome from './components/Welcome';
 import { loadLevelDataset, generateQuestions } from './utils/dataFetcher';
-import type { QuizQuestion, HistoryEntry, UserIdentity, PhaseType, MufrodatItem } from './types';
+import type { QuizQuestion, HistoryEntry, UserIdentity, PhaseType, MufrodatItem, KitabType } from './types';
 
 function App() {
+  const [currentKitab, setCurrentKitab] = useState<KitabType>('dl');
   const [currentLevel, setCurrentLevel] = useState<number>(1);
   const [currentJilid, setCurrentJilid] = useState<number>(1);
   const [currentPhase, setCurrentPhase] = useState<PhaseType>(null);
@@ -76,7 +77,7 @@ function App() {
     setCurrentPhase(phase);
     setView('loading');
     
-    const data = await loadLevelDataset(currentJilid, currentLevel);
+    const data = await loadLevelDataset(currentKitab, currentJilid, currentLevel);
     setRawDataset(data);
     
     if (phase === 'materi') {
@@ -131,13 +132,14 @@ function App() {
         const entry: HistoryEntry = {
           id: Date.now().toString(),
           date: new Date().toISOString(),
+          kitab: currentKitab,
           jilid: currentJilid,
           level: currentLevel,
           score: finalScore,
           correct: newScoreObj.correct,
           wrong: newScoreObj.wrong + newScoreObj.timesUp,
         };
-        const historyKey = `mufrodat_history_jilid${currentJilid}`;
+        const historyKey = `mufrodat_history_${currentKitab}_jilid${currentJilid}`;
         const raw = localStorage.getItem(historyKey);
         let history: HistoryEntry[] = [];
         if (raw) {
@@ -162,7 +164,7 @@ function App() {
   }
 
   if (view === 'history') {
-    return <HistoryViewer currentJilid={currentJilid} identity={identity} onBack={() => window.history.back()} />;
+    return <HistoryViewer currentKitab={currentKitab} currentJilid={currentJilid} identity={identity} onBack={() => window.history.back()} />;
   }
 
   if (view === 'selector') {
@@ -172,6 +174,8 @@ function App() {
         onViewHistory={() => pushView('history')} 
         userName={identity?.name}
         onChangeProfile={() => pushView('welcome')}
+        currentKitab={currentKitab}
+        setCurrentKitab={setCurrentKitab}
         currentJilid={currentJilid}
         setCurrentJilid={setCurrentJilid}
       />

@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import type { HistoryEntry, UserIdentity } from '../types';
+import type { HistoryEntry, UserIdentity, KitabType } from '../types';
 
 interface HistoryViewerProps {
+  currentKitab: KitabType;
   currentJilid: number;
   identity?: UserIdentity | null;
   onBack: () => void;
 }
 
-const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentJilid, identity, onBack }) => {
+const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentKitab, currentJilid, identity, onBack }) => {
   const [history, setHistory] = useState<HistoryEntry[]>([]);
 
-  const historyKey = `mufrodat_history_jilid${currentJilid}`;
-  const jilidLabel = currentJilid === 3 ? "Aby Jilid 1" : `Jilid ${currentJilid}`;
+  const historyKey = `mufrodat_history_${currentKitab}_jilid${currentJilid}`;
+  const kitabLabel = currentKitab === 'dl' ? 'Durusul Lughah' : 'ABY';
+  const jilidLabel = `${kitabLabel} Jilid ${currentJilid}`;
+  const themeColor = currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)';
 
   useEffect(() => {
     const raw = localStorage.getItem(historyKey);
@@ -47,13 +50,15 @@ const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentJilid, identity, o
         >
           ← Kembali
         </button>
-        <h2 style={{ fontSize: '1.25rem', color: 'var(--primary-color)', margin: 0 }}>Riwayat {jilidLabel}</h2>
+        <h2 style={{ fontSize: '1.25rem', color: themeColor, margin: 0, transition: 'color 0.3s ease' }}>Riwayat {jilidLabel}</h2>
         <div style={{ width: '70px', display: 'flex', justifyContent: 'flex-end' }}>
           <img src="/logo.png" alt="Logo Mufrodat" style={{ width: '35px', height: '35px', objectFit: 'contain' }} />
         </div>
       </div>
 
-      <div className="islamic-divider"><div className="islamic-divider-icon"></div></div>
+      <div className="islamic-divider">
+        <div className="islamic-divider-icon" style={{ backgroundColor: themeColor, transition: 'background-color 0.3s ease' }}></div>
+      </div>
 
       {identity && (
         <div style={{
@@ -65,7 +70,7 @@ const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentJilid, identity, o
           border: '1px solid var(--border-color)',
           boxShadow: 'var(--shadow-sm)'
         }}>
-          <h3 style={{ margin: '0 0 0.5rem 0', color: 'var(--primary-color)', fontSize: '1.2rem' }}>
+          <h3 style={{ margin: '0 0 0.5rem 0', color: themeColor, fontSize: '1.2rem', transition: 'color 0.3s ease' }}>
             👤 {identity.name} - Kelas {identity.studentClass}
           </h3>
           <p style={{ margin: 0, color: 'var(--text-muted)', fontSize: '0.95rem', fontStyle: 'italic', fontWeight: 500 }}>
