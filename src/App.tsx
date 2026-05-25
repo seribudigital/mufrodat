@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import LevelSelector from './components/LevelSelector';
 import PhaseSelector from './components/PhaseSelector';
 import MateriViewer from './components/MateriViewer';
@@ -32,16 +32,44 @@ function App() {
     identity ? 'selector' : 'welcome'
   );
 
+  const pushView = (newView: typeof view, replace: boolean = false) => {
+    setView(newView);
+    if (replace) {
+      window.history.replaceState({ view: newView }, '', '');
+    } else {
+      window.history.pushState({ view: newView }, '', '');
+    }
+  };
+
+  useEffect(() => {
+    // Set the initial state in history
+    const initialView = identity ? 'selector' : 'welcome';
+    window.history.replaceState({ view: initialView }, '', '');
+
+    const handlePopState = (event: PopStateEvent) => {
+      if (event.state && event.state.view) {
+        setView(event.state.view);
+      } else {
+        setView(identity ? 'selector' : 'welcome');
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [identity]);
+
   const handleStart = (name: string, studentClass: string) => {
     const newIdentity = { name, studentClass };
     setIdentity(newIdentity);
     localStorage.setItem('mufrodat_identity', JSON.stringify(newIdentity));
-    setView('selector');
+    pushView('selector', true); // replace welcome view in history
   };
 
   const handleSelectLevel = (level: number) => {
     setCurrentLevel(level);
-    setView('phaseSelector');
+    pushView('phaseSelector');
   };
 
   const handleSelectPhase = async (phase: PhaseType) => {
@@ -52,7 +80,7 @@ function App() {
     setRawDataset(data);
     
     if (phase === 'materi') {
-      setView('materi');
+      pushView('materi');
       return;
     }
     
@@ -69,7 +97,7 @@ function App() {
     setCurrentIdx(0);
     setStreak(0);
     setScore({ correct: 0, wrong: 0, timesUp: 0 });
-    setView('quiz');
+    pushView('quiz');
   };
 
   const handleAnswer = (isCorrect: boolean, isTimeUp: boolean = false) => {
@@ -121,7 +149,7 @@ function App() {
         localStorage.setItem(historyKey, JSON.stringify(history));
       }
 
-      setView('summary');
+      pushView('summary', true);
     }
   };
 
@@ -134,16 +162,16 @@ function App() {
   }
 
   if (view === 'history') {
-    return <HistoryViewer currentJilid={currentJilid} identity={identity} onBack={() => setView('selector')} />;
+    return <HistoryViewer currentJilid={currentJilid} identity={identity} onBack={() => window.history.back()} />;
   }
 
   if (view === 'selector') {
     return (
       <LevelSelector 
         onSelect={handleSelectLevel} 
-        onViewHistory={() => setView('history')} 
+        onViewHistory={() => pushView('history')} 
         userName={identity?.name}
-        onChangeProfile={() => setView('welcome')}
+        onChangeProfile={() => pushView('welcome')}
         currentJilid={currentJilid}
         setCurrentJilid={setCurrentJilid}
       />
@@ -155,7 +183,7 @@ function App() {
       <PhaseSelector 
         level={currentLevel} 
         onSelect={handleSelectPhase} 
-        onBack={() => setView('selector')} 
+        onBack={() => window.history.back()} 
       />
     );
   }
@@ -165,7 +193,7 @@ function App() {
       <MateriViewer 
         dataset={rawDataset} 
         level={currentLevel}
-        onBack={() => setView('phaseSelector')} 
+        onBack={() => window.history.back()} 
       />
     );
   }
@@ -241,11 +269,11 @@ function App() {
           <button className="btn" onClick={() => handleSelectPhase(currentPhase)} style={{ background: 'var(--primary-color)', color: '#fff', borderColor: 'var(--primary-color)', justifyContent: 'center' }}>
             Ulangi Sesi
           </button>
-          <button className="btn" onClick={() => setView('phaseSelector')} style={{ justifyContent: 'center' }}>
+          <button className="btn" onClick={() => window.history.back()} style={{ justifyContent: 'center' }}>
             Kembali ke Fase
           </button>
           {currentPhase === 'ujian' && (
-            <button className="btn" onClick={() => setView('history')} style={{ background: 'none', borderColor: 'transparent', color: 'var(--text-muted)', justifyContent: 'center' }}>
+            <button className="btn" onClick={() => pushView('history')} style={{ background: 'none', borderColor: 'transparent', color: 'var(--text-muted)', justifyContent: 'center' }}>
               Lihat Riwayat Belajar
             </button>
           )}
@@ -273,7 +301,7 @@ function App() {
         marginBottom: '1rem',
       }}>
         <button 
-          onClick={() => setView('phaseSelector')}
+          onClick={() => window.history.back()}
           style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.25rem' }}
         >
           ← Kembali
