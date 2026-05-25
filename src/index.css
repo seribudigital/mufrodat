@@ -273,3 +273,62 @@ body::before {
   right: 0;
   transform: rotate(180deg);
 }
+
+/* Responsive Materi List Styles */
+.materi-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.materi-item-row:nth-child(even) {
+  background-color: var(--bg-color);
+}
+
+.materi-item-indonesia {
+  flex: 1;
+  padding-right: 1rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-align: left;
+  color: var(--text-color);
+  word-break: break-word;
+}
+
+.materi-item-arab {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: right;
+  min-width: 120px;
+  word-break: break-word;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 480px) {
+  .materi-item-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .materi-item-indonesia {
+    padding-right: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-align: left;
+  }
+  
+  .materi-item-arab {
+    font-size: 1.35rem;
+    text-align: right;
+    min-width: unset;
+  }
+}
+

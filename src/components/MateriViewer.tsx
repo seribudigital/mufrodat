@@ -108,19 +108,16 @@ const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level }) =
                 {group.items.map((item, index) => (
                   <div 
                     key={index} 
+                    className="materi-item-row"
                     style={{ 
-                      display: 'flex', 
-                      justifyContent: 'space-between', 
-                      alignItems: 'center',
-                      padding: '0.85rem 1rem',
                       borderBottom: index < group.items.length - 1 ? '1px solid var(--border-color)' : 'none',
                       background: index % 2 === 0 ? 'var(--bg-color)' : 'transparent'
                     }}
                   >
-                    <div style={{ flex: 1, paddingRight: '1rem', fontSize: '1.05rem', fontWeight: 500, textAlign: 'left' }}>
+                    <div className="materi-item-indonesia">
                       {item.indonesia}
                     </div>
-                    <div className="arab-text" style={{ flex: 1, textAlign: 'right', fontSize: '1.4rem', minWidth: '150px' }}>
+                    <div className="materi-item-arab">
                       {item.arab}
                     </div>
                   </div>
@@ -139,19 +136,16 @@ const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level }) =
             {dataset.map((item, index) => (
               <div 
                 key={index} 
+                className="materi-item-row"
                 style={{ 
-                  display: 'flex', 
-                  justifyContent: 'space-between', 
-                  alignItems: 'center',
-                  padding: '1rem',
                   borderBottom: index < dataset.length - 1 ? '1px solid var(--border-color)' : 'none',
                   background: index % 2 === 0 ? 'var(--bg-color)' : 'transparent'
                 }}
               >
-                <div style={{ flex: 1, paddingRight: '1rem', fontSize: '1.1rem', fontWeight: 500, textAlign: 'left' }}>
+                <div className="materi-item-indonesia">
                   {item.indonesia}
                 </div>
-                <div className="arab-text" style={{ flex: 1, textAlign: 'right', fontSize: '1.5rem', minWidth: '150px' }}>
+                <div className="materi-item-arab">
                   {item.arab}
                 </div>
               </div>
