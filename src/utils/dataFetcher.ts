@@ -9,9 +9,9 @@ export const loadLevelDataset = async (kitab: KitabType, jilid: number, level: n
   // Durusul Lughah Level Maps
   const dlLevelMapJilid1: Record<number, string[]> = {
     1: ['part1.json', 'part2.json'],
-    2: ['part1.json', 'part2.json', 'part3.json', 'part4.json'],
-    3: ['part1.json', 'part2.json', 'part3.json', 'part4.json', 'part5.json', 'part6.json'],
-    4: ['part1.json', 'part2.json', 'part3.json', 'part4.json', 'part5.json', 'part6.json', 'part7.json', 'part8.json'],
+    2: ['part3.json', 'part4.json'],
+    3: ['part5.json', 'part6.json'],
+    4: ['part7.json', 'part8.json'],
   };
 
   const dlLevelMapJilid2: Record<number, string[]> = {
