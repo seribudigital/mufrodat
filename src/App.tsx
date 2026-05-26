@@ -445,7 +445,7 @@ function App() {
   else if (currentLevel >= 4) timeLimit = 5;
 
   return (
-    <div className="fade-in" style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+    <main className="fade-in" style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
       <ProgressBar current={currentIdx} total={questions.length} />
       
       <div style={{ 
@@ -508,7 +508,7 @@ function App() {
       </div>
 
       <Quiz question={currentQ} timeLimit={timeLimit} phase={currentPhase} onAnswer={handleAnswer} />
-    </div>
+    </main>
   );
 }
 

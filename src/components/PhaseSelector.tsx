@@ -13,7 +13,7 @@ const PhaseSelector: React.FC<PhaseSelectorProps> = ({ level, kitab, jilid, onSe
   const themeColor = kitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)';
 
   return (
-    <div className="fade-in islamic-bg" style={{
+    <main className="fade-in islamic-bg" style={{
       display: 'flex',
       flexDirection: 'column',
       gap: '1.25rem',
@@ -112,7 +112,7 @@ const PhaseSelector: React.FC<PhaseSelectorProps> = ({ level, kitab, jilid, onSe
       >
         ← Kembali ke Pilihan Level
       </button>
-    </div>
+    </main>
   );
 };
 

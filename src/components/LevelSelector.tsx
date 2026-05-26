@@ -97,7 +97,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
   const themeHover = currentKitab === 'dl' ? '#059669' : 'var(--primary-hover)';
 
   return (
-    <div className="fade-in" style={{
+    <main className="fade-in" style={{
       display: 'flex',
       flexDirection: 'column',
       gap: '1.25rem',
@@ -341,7 +341,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
           );
         })}
       </div>
-    </div>
+    </main>
   );
 };
 

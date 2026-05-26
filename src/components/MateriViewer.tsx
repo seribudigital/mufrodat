@@ -34,7 +34,7 @@ const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level, kit
   }
 
   return (
-    <div className="fade-in islamic-bg" style={{
+    <main className="fade-in islamic-bg" style={{
       display: 'flex',
       flexDirection: 'column',
       gap: '1.5rem',
@@ -181,7 +181,7 @@ const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level, kit
           </div>
         </div>
       )}
-    </div>
+    </main>
   );
 };
 
