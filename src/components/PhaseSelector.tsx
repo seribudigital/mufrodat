@@ -84,6 +84,20 @@ const PhaseSelector: React.FC<PhaseSelectorProps> = ({ level, kitab, jilid, onSe
             <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Kuis penuh, simpan skor</span>
           </div>
         </button>
+
+        <div style={{ margin: '0.25rem 0', borderTop: '1px dashed var(--border-color)' }} />
+
+        <button 
+          className="btn" 
+          onClick={() => onSelect('flashcard')}
+          style={{ padding: '1.1rem', justifyContent: 'center', background: 'var(--bg-color)', border: '2px dashed var(--border-color)' }}
+        >
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.35rem', width: '100%' }}>
+            <span style={{ fontSize: '1.75rem' }}>🃏</span>
+            <span style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-color)' }}>Mode Flashcard</span>
+            <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Hafalan kartu bolak-balik</span>
+          </div>
+        </button>
       </div>
 
       <button 

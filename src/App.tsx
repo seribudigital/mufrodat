@@ -3,12 +3,14 @@ import confetti from 'canvas-confetti';
 import LevelSelector from './components/LevelSelector';
 import PhaseSelector from './components/PhaseSelector';
 import MateriViewer from './components/MateriViewer';
+import FlashcardMode from './components/FlashcardMode';
 import Quiz from './components/Quiz';
 import ProgressBar from './components/ProgressBar';
 import HistoryViewer from './components/HistoryViewer';
 import Welcome from './components/Welcome';
 import SpeakerButton from './components/SpeakerButton';
 import { loadLevelDataset, generateQuestions } from './utils/dataFetcher';
+import { recordQuizCompletion } from './utils/streakManager';
 import type { QuizQuestion, HistoryEntry, UserIdentity, PhaseType, MufrodatItem, KitabType, WrongAnswer } from './types';
 
 function App() {
@@ -35,7 +37,7 @@ function App() {
     return saved ? JSON.parse(saved) : null;
   });
 
-  const [view, setView] = useState<'welcome' | 'selector' | 'phaseSelector' | 'materi' | 'loading' | 'quiz' | 'summary' | 'history'>(
+  const [view, setView] = useState<'welcome' | 'selector' | 'phaseSelector' | 'materi' | 'flashcard' | 'loading' | 'quiz' | 'summary' | 'history'>(
     identity ? 'selector' : 'welcome'
   );
 
@@ -103,13 +105,30 @@ function App() {
     }
   }, [view, displayedScore, score.correct, questions.length]);
 
-  // Save history when summary is shown (uses flushed state for accurate scores)
+  // Save history and record streak when summary is shown (uses flushed state for accurate scores)
   useEffect(() => {
-    if (view !== 'summary' || currentPhase !== 'ujian' || historySaved.current) return;
+    if (view !== 'summary' || historySaved.current) return;
     if (questions.length === 0) return;
     historySaved.current = true;
 
     const finalScore = Math.round((score.correct / questions.length) * 100);
+
+    // Record streak for both Latihan and Ujian
+    const correctArabWords = questions
+      .filter((_, idx) => {
+        // Reconstruct which questions were correct: first score.correct questions in order
+        // Actually we need to track correct words properly. Use wrongAnswers to derive.
+        const wrongArabSet = new Set(wrongAnswers.map(wa => wa.arab));
+        return !wrongArabSet.has(questions[idx].item.arab);
+      })
+      .map(q => q.item.arab);
+
+    const isUjian = currentPhase === 'ujian';
+    recordQuizCompletion(currentKitab, currentJilid, currentLevel, correctArabWords, isUjian);
+
+    // Only save history for Ujian
+    if (currentPhase !== 'ujian') return;
+
     const entry: HistoryEntry = {
       id: Date.now().toString(),
       date: new Date().toISOString(),
@@ -130,7 +149,7 @@ function App() {
     }
     history.push(entry);
     localStorage.setItem(historyKey, JSON.stringify(history));
-  }, [view, currentPhase, score, questions.length, currentKitab, currentJilid, currentLevel]);
+  }, [view, currentPhase, score, questions, wrongAnswers, currentKitab, currentJilid, currentLevel]);
 
   const handleStart = (name: string, studentClass: string) => {
     const newIdentity = { name, studentClass };
@@ -153,6 +172,11 @@ function App() {
     
     if (phase === 'materi') {
       pushView('materi');
+      return;
+    }
+
+    if (phase === 'flashcard') {
+      pushView('flashcard');
       return;
     }
     
@@ -262,6 +286,18 @@ function App() {
         kitab={currentKitab}
         jilid={currentJilid}
         onBack={() => window.history.back()} 
+      />
+    );
+  }
+
+  if (view === 'flashcard') {
+    return (
+      <FlashcardMode
+        dataset={rawDataset}
+        level={currentLevel}
+        kitab={currentKitab}
+        jilid={currentJilid}
+        onBack={() => window.history.back()}
       />
     );
   }

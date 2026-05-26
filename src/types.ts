@@ -20,7 +20,7 @@ export interface WrongAnswer {
   userAnswer: string;     // jawaban yang dipilih siswa (kosong jika waktu habis)
 }
 
-export type PhaseType = 'materi' | 'latihan' | 'ujian' | null;
+export type PhaseType = 'materi' | 'latihan' | 'ujian' | 'flashcard' | null;
 
 export type KitabType = 'dl' | 'aby';
 
@@ -38,4 +38,14 @@ export interface HistoryEntry {
 export interface UserIdentity {
   name: string;
   studentClass: string;
+}
+
+export interface StreakData {
+  count: number;
+  lastDate: string; // "YYYY-MM-DD"
+}
+
+export interface MasteryStats {
+  mastered: number;
+  total: number;
 }

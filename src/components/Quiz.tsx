@@ -140,8 +140,8 @@ const Quiz: React.FC<QuizProps> = ({ question, timeLimit, phase, onAnswer }) => 
       {/* Answer Options */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: '1fr',
-        gap: '0.85rem'
+        gridTemplateColumns: question.options.length >= 4 ? '1fr 1fr' : '1fr',
+        gap: '0.65rem'
       }}>
         {question.options.map((opt, idx) => {
           let btnClass = 'btn';
@@ -160,8 +160,9 @@ const Quiz: React.FC<QuizProps> = ({ question, timeLimit, phase, onAnswer }) => 
               className={btnClass}
               onClick={() => handleSelect(idx)}
               disabled={isTransitioning}
+              style={question.options.length >= 4 ? { padding: '0.85rem 0.75rem', fontSize: '1rem' } : {}}
             >
-              <span style={{ fontSize: '1.15rem' }}>{opt}</span>
+              <span style={{ fontSize: question.options.length >= 4 ? '0.95rem' : '1.15rem' }}>{opt}</span>
               <span className="btn-key">{idx + 1}</span>
             </button>
           );

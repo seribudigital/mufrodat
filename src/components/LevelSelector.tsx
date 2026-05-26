@@ -1,6 +1,7 @@
 // LevelSelector.tsx
 import React from 'react';
 import type { KitabType } from '../types';
+import StatsWidget from './StatsWidget';
 
 interface LevelSelectorProps {
   onSelect: (level: number) => void;
@@ -280,7 +281,9 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
         </button>
       </div>
 
-      <div className="card" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.75rem', padding: '1.25rem' }}>
+      <StatsWidget kitab={currentKitab} jilid={currentJilid} />
+
+      <div className="card" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', padding: '1.25rem' }}>
         {levels.map((lvl) => {
           const isLvlAvailable = lvl.isAvailable;
           const isFinal = lvl.isFinal;
