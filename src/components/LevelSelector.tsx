@@ -303,7 +303,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
 
       <StatsWidget kitab={currentKitab} jilid={currentJilid} />
 
-      <div className="card" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', padding: '1.25rem 1rem' }}>
+      <div className={`card moving-gradient-${currentKitab}`} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', padding: '1.25rem 1rem' }}>
         {levels.map((lvl) => {
           const isLvlAvailable = lvl.isAvailable;
           const isFinal = lvl.isFinal;

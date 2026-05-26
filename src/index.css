@@ -571,21 +571,23 @@ body::before {
   }
 }
 
-/* Slow Diagonal Moving Gradient Background for PhaseSelector */
+/* Slow Diagonal Moving Gradient Background for PhaseSelector & LevelSelector */
 @keyframes diagonalGradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-.card.moving-gradient-dl {
+.card.moving-gradient-dl,
+.stats-widget.moving-gradient-dl {
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(167, 243, 208, 0.2), rgba(255, 255, 255, 0.95), rgba(20, 184, 166, 0.15)) !important;
   background-size: 400% 400% !important;
-  animation: diagonalGradient 18s ease-in-out infinite !important;
+  animation: diagonalGradient 8s ease-in-out infinite !important;
 }
 
-.card.moving-gradient-aby {
+.card.moving-gradient-aby,
+.stats-widget.moving-gradient-aby {
   background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(165, 243, 252, 0.22), rgba(255, 255, 255, 0.95), rgba(37, 99, 235, 0.12)) !important;
   background-size: 400% 400% !important;
-  animation: diagonalGradient 18s ease-in-out infinite !important;
+  animation: diagonalGradient 8s ease-in-out infinite !important;
 }

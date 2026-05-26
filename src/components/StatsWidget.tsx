@@ -39,7 +39,7 @@ const StatsWidget: React.FC<StatsWidgetProps> = ({ kitab, jilid }) => {
   const percentage = total > 0 ? Math.round((mastered / total) * 100) : 0;
 
   return (
-    <div className="stats-widget" style={{
+    <div className={`stats-widget moving-gradient-${kitab}`} style={{
       background: 'rgba(255, 255, 255, 0.85)',
       backdropFilter: 'blur(12px)',
       WebkitBackdropFilter: 'blur(12px)',
