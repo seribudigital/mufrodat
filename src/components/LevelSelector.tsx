@@ -157,7 +157,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
           gap: '12px',
           marginBottom: '0.25rem'
         }}>
-          <img src="/logo.png" alt="Logo Mufrodat" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
+          <img src="/logo.png" alt="Logo Mufrodat" width="40" height="40" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
           <h1 style={{ fontSize: '2.2rem', margin: 0, color: themeColor, letterSpacing: '-0.02em', transition: 'color 0.3s ease', lineHeight: 1 }}>Mufrodat</h1>
         </div>
         <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', margin: '0 0 1rem' }}>Pilih Kitab dan Level Pembelajaran</p>
@@ -252,7 +252,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
                   color: isActive ? themeHover : isAvailable ? 'var(--text-color)' : 'var(--text-muted)',
                   fontWeight: isActive ? 700 : 500,
                   cursor: isAvailable ? 'pointer' : 'not-allowed',
-                  opacity: isAvailable ? 1 : 0.55,
+                  opacity: isAvailable ? 1 : 0.85,
                   transition: 'all 0.2s ease',
                   fontSize: '0.85rem',
                   display: 'flex',
@@ -266,7 +266,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
                 {!isAvailable && (
                   <span style={{
                     display: 'inline-block',
-                    background: '#f97316',
+                    background: '#c2410c',
                     color: 'white',
                     fontSize: '0.58rem',
                     padding: '1px 5px',

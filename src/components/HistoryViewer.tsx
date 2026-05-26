@@ -52,7 +52,7 @@ const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentKitab, currentJili
         </button>
         <h2 style={{ fontSize: '1.25rem', color: themeColor, margin: 0, transition: 'color 0.3s ease' }}>Riwayat {jilidLabel}</h2>
         <div style={{ width: '70px', display: 'flex', justifyContent: 'flex-end' }}>
-          <img src="/logo.png" alt="Logo Mufrodat" style={{ width: '35px', height: '35px', objectFit: 'contain' }} />
+          <img src="/logo.png" alt="Logo Mufrodat" width="35" height="35" style={{ width: '35px', height: '35px', objectFit: 'contain' }} />
         </div>
       </div>
 
