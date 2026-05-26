@@ -116,14 +116,19 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
               alignItems: 'center',
               background: 'var(--bg-color)',
               border: '1px solid var(--border-color)',
-              padding: '0.3rem 0.5rem 0.3rem 1rem',
-              borderRadius: '30px',
-              gap: '0.75rem',
+              padding: '0.4rem 0.6rem 0.4rem 1rem',
+              borderRadius: '20px',
+              gap: '1rem',
               boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
             }}>
-              <span style={{ fontSize: '0.9rem', color: 'var(--text-color)', fontWeight: 600 }}>
-                👋 Ahlan wa Sahlan, <span style={{ color: themeColor }}>{userName}</span>
-              </span>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', lineHeight: 1.25 }}>
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 500 }}>
+                  👋 Ahlan wa Sahlan,
+                </span>
+                <span style={{ fontSize: '0.95rem', color: themeColor, fontWeight: 700, wordBreak: 'break-all' }}>
+                  {userName}
+                </span>
+              </div>
               <button 
                 onClick={onChangeProfile}
                 style={{
