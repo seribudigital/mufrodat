@@ -16,13 +16,13 @@ const PhaseSelector: React.FC<PhaseSelectorProps> = ({ level, kitab, jilid, onSe
     <div className="fade-in islamic-bg" style={{
       display: 'flex',
       flexDirection: 'column',
-      gap: '2.5rem',
+      gap: '1.25rem',
       justifyContent: 'center',
       flex: 1,
       maxWidth: '480px',
       margin: '0 auto',
       width: '100%',
-      padding: '2rem 1rem'
+      padding: '1rem 1rem 3rem'
     }}>
       <div style={{ textAlign: 'center' }}>
         <div style={{
@@ -44,58 +44,52 @@ const PhaseSelector: React.FC<PhaseSelectorProps> = ({ level, kitab, jilid, onSe
           <span style={{ opacity: 0.5 }}>/</span>
           <span>Jilid {jilid}</span>
         </div>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', color: themeColor }}>Level {level}</h2>
-        <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '1.5rem' }}>Pilih fase pembelajaran</p>
+        <h2 style={{ fontSize: '2.2rem', marginBottom: '0.25rem', color: themeColor, lineHeight: 1.1 }}>Level {level}</h2>
+        <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1rem' }}>Pilih fase pembelajaran</p>
       </div>
 
-      <div className="card" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.85rem', padding: '1.5rem' }}>
+      <div className="card" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', padding: '1.25rem 1rem' }}>
         <button 
           className="btn" 
           onClick={() => onSelect('materi')}
-          style={{ padding: '1.1rem', justifyContent: 'center', background: 'var(--bg-color)', border: '2px solid var(--primary-light)' }}
+          style={{ padding: '1rem 0.5rem', justifyContent: 'center', background: 'var(--bg-color)', border: '2px solid var(--primary-light)' }}
         >
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.35rem', width: '100%' }}>
-            <span style={{ fontSize: '1.75rem' }}>📖</span>
-            <span style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--primary-hover)' }}>Pelajari Materi</span>
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Lihat daftar kosakata</span>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem', width: '100%' }}>
+            <span style={{ fontSize: '1.5rem' }}>📖</span>
+            <span style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--primary-hover)' }}>Pelajari Materi</span>
+          </div>
+        </button>
+
+        <button 
+          className="btn" 
+          onClick={() => onSelect('flashcard')}
+          style={{ padding: '1rem 0.5rem', justifyContent: 'center', background: 'var(--bg-color)', border: '2px dashed var(--border-color)' }}
+        >
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem', width: '100%' }}>
+            <span style={{ fontSize: '1.5rem' }}>🃏</span>
+            <span style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-color)' }}>Mode Flashcard</span>
           </div>
         </button>
 
         <button 
           className="btn" 
           onClick={() => onSelect('latihan')}
-          style={{ padding: '1.1rem', justifyContent: 'center', background: 'var(--bg-color)', border: '2px solid var(--primary-light)' }}
+          style={{ padding: '1rem 0.5rem', justifyContent: 'center', background: 'var(--bg-color)', border: '2px solid var(--primary-light)' }}
         >
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.35rem', width: '100%' }}>
-            <span style={{ fontSize: '1.75rem' }}>⚡</span>
-            <span style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--primary-hover)' }}>Mulai Latihan</span>
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Kuis cepat dengan 2 pilihan</span>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem', width: '100%' }}>
+            <span style={{ fontSize: '1.5rem' }}>⚡</span>
+            <span style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--primary-hover)' }}>Mulai Latihan</span>
           </div>
         </button>
 
         <button 
           className="btn" 
           onClick={() => onSelect('ujian')}
-          style={{ padding: '1.1rem', justifyContent: 'center', background: 'linear-gradient(to bottom right, #ffffff, var(--primary-light))', border: '2px solid var(--primary-color)' }}
+          style={{ padding: '1rem 0.5rem', justifyContent: 'center', background: 'linear-gradient(to bottom right, #ffffff, var(--primary-light))', border: '2px solid var(--primary-color)' }}
         >
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.35rem', width: '100%' }}>
-            <span style={{ fontSize: '1.75rem' }}>🎯</span>
-            <span style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--primary-hover)' }}>Ikuti Ujian</span>
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Kuis penuh, simpan skor</span>
-          </div>
-        </button>
-
-        <div style={{ margin: '0.25rem 0', borderTop: '1px dashed var(--border-color)' }} />
-
-        <button 
-          className="btn" 
-          onClick={() => onSelect('flashcard')}
-          style={{ padding: '1.1rem', justifyContent: 'center', background: 'var(--bg-color)', border: '2px dashed var(--border-color)' }}
-        >
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.35rem', width: '100%' }}>
-            <span style={{ fontSize: '1.75rem' }}>🃏</span>
-            <span style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-color)' }}>Mode Flashcard</span>
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Hafalan kartu bolak-balik</span>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem', width: '100%' }}>
+            <span style={{ fontSize: '1.5rem' }}>🎯</span>
+            <span style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--primary-hover)' }}>Ikuti Ujian</span>
           </div>
         </button>
       </div>

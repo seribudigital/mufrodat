@@ -145,9 +145,17 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
             </div>
           </div>
         )}
-        <img src="/logo.png" alt="Logo Mufrodat" style={{ width: '60px', height: '60px', marginBottom: '0.25rem', objectFit: 'contain' }} />
-        <h1 style={{ fontSize: '2.5rem', marginBottom: '0.25rem', color: themeColor, letterSpacing: '-0.02em', transition: 'color 0.3s ease' }}>Mufrodat</h1>
-        <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1.25rem' }}>Pilih Kitab dan Level Pembelajaran</p>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '12px',
+          marginBottom: '0.25rem'
+        }}>
+          <img src="/logo.png" alt="Logo Mufrodat" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
+          <h1 style={{ fontSize: '2.2rem', margin: 0, color: themeColor, letterSpacing: '-0.02em', transition: 'color 0.3s ease', lineHeight: 1 }}>Mufrodat</h1>
+        </div>
+        <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', margin: '0 0 1rem' }}>Pilih Kitab dan Level Pembelajaran</p>
 
         {/* Kitab Selector Segmented Control */}
         <div style={{
