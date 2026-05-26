@@ -27,9 +27,9 @@ const getLevels = (kitab: KitabType, jilid: number): LevelOption[] => {
     if (jilid === 1) {
       return [
         { level: 1, title: 'Level 1', description: 'Kosakata 1 - 110 (Part 1-2)', isAvailable: true },
-        { level: 2, title: 'Level 2', description: 'Kosakata 1 - 219 (Part 1-4)', isAvailable: true },
-        { level: 3, title: 'Level 3', description: 'Kosakata 1 - 327 (Part 1-6)', isAvailable: true },
-        { level: 4, title: 'Level 4 (Final)', description: 'Kosakata 1 - 467 (Semua)', isAvailable: true, isFinal: true },
+        { level: 2, title: 'Level 2', description: 'Kosakata 111 - 219 (Part 3-4)', isAvailable: true },
+        { level: 3, title: 'Level 3', description: 'Kosakata 220 - 327 (Part 5-6)', isAvailable: true },
+        { level: 4, title: 'Level 4 (Final)', description: 'Kosakata 328 - 467 (Part 7-8)', isAvailable: true, isFinal: true },
       ];
     } else if (jilid === 2) {
       return [
