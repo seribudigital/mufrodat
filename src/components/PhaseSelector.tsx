@@ -48,7 +48,7 @@ const PhaseSelector: React.FC<PhaseSelectorProps> = ({ level, kitab, jilid, onSe
         <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1rem' }}>Pilih fase pembelajaran</p>
       </div>
 
-      <div className="card" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', padding: '1.25rem 1rem' }}>
+      <div className={`card moving-gradient-${kitab}`} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', padding: '1.25rem 1rem' }}>
         <button 
           className="btn" 
           onClick={() => onSelect('materi')}
