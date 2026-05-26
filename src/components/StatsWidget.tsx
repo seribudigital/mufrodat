@@ -40,16 +40,16 @@ const StatsWidget: React.FC<StatsWidgetProps> = ({ kitab, jilid }) => {
 
   return (
     <div className="stats-widget" style={{
-      background: 'rgba(255, 255, 255, 0.75)',
+      background: 'rgba(255, 255, 255, 0.85)',
       backdropFilter: 'blur(12px)',
       WebkitBackdropFilter: 'blur(12px)',
       borderRadius: '16px',
-      border: '1px solid rgba(255, 255, 255, 0.3)',
-      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
-      padding: '1.25rem',
+      border: '1px solid rgba(255, 255, 255, 0.35)',
+      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.06)',
+      padding: '1.5rem',
       display: 'flex',
       flexDirection: 'column',
-      gap: '1rem',
+      gap: '1.1rem',
     }}>
       {/* Row 1: Streak + Studied Today */}
       <div style={{
@@ -139,7 +139,7 @@ const StatsWidget: React.FC<StatsWidgetProps> = ({ kitab, jilid }) => {
         <div style={{
           width: '100%',
           height: '10px',
-          background: 'rgba(0, 0, 0, 0.06)',
+          background: '#e2e8f0',
           borderRadius: '99px',
           overflow: 'hidden',
           position: 'relative',
@@ -160,9 +160,9 @@ const StatsWidget: React.FC<StatsWidgetProps> = ({ kitab, jilid }) => {
           marginTop: '0.4rem',
         }}>
           <span style={{
-            fontSize: '0.75rem',
-            color: 'var(--text-muted)',
-            fontWeight: 500,
+            fontSize: '0.82rem',
+            color: 'var(--text-color)',
+            fontWeight: 600,
           }}>
             {mastered} / {total} Kosakata Dikuasai
           </span>

@@ -100,13 +100,13 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
     <div className="fade-in" style={{
       display: 'flex',
       flexDirection: 'column',
-      gap: '1.5rem',
+      gap: '1.25rem',
       justifyContent: 'center',
       flex: 1,
       maxWidth: '480px',
       margin: '0 auto',
       width: '100%',
-      padding: '1rem'
+      padding: '1rem 1rem 5rem',  /* bottom padding clears mobile nav bar */
     }}>
       <div style={{ textAlign: 'center' }}>
         {userName && (
@@ -154,7 +154,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gap: '0.5rem',
-          marginBottom: '1.25rem',
+          marginBottom: '1.5rem',
           background: 'rgba(255,255,255,0.7)',
           backdropFilter: 'blur(5px)',
           padding: '0.35rem',
@@ -215,45 +215,52 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
           </button>
         </div>
 
-        {/* Jilid Selector */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginBottom: '1.25rem', flexWrap: 'wrap' }}>
+        {/* Jilid Selector — 2-column grid, same width as Kitab tab */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '0.5rem',
+          marginBottom: '1.25rem',
+        }}>
           {[1, 2, 3, 4].map(jilid => {
             const isAvailable = currentKitab === 'aby' || jilid === 1 || jilid === 2;
             const isActive = currentJilid === jilid;
-            const label = `Jilid ${jilid}`;
-            
+
             return (
               <button
                 key={jilid}
                 onClick={() => isAvailable && setCurrentJilid(jilid)}
                 disabled={!isAvailable}
                 style={{
-                  padding: '0.4rem 1.1rem',
-                  borderRadius: '20px',
+                  padding: '0.5rem 0.5rem',
+                  borderRadius: '12px',
                   border: isActive ? `2px solid ${themeColor}` : '1px solid var(--border-color)',
                   background: isActive ? themeLight : 'var(--bg-color)',
-                  color: isActive ? themeHover : 'var(--text-muted)',
+                  color: isActive ? themeHover : isAvailable ? 'var(--text-color)' : 'var(--text-muted)',
                   fontWeight: isActive ? 700 : 500,
                   cursor: isAvailable ? 'pointer' : 'not-allowed',
-                  opacity: isAvailable ? 1 : 0.5,
-                  position: 'relative',
+                  opacity: isAvailable ? 1 : 0.55,
                   transition: 'all 0.2s ease',
-                  fontSize: '0.85rem'
+                  fontSize: '0.85rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.35rem',
+                  boxShadow: isActive ? `0 0 0 3px ${themeColor}18` : 'none',
                 }}
               >
-                {label}
+                Jilid {jilid}
                 {!isAvailable && (
                   <span style={{
-                    position: 'absolute',
-                    top: '-6px',
-                    right: '-10px',
+                    display: 'inline-block',
                     background: '#f97316',
                     color: 'white',
-                    fontSize: '0.6rem',
-                    padding: '2px 5px',
-                    borderRadius: '10px',
-                    fontWeight: 'bold',
-                    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                    fontSize: '0.58rem',
+                    padding: '1px 5px',
+                    borderRadius: '8px',
+                    fontWeight: 700,
+                    lineHeight: 1.5,
+                    verticalAlign: 'middle',
                   }}>
                     Soon
                   </span>
@@ -283,7 +290,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
 
       <StatsWidget kitab={currentKitab} jilid={currentJilid} />
 
-      <div className="card" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', padding: '1.25rem' }}>
+      <div className="card" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', padding: '1.25rem 1rem' }}>
         {levels.map((lvl) => {
           const isLvlAvailable = lvl.isAvailable;
           const isFinal = lvl.isFinal;
@@ -295,7 +302,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
               disabled={!isLvlAvailable}
               style={{ 
                 justifyContent: 'center', 
-                padding: '1rem',
+                padding: '1.25rem 0.75rem',
                 opacity: isLvlAvailable ? 1 : 0.65,
                 cursor: isLvlAvailable ? 'pointer' : 'not-allowed',
                 ...(isFinal && isLvlAvailable ? {
