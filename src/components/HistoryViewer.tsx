@@ -11,26 +11,48 @@ interface HistoryViewerProps {
 const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentKitab, currentJilid, identity, onBack }) => {
   const [history, setHistory] = useState<HistoryEntry[]>([]);
 
-  const historyKey = `mufrodat_history_${currentKitab}_jilid${currentJilid}`;
-  const kitabLabel = currentKitab === 'dl' ? 'Durusul Lughah' : 'ABY';
-  const jilidLabel = `${kitabLabel} Jilid ${currentJilid}`;
-  const themeColor = currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)';
+  const kitabLabel = currentKitab === 'quran' ? 'Al-Qur\'an' : currentKitab === 'dl' ? 'Durusul Lughah' : 'ABY';
+  const jilidLabel = currentKitab === 'quran' ? `${kitabLabel} Kelompok ${currentJilid}` : `${kitabLabel} Jilid ${currentJilid}`;
+  const themeColor = currentKitab === 'quran' ? '#d97706' : currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)';
 
   useEffect(() => {
-    const raw = localStorage.getItem(historyKey);
-    if (raw) {
-      try {
-        const parsed: HistoryEntry[] = JSON.parse(raw);
-        setHistory(parsed.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
-      } catch (e) {
-        console.error("Error parsing history:", e);
+    let allHistory: HistoryEntry[] = [];
+    
+    if (currentKitab === 'quran') {
+      for (let i = 1; i <= 10; i++) {
+        const juz = (currentJilid - 1) * 10 + i;
+        const key = `mufrodat_history_quran_juz${juz}`;
+        const raw = localStorage.getItem(key);
+        if (raw) {
+          try {
+            const parsed: HistoryEntry[] = JSON.parse(raw);
+            allHistory = [...allHistory, ...parsed];
+          } catch (e) { console.error("Error parsing history:", e); }
+        }
+      }
+    } else {
+      const historyKey = `mufrodat_history_${currentKitab}_jilid${currentJilid}`;
+      const raw = localStorage.getItem(historyKey);
+      if (raw) {
+        try {
+          allHistory = JSON.parse(raw);
+        } catch (e) { console.error("Error parsing history:", e); }
       }
     }
-  }, [historyKey]);
+    
+    setHistory(allHistory.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
+  }, [currentKitab, currentJilid]);
 
   const handleClear = () => {
     if (window.confirm(`Yakin ingin menghapus semua riwayat tes untuk ${jilidLabel}?`)) {
-      localStorage.removeItem(historyKey);
+      if (currentKitab === 'quran') {
+        for (let i = 1; i <= 10; i++) {
+          const juz = (currentJilid - 1) * 10 + i;
+          localStorage.removeItem(`mufrodat_history_quran_juz${juz}`);
+        }
+      } else {
+        localStorage.removeItem(`mufrodat_history_${currentKitab}_jilid${currentJilid}`);
+      }
       setHistory([]);
     }
   };
@@ -95,7 +117,9 @@ const HistoryViewer: React.FC<HistoryViewerProps> = ({ currentKitab, currentJili
               return (
                 <div key={item.id} className="card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.25rem' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                    <span style={{ fontWeight: 700, fontSize: '1.1rem', color: 'var(--text-color)' }}>Level {item.level}</span>
+                    <span style={{ fontWeight: 700, fontSize: '1.1rem', color: 'var(--text-color)' }}>
+                      {currentKitab === 'quran' ? `Juz ${(currentJilid - 1) * 10 + item.level}` : `Level ${item.level}`}
+                    </span>
                     <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{dateStr} • {timeStr}</span>
                     <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
                       <span style={{ color: 'var(--success-color)' }}>{item.correct} Benar</span> • <span style={{ color: 'var(--error-color)' }}>{item.wrong} Salah</span>

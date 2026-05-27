@@ -8,11 +8,22 @@ const TOTAL_VOCAB: Record<string, number> = {
   'aby_2': 483,
   'aby_3': 371,
   'aby_4': 428,
+  // Placeholder Quran Total Vocab
+  'quran_1': 2522, 'quran_2': 2578, 'quran_3': 2622, 'quran_4': 2506, 'quran_5': 2579,
+  'quran_6': 2503, 'quran_7': 2774, 'quran_8': 2566, 'quran_9': 2486, 'quran_10': 2389,
+  'quran_11': 2657, 'quran_12': 2693, 'quran_13': 2613, 'quran_14': 2499, 'quran_15': 2684,
+  'quran_16': 2747, 'quran_17': 2443, 'quran_18': 2641, 'quran_19': 2611, 'quran_20': 2554,
+  'quran_21': 2582, 'quran_22': 2638, 'quran_23': 2627, 'quran_24': 2520, 'quran_25': 2668,
+  'quran_26': 2612, 'quran_27': 2528, 'quran_28': 2618, 'quran_29': 2661, 'quran_30': 2308,
 };
 
 const STREAK_KEY = 'mufrodat_streak';
 
-function getMasteryKey(kitab: KitabType, jilid: number): string {
+function getMasteryKey(kitab: KitabType, jilid: number, level?: number): string {
+  if (kitab === 'quran' && level !== undefined) {
+    const juz = (jilid - 1) * 10 + level;
+    return `mufrodat_mastery_quran_juz${juz}`;
+  }
   return `mufrodat_mastery_${kitab}_${jilid}`;
 }
 
@@ -66,7 +77,7 @@ export function getStreak(): StreakData {
 export function recordQuizCompletion(
   kitab: KitabType,
   jilid: number,
-  _level: number,
+  level: number,
   correctArabWords: string[],
   isUjian: boolean
 ): void {
@@ -92,7 +103,7 @@ export function recordQuizCompletion(
 
   // ── Update mastery (only for Ujian) ──
   if (isUjian && correctArabWords.length > 0) {
-    const key = getMasteryKey(kitab, jilid);
+    const key = getMasteryKey(kitab, jilid, level);
     const raw = localStorage.getItem(key);
     let mastered: string[] = [];
     if (raw) {
@@ -111,6 +122,21 @@ export function recordQuizCompletion(
 // ──── MASTERY STATS ────
 
 export function getMasteryStats(kitab: KitabType, jilid: number): MasteryStats {
+  if (kitab === 'quran') {
+    let mastered = 0;
+    let total = 0;
+    for (let i = 1; i <= 10; i++) {
+      const juz = (jilid - 1) * 10 + i;
+      total += TOTAL_VOCAB[`quran_${juz}`] || 0;
+      const key = `mufrodat_mastery_quran_juz${juz}`;
+      const raw = localStorage.getItem(key);
+      if (raw) {
+        try { mastered += JSON.parse(raw).length; } catch {}
+      }
+    }
+    return { mastered, total };
+  }
+
   const key = getMasteryKey(kitab, jilid);
   const totalKey = `${kitab}_${jilid}`;
   const total = TOTAL_VOCAB[totalKey] || 0;
@@ -132,13 +158,21 @@ export function getTotalMasteryStats(): MasteryStats {
 
   for (const [key, total] of Object.entries(TOTAL_VOCAB)) {
     totalVocab += total;
-    const [kitab, jilidStr] = key.split('_');
-    const raw = localStorage.getItem(getMasteryKey(kitab as KitabType, parseInt(jilidStr)));
-    if (raw) {
-      try {
-        const mastered: string[] = JSON.parse(raw);
-        totalMastered += mastered.length;
-      } catch { /* skip */ }
+    if (key.startsWith('quran_')) {
+      const juz = key.split('_')[1];
+      const raw = localStorage.getItem(`mufrodat_mastery_quran_juz${juz}`);
+      if (raw) {
+        try { totalMastered += JSON.parse(raw).length; } catch {}
+      }
+    } else {
+      const [kitab, jilidStr] = key.split('_');
+      const raw = localStorage.getItem(getMasteryKey(kitab as KitabType, parseInt(jilidStr)));
+      if (raw) {
+        try {
+          const mastered: string[] = JSON.parse(raw);
+          totalMastered += mastered.length;
+        } catch { /* skip */ }
+      }
     }
   }
 

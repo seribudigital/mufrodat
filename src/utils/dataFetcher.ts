@@ -77,6 +77,20 @@ export const loadLevelDataset = async (kitab: KitabType, jilid: number, level: n
     }
   };
 
+  // Quran Level Maps (jilid 1, 2, 3 correspond to groups of 10 juz)
+  const quranLevelMapJilid1: Record<number, string[]> = {
+    1: ['juz1.json'], 2: ['juz2.json'], 3: ['juz3.json'], 4: ['juz4.json'], 5: ['juz5.json'],
+    6: ['juz6.json'], 7: ['juz7.json'], 8: ['juz8.json'], 9: ['juz9.json'], 10: ['juz10.json'],
+  };
+  const quranLevelMapJilid2: Record<number, string[]> = {
+    1: ['juz11.json'], 2: ['juz12.json'], 3: ['juz13.json'], 4: ['juz14.json'], 5: ['juz15.json'],
+    6: ['juz16.json'], 7: ['juz17.json'], 8: ['juz18.json'], 9: ['juz19.json'], 10: ['juz20.json'],
+  };
+  const quranLevelMapJilid3: Record<number, string[]> = {
+    1: ['juz21.json'], 2: ['juz22.json'], 3: ['juz23.json'], 4: ['juz24.json'], 5: ['juz25.json'],
+    6: ['juz26.json'], 7: ['juz27.json'], 8: ['juz28.json'], 9: ['juz29.json'], 10: ['juz30.json'],
+  };
+
   let levelMap = dlLevelMapJilid1;
   if (kitab === 'dl') {
     if (jilid === 2) {
@@ -92,13 +106,21 @@ export const loadLevelDataset = async (kitab: KitabType, jilid: number, level: n
     } else if (jilid === 4) {
       levelMap = abyLevelMapJilid4;
     }
+  } else if (kitab === 'quran') {
+    if (jilid === 1) {
+      levelMap = quranLevelMapJilid1;
+    } else if (jilid === 2) {
+      levelMap = quranLevelMapJilid2;
+    } else if (jilid === 3) {
+      levelMap = quranLevelMapJilid3;
+    }
   }
 
-  const allowedParts = levelMap[level] || levelMap[4];
+  const allowedParts = levelMap[level] || (kitab === 'quran' ? [] : levelMap[4]);
 
   for (const path in modules) {
     const isTargetKitab = path.includes(`/${kitab}/`);
-    const isTargetJilid = path.includes(`/jilid${jilid}/`);
+    const isTargetJilid = kitab === 'quran' ? true : path.includes(`/jilid${jilid}/`);
     const fileName = path.split('/').pop() || '';
     if (isTargetKitab && isTargetJilid && allowedParts.includes(fileName)) {
       const mod = await modules[path]();

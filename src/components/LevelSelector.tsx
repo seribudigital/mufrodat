@@ -69,6 +69,17 @@ const getLevels = (kitab: KitabType, jilid: number): LevelOption[] => {
         { level: 4, title: 'Level 4 (Final)', description: 'Kosakata Unit 7 - 8 (85 kata)', isAvailable: true, isFinal: true },
       ];
     }
+  } else if (kitab === 'quran') {
+    const juzStart = (jilid - 1) * 10 + 1;
+    return Array.from({ length: 10 }, (_, i) => {
+      const juzNum = juzStart + i;
+      return { 
+        level: i + 1, 
+        title: `Juz ${juzNum}`, 
+        description: `Kosakata`, 
+        isAvailable: true 
+      };
+    });
   }
 
   // Fallback for unavailable volumes
@@ -92,9 +103,9 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
 }) => {
   
   const levels = getLevels(currentKitab, currentJilid);
-  const themeColor = currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)';
-  const themeLight = currentKitab === 'dl' ? 'rgba(16, 185, 129, 0.1)' : 'var(--primary-light)';
-  const themeHover = currentKitab === 'dl' ? '#059669' : 'var(--primary-hover)';
+  const themeColor = currentKitab === 'quran' ? '#d97706' : currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)';
+  const themeLight = currentKitab === 'quran' ? 'rgba(217, 119, 6, 0.1)' : currentKitab === 'dl' ? 'rgba(16, 185, 129, 0.1)' : 'var(--primary-light)';
+  const themeHover = currentKitab === 'quran' ? '#b45309' : currentKitab === 'dl' ? '#059669' : 'var(--primary-hover)';
 
   return (
     <main className="fade-in" style={{
@@ -142,7 +153,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
                   cursor: 'pointer',
                   transition: 'all 0.2s ease',
                 }}
-                onMouseOver={(e) => e.currentTarget.style.background = currentKitab === 'dl' ? 'rgba(16, 185, 129, 0.2)' : '#dbeafe'}
+                onMouseOver={(e) => e.currentTarget.style.background = currentKitab === 'quran' ? 'rgba(217, 119, 6, 0.2)' : currentKitab === 'dl' ? 'rgba(16, 185, 129, 0.2)' : '#dbeafe'}
                 onMouseOut={(e) => e.currentTarget.style.background = themeLight}
               >
                 Ganti
@@ -165,7 +176,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
         {/* Kitab Selector Segmented Control */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
+          gridTemplateColumns: '1fr 1fr 1fr',
           gap: '0.5rem',
           marginBottom: '1.5rem',
           background: 'rgba(255,255,255,0.7)',
@@ -226,17 +237,43 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
             <span style={{ fontSize: '1.1rem' }}>💬</span>
             <span style={{ fontSize: '0.8rem' }}>Baina Yadaik (ABY)</span>
           </button>
+          
+          <button
+            onClick={() => {
+              setCurrentKitab('quran');
+              setCurrentJilid(1);
+            }}
+            style={{
+              padding: '0.65rem 0.5rem',
+              borderRadius: '12px',
+              border: 'none',
+              background: currentKitab === 'quran' ? 'linear-gradient(135deg, #fbbf24, #d97706)' : 'transparent',
+              color: currentKitab === 'quran' ? '#ffffff' : 'var(--text-muted)',
+              fontWeight: 700,
+              cursor: 'pointer',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '0.15rem',
+              boxShadow: currentKitab === 'quran' ? '0 4px 10px rgba(217, 119, 6, 0.25)' : 'none',
+              transform: currentKitab === 'quran' ? 'scale(1.01)' : 'scale(1)'
+            }}
+          >
+            <span style={{ fontSize: '1.1rem' }}>📖</span>
+            <span style={{ fontSize: '0.8rem' }}>Al-Qur'an</span>
+          </button>
         </div>
 
         {/* Jilid Selector — 2-column grid, same width as Kitab tab */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
+          gridTemplateColumns: currentKitab === 'quran' ? '1fr 1fr 1fr' : '1fr 1fr',
           gap: '0.5rem',
           marginBottom: '1.25rem',
         }}>
-          {[1, 2, 3, 4].map(jilid => {
-            const isAvailable = currentKitab === 'aby' || jilid === 1 || jilid === 2;
+          {(currentKitab === 'quran' ? [1, 2, 3] : [1, 2, 3, 4]).map(jilid => {
+            const isAvailable = currentKitab === 'aby' || currentKitab === 'quran' || jilid === 1 || jilid === 2;
             const isActive = currentJilid === jilid;
 
             return (
@@ -262,7 +299,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
                   boxShadow: isActive ? `0 0 0 3px ${themeColor}18` : 'none',
                 }}
               >
-                Jilid {jilid}
+                {currentKitab === 'quran' ? `Juz ${(jilid-1)*10+1} - ${jilid*10}` : `Jilid ${jilid}`}
                 {!isAvailable && (
                   <span style={{
                     display: 'inline-block',
@@ -303,7 +340,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
 
       <StatsWidget kitab={currentKitab} jilid={currentJilid} />
 
-      <div className={`card moving-gradient-${currentKitab}`} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', padding: '1.25rem 1rem' }}>
+      <div className={`card ${currentKitab === 'quran' ? 'moving-gradient-quran' : `moving-gradient-${currentKitab}`}`} style={{ display: 'grid', gridTemplateColumns: currentKitab === 'quran' ? '1fr 1fr 1fr' : '1fr 1fr', gap: '0.75rem', padding: '1.25rem 1rem' }}>
         {levels.map((lvl) => {
           const isLvlAvailable = lvl.isAvailable;
           const isFinal = lvl.isFinal;
@@ -315,7 +352,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
               disabled={!isLvlAvailable}
               style={{ 
                 justifyContent: 'center', 
-                padding: '1.25rem 0.75rem',
+                padding: currentKitab === 'quran' ? '0.75rem 0.5rem' : '1.25rem 0.75rem',
                 opacity: isLvlAvailable ? 1 : 0.65,
                 cursor: isLvlAvailable ? 'pointer' : 'not-allowed',
                 ...(isFinal && isLvlAvailable ? {
@@ -327,7 +364,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
             >
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem', width: '100%' }}>
                 <span style={{ 
-                  fontSize: '1.15rem', 
+                  fontSize: currentKitab === 'quran' ? '1rem' : '1.15rem', 
                   fontWeight: isFinal && isLvlAvailable ? 700 : 600,
                   color: isFinal && isLvlAvailable ? themeHover : 'inherit'
                 }}>
@@ -341,6 +378,12 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({
           );
         })}
       </div>
+
+      {currentKitab === 'quran' && (
+        <div style={{ textAlign: 'center', marginTop: '0.5rem', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+          Sumber kosakata dan arti Al-Qur'an dari <a href="https://quran.com/" target="_blank" rel="noopener noreferrer" style={{ color: themeColor, textDecoration: 'none', fontWeight: 600 }}>Quran.com</a>
+        </div>
+      )}
     </main>
   );
 };

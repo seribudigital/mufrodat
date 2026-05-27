@@ -22,7 +22,7 @@ export interface WrongAnswer {
 
 export type PhaseType = 'materi' | 'latihan' | 'ujian' | 'flashcard' | null;
 
-export type KitabType = 'dl' | 'aby';
+export type KitabType = 'dl' | 'aby' | 'quran';
 
 export interface HistoryEntry {
   id: string;

@@ -1,6 +1,10 @@
 import type { KitabType } from '../types';
 
 function getKey(kitab: KitabType, jilid: number, level: number): string {
+  if (kitab === 'quran') {
+    const juz = (jilid - 1) * 10 + level;
+    return `mufrodat_flashcard_quran_juz${juz}`;
+  }
   return `mufrodat_flashcard_${kitab}_${jilid}_level${level}`;
 }
 

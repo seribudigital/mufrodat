@@ -22,7 +22,7 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 const FlashcardMode: React.FC<FlashcardModeProps> = ({ dataset, level, kitab, jilid, onBack }) => {
-  const themeColor = kitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)';
+  const themeColor = kitab === 'quran' ? '#d97706' : kitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)';
 
   // Order cards: "Belum Hafal" words first (shuffled), then the rest (shuffled)
   const orderedCards = useMemo(() => {
@@ -227,11 +227,11 @@ const FlashcardMode: React.FC<FlashcardModeProps> = ({ dataset, level, kitab, ji
           border: '1px solid var(--border-color)',
           boxShadow: 'var(--shadow-sm)'
         }}>
-          <span>{kitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
+          <span>{kitab === 'quran' ? '📖 Al-Qur\'an' : kitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
           <span style={{ opacity: 0.5 }}>/</span>
-          <span>Jilid {jilid}</span>
+          <span>{kitab === 'quran' ? `Kelompok ${jilid}` : `Jilid ${jilid}`}</span>
           <span style={{ opacity: 0.5 }}>/</span>
-          <span style={{ color: themeColor }}>Level {level}</span>
+          <span style={{ color: themeColor }}>{kitab === 'quran' ? `Juz ${(jilid - 1) * 10 + level}` : `Level ${level}`}</span>
         </div>
       </div>
 

@@ -10,7 +10,7 @@ interface PhaseSelectorProps {
 }
 
 const PhaseSelector: React.FC<PhaseSelectorProps> = ({ level, kitab, jilid, onSelect, onBack }) => {
-  const themeColor = kitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)';
+  const themeColor = kitab === 'quran' ? '#d97706' : kitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)';
 
   return (
     <main className="fade-in islamic-bg" style={{
@@ -40,11 +40,13 @@ const PhaseSelector: React.FC<PhaseSelectorProps> = ({ level, kitab, jilid, onSe
           border: '1px solid var(--border-color)',
           boxShadow: 'var(--shadow-sm)'
         }}>
-          <span>{kitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
+          <span>{kitab === 'quran' ? '📖 Al-Qur\'an' : kitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
           <span style={{ opacity: 0.5 }}>/</span>
-          <span>Jilid {jilid}</span>
+          <span>{kitab === 'quran' ? `Kelompok ${jilid}` : `Jilid ${jilid}`}</span>
         </div>
-        <h2 style={{ fontSize: '2.2rem', marginBottom: '0.25rem', color: themeColor, lineHeight: 1.1 }}>Level {level}</h2>
+        <h2 style={{ fontSize: '2.2rem', marginBottom: '0.25rem', color: themeColor, lineHeight: 1.1 }}>
+          {kitab === 'quran' ? `Juz ${(jilid - 1) * 10 + level}` : `Level ${level}`}
+        </h2>
         <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1rem' }}>Pilih fase pembelajaran</p>
       </div>
 

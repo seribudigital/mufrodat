@@ -35,7 +35,7 @@ const StatsWidget: React.FC<StatsWidgetProps> = ({ kitab, jilid }) => {
   const themeGradient = kitab === 'dl'
     ? 'linear-gradient(90deg, #10b981, #34d399)'
     : 'linear-gradient(90deg, #2563eb, #60a5fa)';
-  const kitabLabel = kitab === 'dl' ? 'Durusul Lughah' : 'ABY';
+  const kitabLabel = kitab === 'quran' ? 'Al-Qur\'an Kelompok' : kitab === 'dl' ? 'Durusul Lughah Jilid' : 'ABY Jilid';
   const percentage = total > 0 ? Math.round((mastered / total) * 100) : 0;
 
   return (
@@ -124,7 +124,7 @@ const StatsWidget: React.FC<StatsWidgetProps> = ({ kitab, jilid }) => {
             fontWeight: 600,
             color: 'var(--text-color)',
           }}>
-            📊 Kosakata {kitabLabel} Jilid {jilid}
+            📊 Kosakata {kitabLabel} {jilid}
           </span>
           <span style={{
             fontSize: '0.75rem',

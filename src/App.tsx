@@ -139,7 +139,9 @@ function App() {
       correct: score.correct,
       wrong: score.wrong + score.timesUp,
     };
-    const historyKey = `mufrodat_history_${currentKitab}_jilid${currentJilid}`;
+    const historyKey = currentKitab === 'quran' 
+      ? `mufrodat_history_quran_juz${(currentJilid - 1) * 10 + currentLevel}`
+      : `mufrodat_history_${currentKitab}_jilid${currentJilid}`;
     const raw = localStorage.getItem(historyKey);
     let history: HistoryEntry[] = [];
     if (raw) {
@@ -342,11 +344,13 @@ function App() {
             border: '1px solid var(--border-color)',
             marginBottom: '0.75rem'
           }}>
-            <span>{currentKitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
+            <span>{currentKitab === 'quran' ? '📖 Al-Qur\'an' : currentKitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
             <span style={{ opacity: 0.5 }}>/</span>
-            <span>Jilid {currentJilid}</span>
+            <span>{currentKitab === 'quran' ? `Kelompok ${currentJilid}` : `Jilid ${currentJilid}`}</span>
             <span style={{ opacity: 0.5 }}>/</span>
-            <span style={{ color: currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)' }}>Level {currentLevel}</span>
+            <span style={{ color: currentKitab === 'quran' ? '#d97706' : currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)' }}>
+              {currentKitab === 'quran' ? `Juz ${(currentJilid - 1) * 10 + currentLevel}` : `Level ${currentLevel}`}
+            </span>
           </div>
           {identity && (
             <div style={{ 
@@ -495,11 +499,13 @@ function App() {
           border: '1px solid var(--border-color)',
           boxShadow: 'var(--shadow-sm)'
         }}>
-          <span>{currentKitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
+          <span>{currentKitab === 'quran' ? '📖 Al-Qur\'an' : currentKitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
           <span style={{ opacity: 0.5 }}>/</span>
-          <span>Jilid {currentJilid}</span>
+          <span>{currentKitab === 'quran' ? `Kelompok ${currentJilid}` : `Jilid ${currentJilid}`}</span>
           <span style={{ opacity: 0.5 }}>/</span>
-          <span style={{ color: currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)' }}>Level {currentLevel}</span>
+          <span style={{ color: currentKitab === 'quran' ? '#d97706' : currentKitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)' }}>
+            {currentKitab === 'quran' ? `Juz ${(currentJilid - 1) * 10 + currentLevel}` : `Level ${currentLevel}`}
+          </span>
         </div>
       </div>
 

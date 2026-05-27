@@ -84,11 +84,13 @@ const MateriViewer: React.FC<MateriViewerProps> = ({ dataset, onBack, level, kit
           border: '1px solid var(--border-color)',
           boxShadow: 'var(--shadow-sm)'
         }}>
-          <span>{kitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
+          <span>{kitab === 'quran' ? '📖 Al-Qur\'an' : kitab === 'dl' ? '📚 Durusul Lughah' : '💬 ABY'}</span>
           <span style={{ opacity: 0.5 }}>/</span>
-          <span>Jilid {jilid}</span>
+          <span>{kitab === 'quran' ? `Kelompok ${jilid}` : `Jilid ${jilid}`}</span>
         </div>
-        <h2 style={{ fontSize: '2rem', color: kitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)', marginBottom: '0.5rem' }}>Materi Level {level}</h2>
+        <h2 style={{ fontSize: '2rem', color: kitab === 'quran' ? '#d97706' : kitab === 'dl' ? 'var(--success-color)' : 'var(--primary-color)', marginBottom: '0.5rem' }}>
+          Materi {kitab === 'quran' ? `Juz ${(jilid - 1) * 10 + level}` : `Level ${level}`}
+        </h2>
         <p style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>Daftar {dataset.length} kosakata</p>
       </div>
 
